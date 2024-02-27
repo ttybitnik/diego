@@ -157,7 +157,7 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 - [diego set](docs/user_guide.md#diego-set) :: set a configuration option
   - [diego set all](docs/user_guide.md#diego-set-all) :: enable or disable the all flag by default
   - [diego set defaults](docs/user_guide.md#diego-set-defaults) :: restore Diego default settings
-  - [diego set format](docs/user_guide.md#diego-set-format) :: set ouput format for the Hugo data file (default "yaml")
+  - [diego set format](docs/user_guide.md#diego-set-format) :: set output format for the Hugo data file (default "yaml")
   - [diego set hugodir](docs/user_guide.md#diego-set-hugodir) :: set path to the Hugo directory (default ".")
   - [diego set overwrite](docs/user_guide.md#diego-set-overwrite) :: enable or disable the overwrite flag by default
   - [diego set scrape](docs/user_guide.md#diego-set-scrape) :: enable or disable the scrape flag by default

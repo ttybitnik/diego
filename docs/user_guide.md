@@ -227,7 +227,7 @@ diego s defaults 1
 
 ### `diego set format`
 
-Set ouput format for the Hugo data file (default "yaml").
+Set output format for the Hugo data file (default "yaml").
 
 ```
 diego set format {yaml|json|toml|xml} [flags]
@@ -334,7 +334,7 @@ Import every available field from CSV/JSON file.
 
 #### --format string
 
-Ouput format for the Hugo data file (default "yaml").
+Output format for the Hugo data file (default "yaml").
 
 #### --hugodir string
 

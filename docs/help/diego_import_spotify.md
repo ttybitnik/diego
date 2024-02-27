@@ -21,7 +21,7 @@ diego i s playlist -i playlist.json --all --shortcode
 
 ```
       --all              import every available field from JSON file
-      --format string    ouput format for the Hugo data file (default "yaml")
+      --format string    output format for the Hugo data file (default "yaml")
   -h, --help             help for spotify
       --hugodir string   path to the Hugo directory (default ".")
   -i, --input string     path to the JSON file (required)

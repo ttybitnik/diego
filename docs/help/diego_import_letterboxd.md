@@ -21,7 +21,7 @@ diego i l diary -i diary.csv --all --scrape --shortcode
 
 ```
       --all              import every available field from CSV file
-      --format string    ouput format for the Hugo data file (default "yaml")
+      --format string    output format for the Hugo data file (default "yaml")
   -h, --help             help for letterboxd
       --hugodir string   path to the Hugo directory (default ".")
   -i, --input string     path to the CSV file (required)

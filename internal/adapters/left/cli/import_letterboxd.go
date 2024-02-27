@@ -62,7 +62,7 @@ func init() {
 	letterboxdCmd.Flags().BoolVar(&ca.cobra.overwrite, "overwrite", false, "overwrite existent output data file")
 	letterboxdCmd.Flags().BoolVar(&ca.cobra.scrape, "scrape", false, "fetch additional data from CSV links using HTTP")
 	letterboxdCmd.Flags().BoolVar(&ca.cobra.shortcode, "shortcode", false, "generate a shortcode template for Hugo")
-	letterboxdCmd.Flags().StringVar(&ca.cobra.format, "format", domain.OutputYAML, "ouput format for the Hugo data file")
+	letterboxdCmd.Flags().StringVar(&ca.cobra.format, "format", domain.OutputYAML, "output format for the Hugo data file")
 	letterboxdCmd.Flags().StringVar(&ca.cobra.hugodir, "hugodir", ".", "path to the Hugo directory")
 	letterboxdCmd.Flags().StringVarP(&ca.cobra.input, "input", "i", "", "path to the CSV file (required)")
 }

@@ -55,7 +55,7 @@ func init() {
 	goodreadsCmd.Flags().BoolVar(&ca.cobra.overwrite, "overwrite", false, "overwrite existent output data file")
 	goodreadsCmd.Flags().BoolVar(&ca.cobra.scrape, "scrape", false, "fetch additional data from CSV links using HTTP")
 	goodreadsCmd.Flags().BoolVar(&ca.cobra.shortcode, "shortcode", false, "generate a shortcode template for Hugo")
-	goodreadsCmd.Flags().StringVar(&ca.cobra.format, "format", domain.OutputYAML, "ouput format for the Hugo data file")
+	goodreadsCmd.Flags().StringVar(&ca.cobra.format, "format", domain.OutputYAML, "output format for the Hugo data file")
 	goodreadsCmd.Flags().StringVar(&ca.cobra.hugodir, "hugodir", ".", "path to the Hugo directory")
 	goodreadsCmd.Flags().StringVarP(&ca.cobra.input, "input", "i", "", "path to the CSV file (required)")
 }

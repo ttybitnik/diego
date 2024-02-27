@@ -61,7 +61,7 @@ func init() {
 	spotifyCmd.Flags().BoolVar(&ca.cobra.overwrite, "overwrite", false, "overwrite existent output data file")
 	spotifyCmd.Flags().BoolVar(&ca.cobra.scrape, "scrape", false, "fetch additional data from JSON links using HTTP")
 	spotifyCmd.Flags().BoolVar(&ca.cobra.shortcode, "shortcode", false, "generate a shortcode template for Hugo")
-	spotifyCmd.Flags().StringVar(&ca.cobra.format, "format", domain.OutputYAML, "ouput format for the Hugo data file")
+	spotifyCmd.Flags().StringVar(&ca.cobra.format, "format", domain.OutputYAML, "output format for the Hugo data file")
 	spotifyCmd.Flags().StringVar(&ca.cobra.hugodir, "hugodir", ".", "path to the Hugo directory")
 	spotifyCmd.Flags().StringVarP(&ca.cobra.input, "input", "i", "", "path to the JSON file (required)")
 

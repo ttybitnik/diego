@@ -1,10 +1,10 @@
 ## diego set format
 
-Set ouput format for the Hugo data file (default "yaml")
+Set output format for the Hugo data file (default "yaml")
 
 ### Synopsis
 
-Set ouput format for the Hugo data file (default "yaml").
+Set output format for the Hugo data file (default "yaml").
 
 ```
 diego set format {yaml|json|toml|xml} [flags]

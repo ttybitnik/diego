@@ -32,8 +32,8 @@ var formatCmd = &cobra.Command{
 	ValidArgs: []string{"yaml", "json", "toml", "xml"},
 	Example: "diego set format yaml\n" +
 		"diego s format json",
-	Short: "Set ouput format for the Hugo data file (default \"yaml\")",
-	Long:  "Set ouput format for the Hugo data file (default \"yaml\").",
+	Short: "Set output format for the Hugo data file (default \"yaml\")",
+	Long:  "Set output format for the Hugo data file (default \"yaml\").",
 	Run: func(cmd *cobra.Command, args []string) {
 		switch args[0] {
 		case "yaml":
