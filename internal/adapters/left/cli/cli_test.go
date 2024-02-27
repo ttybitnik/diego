@@ -45,7 +45,7 @@ var cases = []struct {
 	model     string
 	golden    string
 }{
-	// {"GoodreadsLibrary", []string{"library", "invalid", "empty"}, []bool{false, true, true}, domain.GoodreadsLibrary, "library"},
+	{"GoodreadsLibrary", []string{"library", "invalid", "empty"}, []bool{false, true, true}, domain.GoodreadsLibrary, "library"},
 	{"ImdbList", []string{"list", "invalid", "empty"}, []bool{false, true, true}, domain.ImdbList, "list"},
 	{"ImdbRatings", []string{"ratings", "invalid", "empty"}, []bool{false, true, true}, domain.ImdbRatings, "ratings"},
 	{"ImdbWatchlist", []string{"watchlist", "invalid", "empty"}, []bool{false, true, true}, domain.ImdbWatchlist, "watchlist"},
@@ -64,9 +64,9 @@ func serviceSubdirAndFormat(t *testing.T, command string) (string, string) {
 	var subdir, format string
 
 	switch {
-	// case strings.HasPrefix(command, "Goodreads"):
-	// 	subdir = "goodreads/"
-	// 	format = ".csv"
+	case strings.HasPrefix(command, "Goodreads"):
+		subdir = "goodreads/"
+		format = ".csv"
 	case strings.HasPrefix(command, "Imdb"):
 		subdir = "imdb/"
 		format = ".csv"

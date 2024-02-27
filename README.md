@@ -149,7 +149,7 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 
 - [diego completion](docs/user_guide.md#diego-completion) :: generate the autocompletion script for the specified shell
 - [diego import](docs/user_guide.md#diego-import) :: import data from various services into Hugo
-  <!-- - [diego import goodreads](docs/user_guide.md#diego-import-goodreads) :: import data from Goodreads -->
+  - [diego import goodreads](docs/user_guide.md#diego-import-goodreads) :: import data from Goodreads
   - [diego import imdb](docs/user_guide.md#diego-import-imdb) :: import data from IMDb
   - [diego import letterboxd](docs/user_guide.md#diego-import-letterboxd) :: import data from Letterboxd
   - [diego import spotify](docs/user_guide.md#diego-import-spotify) :: import data from Spotify
@@ -166,7 +166,7 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 
 ## Supported Services and Files
 
-<!-- - [Goodreads](docs/user_guide.md#goodreads) -->
+- [Goodreads](docs/user_guide.md#goodreads)
 - [IMDb](docs/user_guide.md#imdb)
 - [Letterboxd](docs/user_guide.md#letterboxd)
 - [Spotify](docs/user_guide.md#spotify)

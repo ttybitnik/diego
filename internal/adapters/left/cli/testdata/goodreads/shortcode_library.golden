@@ -1,0 +1,24 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_goodreads_library "name" }}
+    <tr>
+      <td>
+	<strong>{{ .name }}</strong>
+      </td>
+      <td>
+	{{ .author }}
+      </td>
+      <td>
+	{{ .myrating }}
+      </td>
+      <td>
+	{{ .yearpublished }}
+      </td>
+      <td>
+	<a href="{{ .url }}">goodreads</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

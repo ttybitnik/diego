@@ -116,20 +116,20 @@ diego help [command] [flags]
 
 Import data from various services into Hugo.
 
-<!-- ### `diego import goodreads` -->
+### `diego import goodreads`
 
-<!-- Import data from Goodreads. -->
+Import data from Goodreads.
 
-<!-- ``` -->
-<!-- diego import goodreads {library} -i file [flags] -->
-<!-- ``` -->
+```
+diego import goodreads {library} -i file [flags]
+```
 
-<!-- **Examples** -->
+**Examples**
 
-<!-- ``` -->
-<!-- diego import goodreads library -i library.csv -->
-<!-- diego i g library -i library.csv --all --scrape --shortcode -->
-<!-- ``` -->
+```
+diego import goodreads library -i library.csv
+diego i g library -i library.csv --all --scrape --shortcode
+```
 
 ### `diego import imdb`
 
@@ -378,19 +378,19 @@ diego:
 
 List of current supported services and files with data samples.
 
-<!-- ### Goodreads -->
+### Goodreads
 
-<!-- Official Goodreads supported files. -->
+Official Goodreads supported files.
 
-<!-- **goodreads_library.csv** -->
-<!-- ```csv -->
-<!-- Id,Name,Author,Author l-f,Additional Authors,ISBN,ISBN13,My Rating,Average Rating,Publisher,Binding,Number of Pages,Year Published,Year,Date Read,Date Added,Bookshelves,Bookshelves with positions,Exclusive Shelf,My Review,Spoiler,Private Notes,Read Count,Owned Copies -->
-<!-- 517435,Memórias do Subsolo,Fyodor Dostoevsky,"Dostoevsky, Fyodor","Boris Schnaiderman, Fiódor Dostoyevski","=""8573261854""","=""9788573261851""",0,4.18,Editora 34,Paperback,152,2009,1864,,2018/01/03,favorites,favorites (#20),read,,,,1,0 -->
-<!-- 13614950,Ein Brasilianer in Berlin,João Ubaldo Ribeiro,"Ribeiro, João Ubaldo",,"=""3939455040""","=""9783939455042""",0,3.92,Suhrkamp,Paperback,,2017,1994,2020/10/13,2020/10/13,favorites,favorites (#11),read,,,,1,0 -->
-<!-- 25587882,Mastering Emacs,Mickey Petersen,"Petersen, Mickey",,"=""""","=""""",0,4.16,,ebook,314,2022,2015,2023/01/22,2023/01/22,,,read,,,,1,0 -->
-<!-- ``` -->
+**goodreads_library.csv**
+```csv
+Id,Name,Author,Author l-f,Additional Authors,ISBN,ISBN13,My Rating,Average Rating,Publisher,Binding,Number of Pages,Year Published,Year,Date Read,Date Added,Bookshelves,Bookshelves with positions,Exclusive Shelf,My Review,Spoiler,Private Notes,Read Count,Owned Copies
+517435,Memórias do Subsolo,Fyodor Dostoevsky,"Dostoevsky, Fyodor","Boris Schnaiderman, Fiódor Dostoyevski","=""8573261854""","=""9788573261851""",0,4.18,Editora 34,Paperback,152,2009,1864,,2018/01/03,favorites,favorites (#20),read,,,,1,0
+13614950,Ein Brasilianer in Berlin,João Ubaldo Ribeiro,"Ribeiro, João Ubaldo",,"=""3939455040""","=""9783939455042""",0,3.92,Suhrkamp,Paperback,,2017,1994,2020/10/13,2020/10/13,favorites,favorites (#11),read,,,,1,0
+25587882,Mastering Emacs,Mickey Petersen,"Petersen, Mickey",,"=""""","=""""",0,4.16,,ebook,314,2022,2015,2023/01/22,2023/01/22,,,read,,,,1,0
+```
 
-<!-- Optional `--scrape` fields: *ImgUrl* -->
+Optional `--scrape` fields: *ImgUrl*
 
 ### IMDb
 

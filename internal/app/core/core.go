@@ -24,11 +24,11 @@ import (
 	"github.com/ttybitnik/diego/internal/app/domain"
 	"github.com/ttybitnik/diego/internal/app/social"
 
-	// "github.com/ttybitnik/diego/internal/app/social/goodreads"
 	"math/rand"
 	"sync"
 	"time"
 
+	"github.com/ttybitnik/diego/internal/app/social/goodreads"
 	"github.com/ttybitnik/diego/internal/app/social/imdb"
 	"github.com/ttybitnik/diego/internal/app/social/letterboxd"
 	"github.com/ttybitnik/diego/internal/app/social/spotify"
@@ -45,7 +45,7 @@ import (
 const (
 	maxAsyncHTTP = 30
 
-	// goodreadsLibraryLen = 24
+	goodreadsLibraryLen = 24
 
 	imdbListLen      = 17
 	imdbRatingsLen   = 13
@@ -75,12 +75,12 @@ func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 	var mLen int
 
 	switch dc.Model {
-	// case domain.GoodreadsLibrary:
-	// 	sm = &goodreads.Library{}
-	// 	mLen = goodreadsLibraryLen
-	// 	if dc.All {
-	// 		sm = &goodreads.LibraryComplete{}
-	// 	}
+	case domain.GoodreadsLibrary:
+		sm = &goodreads.Library{}
+		mLen = goodreadsLibraryLen
+		if dc.All {
+			sm = &goodreads.LibraryComplete{}
+		}
 	case domain.ImdbList:
 		sm = &imdb.List{}
 		mLen = imdbListLen

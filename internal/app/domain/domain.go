@@ -19,7 +19,7 @@
 package domain
 
 const (
-	// GoodreadsLibrary = "diego_goodreads_library"
+	GoodreadsLibrary = "diego_goodreads_library"
 
 	ImdbList      = "diego_imdb_list"
 	ImdbRatings   = "diego_imdb_ratings"
