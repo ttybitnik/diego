@@ -6,7 +6,7 @@ Diego integrates with Hugo as a CLI tool to assist in importing and utilizing ex
 
 [![release](https://img.shields.io/github/v/release/ttybitnik/diego)](https://github.com/ttybitnik/diego/releases/latest)
 [![ci/cd](https://github.com/ttybitnik/diego/actions/workflows/cicd.yaml/badge.svg)](https://github.com/ttybitnik/diego/actions/workflows/cicd.yaml)
-[![go report card](https://goreportcard.com/badge/github.com/ttybitnik/diego)](https://goreportcard.com/badge/github.com/ttybitnik/diego)
+[![go report card](https://goreportcard.com/badge/github.com/ttybitnik/diego)](https://goreportcard.com/report/github.com/ttybitnik/diego)
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 <!-- [!["buy me a coffee"](https://img.shields.io/badge/buy_me_a_coffee-ttybitnik-FFDD00?logo=buymeacoffee&labelColor=gray&logoColor=FFFFFF)](https://buymeacoffee.com/ttybitnik) -->
 
