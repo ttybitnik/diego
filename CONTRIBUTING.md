@@ -19,6 +19,6 @@ Execute `make run` to test and check your changes. If you do not have `golangci-
 
 ## Diego Internals
 
-Diego follows the **Port and Adapters Architecture (Hexagonal)**. Refer to commit [0e48f4d](#placeholder) for an overview of the files that need to be changed to implement support for a new service/file.
+Diego follows the **Port and Adapters Architecture (Hexagonal)**. Refer to commit [3eb8bf8](https://github.com/ttybitnik/diego/commit/3eb8bf8c4ff034c0383a258be3eda1b966aa1e86) for an overview of the files that need to be changed to implement support for a new service/file.
 
 [Conventional Commits](https://www.conventionalcommits.org/) messages are welcome but not mandatory, since each pull request will be squashed during the merge process. They are used to automate [Semantic Versioning](https://semver.org/) for the releases.
