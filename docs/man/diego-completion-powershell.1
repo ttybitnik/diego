@@ -1,0 +1,49 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-completion-powershell - Generate the autocompletion script for powershell
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego completion powershell [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Generate the autocompletion script for powershell.
+
+.PP
+To load completions in your current shell session:
+
+.EX
+diego completion powershell | Out-String | Invoke-Expression
+
+.EE
+
+.PP
+To load completions for every new session, add the output of the above command
+to your powershell profile.
+
+
+.SH OPTIONS
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for powershell
+
+.PP
+\fB--no-descriptions\fP[=false]
+	disable completion descriptions
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-completion(1)\fP

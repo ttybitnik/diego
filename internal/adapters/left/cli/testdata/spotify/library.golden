@@ -1,0 +1,29 @@
+- tracks:
+    - artist: Modena City Ramblers
+      album: Tracce Clandestine
+      track: Crookedwood Polkas
+      uri: spotify:track:4pQF8GvUIT2CKmoJG209ak
+      trackurl: https://open.spotify.com/track/4pQF8GvUIT2CKmoJG209ak
+    - artist: Jorge Ben Jor
+      album: A Tabua De Esmeralda
+      track: O Homem Da Gravata Florida
+      uri: spotify:track:0iPjvpxh6XE9Zo2smrWDhw
+      trackurl: https://open.spotify.com/track/0iPjvpxh6XE9Zo2smrWDhw
+    - artist: Lou Reed
+      album: The Raven
+      track: Call on Me (feat. Laurie Anderson)
+      uri: spotify:track:2WSnY39N88UvTgt1YhvVFA
+      trackurl: https://open.spotify.com/track/2WSnY39N88UvTgt1YhvVFA
+  albums:
+    - artist: SEATBELTS
+      album: 「COWBOY BEBOP」オリジナルサウンドトラック
+      uri: spotify:album:6cYPbwsAFAcddFuGeXMR7l
+      albumurl: https://open.spotify.com/album/6cYPbwsAFAcddFuGeXMR7l
+    - artist: Lykke Li
+      album: Youth Novels
+      uri: spotify:album:65ain97ltDAxldCiOcBtHo
+      albumurl: https://open.spotify.com/album/65ain97ltDAxldCiOcBtHo
+    - artist: Zaz
+      album: Spotify Sessions
+      uri: spotify:album:4Oun04R6kdukRGC8djhzHG
+      albumurl: https://open.spotify.com/album/4Oun04R6kdukRGC8djhzHG

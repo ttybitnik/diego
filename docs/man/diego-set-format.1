@@ -1,0 +1,41 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-set-format - Set ouput format for the Hugo data file (default "yaml")
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego set format {yaml|json|toml|xml} [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Set ouput format for the Hugo data file (default "yaml").
+
+
+.SH OPTIONS
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for format
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH EXAMPLE
+.EX
+diego set format yaml
+diego s format json
+
+.EE
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-set(1)\fP

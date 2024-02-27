@@ -1,0 +1,24 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_spotify_playlist.playlists "name" }}
+    <tr>
+      <td>
+	<strong>{{ .name }}</strong>
+      </td>
+      <td>
+	{{ .items.track.trackname }}
+      </td>
+      <td>
+	{{ .items.track.artistname }}
+      </td>
+      <td>
+	{{ .items.track.albumname }}
+      </td>
+      <td>
+	<a href="{{ .items.track.trackurl }}">Spotify</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

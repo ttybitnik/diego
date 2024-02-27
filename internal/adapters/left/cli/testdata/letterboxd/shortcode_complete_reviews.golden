@@ -1,0 +1,27 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_letterboxd_reviews "name" }}
+    <tr>
+      <td>
+	<strong>{{ .name }}</strong>
+      </td>
+      <td>
+	{{ .year }}
+      </td>
+      <td>
+	{{ .date }}
+      </td>
+      <td>
+	{{ .rating }}
+      </td>
+      <td>
+	{{ .review }}
+      </td>
+      <td>
+	<a href="{{ .url }}">Letterboxd</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

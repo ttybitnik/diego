@@ -1,0 +1,86 @@
+{
+    "playlists": [
+	{
+	    "name": "A Sétima",
+	    "lastModifiedDate": "2020-02-21",
+	    "items": [
+		{
+		    "track": {
+			"trackName": "Le tourbillon",
+			"artistName": "Jeanne Moreau",
+			"albumName": "Le tourbillon de ma vie (Best Of 2017)",
+			"trackUri": "spotify:track:0ZRnvyA5MxbgTCfWRw3YU4"
+		    },
+		    "episode": null,
+		    "localTrack": null,
+		    "addedDate": "2018-09-09"
+		},
+		{
+		    "track": {
+			"trackName": "Cucurrucucu Paloma - Ao Vivo",
+			"artistName": "Caetano Veloso",
+			"albumName": "Fina Estampa Ao Vivo",
+			"trackUri": "spotify:track:2jIyIMXAHeHSz3ip6ccMFl"
+		    },
+		    "episode": null,
+		    "localTrack": null,
+		    "addedDate": "2018-09-10"
+		},
+		{
+		    "track": {
+			"trackName": "Preciso Me Encontrar",
+			"artistName": "Cartola",
+			"albumName": "Raizes Do Samba",
+			"trackUri": "spotify:track:1op7nM2R2M6FAU6dSCTRWV"
+		    },
+		    "episode": null,
+		    "localTrack": null,
+		    "addedDate": "2018-09-09"
+		}
+	    ],
+	    "description": "O cinema e a música: eternodevir.com&#x2F;a-setima&#x2F;",
+	    "numberOfFollowers": 4
+	},
+	{
+	    "name": "Rendez-vous 1408",
+	    "lastModifiedDate": "2020-02-21",
+	    "items": [
+		{
+		    "track": {
+			"trackName": "Love Will Tear Us Apart - 2010 Remaster",
+			"artistName": "Joy Division",
+			"albumName": "Substance",
+			"trackUri": "spotify:track:1r8oPEXqnhUVgkUkJNqEuF"
+		    },
+		    "episode": null,
+		    "localTrack": null,
+		    "addedDate": "2016-11-19"
+		},
+		{
+		    "track": {
+			"trackName": "Tear You Apart",
+			"artistName": "She Wants Revenge",
+			"albumName": "She Wants Revenge",
+			"trackUri": "spotify:track:5uahjiKiYXxGlF4GdnKPNv"
+		    },
+		    "episode": null,
+		    "localTrack": null,
+		    "addedDate": "2016-11-19"
+		},
+		{
+		    "track": {
+			"trackName": "Who Can It Be Now?",
+			"artistName": "Men At Work",
+			"albumName": "The Essential Men At Work",
+			"trackUri": "spotify:track:29r3fDexnrto7WABfpblNH"
+		    },
+		    "episode": null,
+		    "localTrack": null,
+		    "addedDate": "2016-11-19"
+		}
+	    ],
+	    "description": "Festa de 5 (-:",
+	    "numberOfFollowers": 3
+	}
+  ]
+}

@@ -1,0 +1,41 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-set-shortcode - Enable or disable the shortcode flag by default
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego set shortcode {true|false|1|0|enabled|disabled} [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Enable or disable the shortcode flag by default.
+
+
+.SH OPTIONS
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for shortcode
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH EXAMPLE
+.EX
+diego set shortcode true
+diego s shortcode false
+
+.EE
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-set(1)\fP

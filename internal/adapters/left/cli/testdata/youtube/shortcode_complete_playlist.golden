@@ -1,0 +1,18 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_youtube_playlist "timestamp" }}
+    <tr>
+      <td>
+	<strong>{{ .timestamp }}</strong>
+      </td>
+      <td>
+	{{ .id }}
+      </td>
+      <td>
+	<a href="{{ .url }}">YouTube</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

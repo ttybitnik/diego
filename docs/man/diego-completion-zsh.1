@@ -1,0 +1,72 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-completion-zsh - Generate the autocompletion script for zsh
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego completion zsh [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Generate the autocompletion script for the zsh shell.
+
+.PP
+If shell completion is not already enabled in your environment you will need
+to enable it.  You can execute the following once:
+
+.EX
+echo "autoload -U compinit; compinit" >> ~/.zshrc
+
+.EE
+
+.PP
+To load completions in your current shell session:
+
+.EX
+source <(diego completion zsh)
+
+.EE
+
+.PP
+To load completions for every new session, execute once:
+
+.SS Linux:
+.EX
+diego completion zsh > "${fpath[1]}/_diego"
+
+.EE
+
+.SS macOS:
+.EX
+diego completion zsh > $(brew --prefix)/share/zsh/site-functions/_diego
+
+.EE
+
+.PP
+You will need to start a new shell for this setup to take effect.
+
+
+.SH OPTIONS
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for zsh
+
+.PP
+\fB--no-descriptions\fP[=false]
+	disable completion descriptions
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-completion(1)\fP

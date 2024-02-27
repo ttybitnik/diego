@@ -1,0 +1,69 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-import-youtube - Import data from YouTube
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego import youtube {playlist|subscriptions} -i file [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Import data from YouTube.
+
+
+.SH OPTIONS
+.PP
+\fB--all\fP[=false]
+	import every available field from CSV file
+
+.PP
+\fB--format\fP="yaml"
+	ouput format for the Hugo data file
+
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for youtube
+
+.PP
+\fB--hugodir\fP="."
+	path to the Hugo directory
+
+.PP
+\fB-i\fP, \fB--input\fP=""
+	path to the CSV file (required)
+
+.PP
+\fB--overwrite\fP[=false]
+	overwrite existent output data file
+
+.PP
+\fB--scrape\fP[=false]
+	fetch additional data from CSV links using HTTP
+
+.PP
+\fB--shortcode\fP[=false]
+	generate a shortcode template for Hugo
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH EXAMPLE
+.EX
+diego import youtube subscriptions -i subscriptions.csv
+diego i y playlist -i playlist.csv --all --scrape --shortcode
+
+.EE
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-import(1)\fP

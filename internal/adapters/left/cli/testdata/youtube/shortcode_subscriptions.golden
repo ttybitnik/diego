@@ -1,0 +1,15 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_youtube_subscriptions "name" }}
+    <tr>
+      <td>
+	<strong>{{ .channelid }}</strong>
+      </td>
+      <td>
+	<a href="{{ .channelurl }}">YouTube</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

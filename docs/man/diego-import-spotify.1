@@ -1,0 +1,65 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-import-spotify - Import data from Spotify
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego import spotify {library|playlist} -i file [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Import data from Spotify.
+
+
+.SH OPTIONS
+.PP
+\fB--all\fP[=false]
+	import every available field from JSON file
+
+.PP
+\fB--format\fP="yaml"
+	ouput format for the Hugo data file
+
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for spotify
+
+.PP
+\fB--hugodir\fP="."
+	path to the Hugo directory
+
+.PP
+\fB-i\fP, \fB--input\fP=""
+	path to the JSON file (required)
+
+.PP
+\fB--overwrite\fP[=false]
+	overwrite existent output data file
+
+.PP
+\fB--shortcode\fP[=false]
+	generate a shortcode template for Hugo
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH EXAMPLE
+.EX
+diego import spotify library -i library.json
+diego i s playlist -i playlist.json --all --shortcode
+
+.EE
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-import(1)\fP

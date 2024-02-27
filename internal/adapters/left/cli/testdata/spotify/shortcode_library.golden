@@ -1,0 +1,38 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_spotify_library.tracks "track" }}
+    <tr>
+      <td>
+	<strong>{{ .track }}</strong>
+      </td>
+      <td>
+	{{ .artist }}
+      </td>
+      <td>
+	{{ .album }}
+      </td>
+      <td>
+	<a href="{{ .trackurl }}">Spotify</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_spotify_library.albums "album" }}
+    <tr>
+      <td>
+	<strong>{{ .album }}</strong>
+      </td>
+      <td>
+	{{ .artist }}
+      </td>
+      <td>
+	<a href="{{ .albumurl }}">Spotify</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

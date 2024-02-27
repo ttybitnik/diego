@@ -1,0 +1,18 @@
+- name: Hable con ella
+  directors: Pedro Almodóvar
+  year: "2002"
+  yourrating: "10"
+  imdbrating: "7.9"
+  url: https://www.imdb.com/title/tt0287467/
+- name: Il deserto rosso
+  directors: Michelangelo Antonioni
+  year: "1964"
+  yourrating: "10"
+  imdbrating: "7.5"
+  url: https://www.imdb.com/title/tt0058003/
+- name: Fa yeung nin wah
+  directors: Kar-Wai Wong
+  year: "2000"
+  yourrating: "10"
+  imdbrating: "8.1"
+  url: https://www.imdb.com/title/tt0118694/

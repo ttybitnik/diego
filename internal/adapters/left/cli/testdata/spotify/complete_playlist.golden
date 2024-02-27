@@ -1,0 +1,65 @@
+- playlists:
+    - name: A Sétima
+      lastmodifieddate: "2020-02-21"
+      items:
+        - track:
+            trackname: Le tourbillon
+            artistname: Jeanne Moreau
+            albumname: Le tourbillon de ma vie (Best Of 2017)
+            trackuri: spotify:track:0ZRnvyA5MxbgTCfWRw3YU4
+            trackurl: https://open.spotify.com/track/0ZRnvyA5MxbgTCfWRw3YU4
+          episode: null
+          localtrack: null
+          addeddate: "2018-09-09"
+        - track:
+            trackname: Cucurrucucu Paloma - Ao Vivo
+            artistname: Caetano Veloso
+            albumname: Fina Estampa Ao Vivo
+            trackuri: spotify:track:2jIyIMXAHeHSz3ip6ccMFl
+            trackurl: https://open.spotify.com/track/2jIyIMXAHeHSz3ip6ccMFl
+          episode: null
+          localtrack: null
+          addeddate: "2018-09-10"
+        - track:
+            trackname: Preciso Me Encontrar
+            artistname: Cartola
+            albumname: Raizes Do Samba
+            trackuri: spotify:track:1op7nM2R2M6FAU6dSCTRWV
+            trackurl: https://open.spotify.com/track/1op7nM2R2M6FAU6dSCTRWV
+          episode: null
+          localtrack: null
+          addeddate: "2018-09-09"
+      description: 'O cinema e a música: eternodevir.com&#x2F;a-setima&#x2F;'
+      numberoffollowers: 4
+    - name: Rendez-vous 1408
+      lastmodifieddate: "2020-02-21"
+      items:
+        - track:
+            trackname: Love Will Tear Us Apart - 2010 Remaster
+            artistname: Joy Division
+            albumname: Substance
+            trackuri: spotify:track:1r8oPEXqnhUVgkUkJNqEuF
+            trackurl: https://open.spotify.com/track/1r8oPEXqnhUVgkUkJNqEuF
+          episode: null
+          localtrack: null
+          addeddate: "2016-11-19"
+        - track:
+            trackname: Tear You Apart
+            artistname: She Wants Revenge
+            albumname: She Wants Revenge
+            trackuri: spotify:track:5uahjiKiYXxGlF4GdnKPNv
+            trackurl: https://open.spotify.com/track/5uahjiKiYXxGlF4GdnKPNv
+          episode: null
+          localtrack: null
+          addeddate: "2016-11-19"
+        - track:
+            trackname: Who Can It Be Now?
+            artistname: Men At Work
+            albumname: The Essential Men At Work
+            trackuri: spotify:track:29r3fDexnrto7WABfpblNH
+            trackurl: https://open.spotify.com/track/29r3fDexnrto7WABfpblNH
+          episode: null
+          localtrack: null
+          addeddate: "2016-11-19"
+      description: 'Festa de 5 (-:'
+      numberoffollowers: 3

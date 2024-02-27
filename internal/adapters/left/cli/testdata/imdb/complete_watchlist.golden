@@ -1,0 +1,51 @@
+- name: Killers of the Flower Moon
+  directors: Martin Scorsese
+  year: "2023"
+  created: "2023-12-25"
+  position: "222"
+  url: https://www.imdb.com/title/tt5537002/
+  const: tt5537002
+  modified: "2023-12-25"
+  description: ""
+  titletype: movie
+  imdbrating: "7.8"
+  runtimemins: "206"
+  genres: Crime, Drama, History, Mystery, Romance, Western
+  numvotes: "139774"
+  releasedate: "2023-05-20"
+  yourrating: ""
+  daterated: ""
+- name: Kuolleet lehdet
+  directors: Aki Kaurismäki
+  year: "2023"
+  created: "2023-12-25"
+  position: "223"
+  url: https://www.imdb.com/title/tt21027780/
+  const: tt21027780
+  modified: "2023-12-25"
+  description: ""
+  titletype: movie
+  imdbrating: "7.6"
+  runtimemins: "81"
+  genres: Comedy, Drama
+  numvotes: "6786"
+  releasedate: "2023-05-23"
+  yourrating: ""
+  daterated: ""
+- name: Elis & Tom, só tinha de ser com você
+  directors: Roberto de Oliveira, Jom Tob Azulay
+  year: "2023"
+  created: "2023-12-25"
+  position: "224"
+  url: https://www.imdb.com/title/tt26255088/
+  const: tt26255088
+  modified: "2023-12-25"
+  description: ""
+  titletype: movie
+  imdbrating: "7.9"
+  runtimemins: "100"
+  genres: Documentary
+  numvotes: "240"
+  releasedate: "2023-08-24"
+  yourrating: ""
+  daterated: ""

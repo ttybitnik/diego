@@ -1,0 +1,24 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_imdb_list "name" }}
+    <tr>
+      <td>
+	<strong>{{ .name }}</strong>
+      </td>
+      <td>
+	{{ .directors }}
+      </td>
+      <td>
+	{{ .year }}
+      </td>
+      <td>
+	{{ .yourrating }}
+      </td>
+      <td>
+	<a href="{{ .url }}">IMDb</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

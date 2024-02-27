@@ -1,0 +1,41 @@
+.nh
+.TH "DIEGO" "1" "Feb 2024" "diego manual" "User Commands"
+
+.SH NAME
+.PP
+diego-set-all - Enable or disable the all flag by default
+
+
+.SH SYNOPSIS
+.PP
+\fBdiego set all {true|false|1|0|enabled|disabled} [flags]\fP
+
+
+.SH DESCRIPTION
+.PP
+Enable or disable the all flag by default.
+
+
+.SH OPTIONS
+.PP
+\fB-h\fP, \fB--help\fP[=false]
+	help for all
+
+
+.SH OPTIONS INHERITED FROM PARENT COMMANDS
+.PP
+\fB--config\fP=""
+	config file (default is $HOME/.config/diego/config.yaml)
+
+
+.SH EXAMPLE
+.EX
+diego set all true
+diego s all false
+
+.EE
+
+
+.SH SEE ALSO
+.PP
+\fBdiego-set(1)\fP
