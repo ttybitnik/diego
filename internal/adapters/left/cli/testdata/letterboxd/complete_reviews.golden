@@ -1,1 +1,27 @@
-[]
+- name: Fallen Leaves
+  year: "2023"
+  url: https://boxd.it/5wluaZ
+  date: "2024-01-07"
+  rating: "4"
+  rewatch: ""
+  review: Lorem Ipsum!
+  tags: ""
+  watcheddate: "2024-01-06"
+- name: Goodbye, Dragon Inn
+  year: "2003"
+  url: https://boxd.it/5E4WzB
+  date: "2024-01-21"
+  rating: "4"
+  rewatch: ""
+  review: Lorem Ipsum!
+  tags: ""
+  watcheddate: "2024-01-20"
+- name: Pictures of Ghosts
+  year: "2023"
+  url: https://boxd.it/5FB5dd
+  date: "2024-01-24"
+  rating: "5"
+  rewatch: ""
+  review: Lorem Ipsum!
+  tags: ""
+  watcheddate: "2024-01-23"
