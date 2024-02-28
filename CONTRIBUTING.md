@@ -38,3 +38,12 @@ Diego follows the **Port and Adapters Architecture (Hexagonal)**. Refer to commi
 - `make deploy` :: lint, test, build, and deploy the application locally
 - `make update` :: update module dependencies and call `make run`
 - `make golden` :: generate/update golden files using current test results
+
+### Generate Docs
+
+To automate the process of updating the `docs/help` and `docs/man` files, set the `DIEGO_GENDOCS` environment variable to `1` before building and running the application.
+
+The recommended approach is to temporarily set the variable by using the following command whenever necessary:
+```bash
+DIEGO_GENDOCS=1 make run
+```
