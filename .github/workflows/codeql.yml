@@ -27,7 +27,6 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
     # Runner size impacts CodeQL analysis time. To learn more, please see:
     #   - https://gh.io/recommended-hardware-resources-for-running-codeql
     #   - https://gh.io/supported-runners-and-hardware-resources
@@ -40,8 +39,8 @@ jobs:
       security-events: write
 
       # only required for workflows in private repositories
-      actions: read
-      contents: read
+      # actions: read
+      # contents: read
 
     strategy:
       fail-fast: false
