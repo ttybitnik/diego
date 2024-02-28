@@ -176,9 +176,9 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 
 To request support for a new service or file, submit a [feature request](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) with a small sample of the official exported file.
 
-To contribute to `diego` development, refer to the [contributing instructions](CONTRIBUTING.md).
-
 In case of unexpected behavior, please open a [bug report](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=).
+
+To contribute to `diego` development, refer to the [contributing instructions](CONTRIBUTING.md).
 
 # License
 
