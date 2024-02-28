@@ -12,16 +12,7 @@
 name: "codeql"
 
 on:
-  push:
-    branches: [ "master" ]
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-  pull_request:
-    branches: [ "master" ]
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
+  workflow_call:
   schedule:
     - cron: '34 8 * * 4'
 

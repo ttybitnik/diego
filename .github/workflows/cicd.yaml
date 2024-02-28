@@ -78,3 +78,8 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  codeql-analyze:
+    permissions:
+      security-events: write
+    uses: ./.github/workflows/codeql.yaml
