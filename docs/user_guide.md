@@ -453,6 +453,9 @@ Optional `--scrape` fields: *Director*, *ImgUrl*
 **letterboxd_reviews.csv**
 ```csv
 Date,Name,Year,Letterboxd URI,Rating,Rewatch,Review,Tags,Watched Date
+2024-01-07,Fallen Leaves,2023,https://boxd.it/5wluaZ,4,,"Lorem Ipsum!",,2024-01-06
+2024-01-21,"Goodbye, Dragon Inn",2003,https://boxd.it/5E4WzB,4,,"Lorem Ipsum!",,2024-01-20
+2024-01-24,Pictures of Ghosts,2023,https://boxd.it/5FB5dd,5,,"Lorem Ipsum!",,2024-01-23
 ```
 
 Optional `--scrape` fields: *Director*, *ImgUrl*
