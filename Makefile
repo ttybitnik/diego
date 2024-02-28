@@ -5,7 +5,7 @@ test: lint
 	go test -cover ./internal/adapters/left/cli
 
 build: test
-	go build -o diego cmd/main.go
+	go build -o diego main.go
 
 run: build
 	./diego
