@@ -68,7 +68,7 @@ jobs:
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
 
-    # Install Go so we don't use an out of date version to auto-build
+    # Install Go from go.mod to avoid Autobuild conflict
     # https://github.com/github/codeql-action/issues/1842#issuecomment-1704398087
     - name: Install Go
       uses: actions/setup-go@v4
