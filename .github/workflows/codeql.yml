@@ -26,7 +26,7 @@ on:
     - cron: '34 8 * * 4'
 
 jobs:
-  analyze:
+  codeql-analyze:
     # Runner size impacts CodeQL analysis time. To learn more, please see:
     #   - https://gh.io/recommended-hardware-resources-for-running-codeql
     #   - https://gh.io/supported-runners-and-hardware-resources
