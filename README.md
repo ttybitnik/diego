@@ -31,7 +31,7 @@ For real usage examples, you can check the collections section on my personal **
 
 # Installation
 
-Installing `diego` is easy. You can either compile it from source or download the official binaries from the [releases](https://github.com/ttybitnik/diego/releases).
+You can either compile `diego` from source or download the official binaries from the [releases](https://github.com/ttybitnik/diego/releases).
 
 > [!TIP]
 > After following the instructions for your preferred installation method, run `diego -v` to test the installed version.
