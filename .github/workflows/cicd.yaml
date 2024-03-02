@@ -13,9 +13,10 @@ on:
       - '**.md'
       - 'docs/**'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+# Not necessary for now and it is canceling the release-please checks
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
 
 jobs:
   release-please:
