@@ -46,7 +46,7 @@ Date,Name,Year,Letterboxd URI
 2021-12-14,Blade Runner,1982,https://boxd.it/2bcA
 ```
 
-4. Run `diego import letterboxd films` passing the path to the `films.csv` in the `-i` (`--input`) flag. By default, `diego` assumes the current working path (`.`) as the Hugo directory. `diego` then generates the Hugo data file under its `data` directory.
+4. Run `diego import letterboxd films` passing the path to the `films.csv` in the `-i` (`--input`) flag. By default, `diego` assumes the current working path (`.`) as the Hugo directory. `diego` then generates the Hugo data file under the `data` directory.
 
 ```txt
 $ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv
@@ -55,7 +55,7 @@ Hugo data file created: data/diego_letterboxd_films.yaml
 ```
 
 ```yaml
-# data/diego_letterboxd_diary.yaml
+# data/diego_letterboxd_films.yaml
 - name: Sans Soleil
   year: "1983"
   url: https://boxd.it/28B8
@@ -70,18 +70,53 @@ Hugo data file created: data/diego_letterboxd_films.yaml
   date: "2021-12-14"
 ```
 
-4.1 Optionally, since the Letterboxd `films.csv` does not include director or poster information, append the `--scrape` flag to the command to fetch this additional data for each entry.
-
-> [!IMPORTANT]
-> The `--scrape` flag is designed to be as lightweight and minimal as possible. It only fetches missing textual information from the URLs in the input file. To understand how it works and the specific fields retrieved for each command, read the [Diego User Guide](user_guide.md).
+4.1 Optionally, to generate an Hugo shortcode template for the data file, append the `--shortcode` flag to the command. This creates the Hugo shortcode template under the `layouts/shortcodes` directory.
 
 ```txt
-$ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --scrape
+$ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --shortcode
+Importing diego_letterboxd_films from: examples/silo/letterboxd_likes_films.csv
+Hugo data file created: data/diego_letterboxd_films.yaml
+Hugo shortcode template created: layouts/shortcodes/diego_letterboxd_films.html
+```
+
+```html
+<!-- layouts/shortcodes/diego_letterboxd_films.html -->
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_letterboxd_films "name" }}
+    <tr>
+      <td>
+	<strong>{{ .name }}</strong>
+      </td>
+      <td>
+	{{ .year }}
+      </td>
+      <td>
+	{{ .date }}
+      </td>
+      <td>
+	<a href="{{ .url }}">Letterboxd</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+```
+
+4.2 Optionally, since the Letterboxd `films.csv` does not include director or poster information, append the `--scrape` flag to the command to fetch this additional data for each entry.
+
+> [!IMPORTANT]
+> The `--scrape` flag is designed to be as lightweight and minimal as possible. It only fetches missing textual information from the URLs in the input file. To understand how it works and the specific fields retrieved for each command, read the [Diego User Guide](user_guide.md) before using this flag.
+
+```txt
+$ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --shortcode --scrape
 Importing diego_letterboxd_films from: examples/silo/letterboxd_likes_films.csv
 Fetching "https://boxd.it/bv4u"...
 Fetching "https://boxd.it/28B8"...
 Fetching "https://boxd.it/2bcA"...
 Hugo data file created: data/diego_letterboxd_films.yaml
+Hugo shortcode template created: layouts/shortcodes/diego_letterboxd_films.html
 ```
 
 ```yaml
@@ -106,48 +141,8 @@ Hugo data file created: data/diego_letterboxd_films.yaml
   date: "2021-12-14"
 ```
 
-4.2 Optionally, to generate an Hugo shortcode template for the data file, append the `--shortcode` flag to the command. This creates the Hugo shortcode template under its `layouts/shortcodes` directory.
-
-```txt
-$ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --scrape --shortcode
-Importing diego_letterboxd_films from: examples/silo/letterboxd_likes_films.csv
-Fetching "https://boxd.it/bv4u"...
-Fetching "https://boxd.it/28B8"...
-Fetching "https://boxd.it/2bcA"...
-Hugo data file created: data/diego_letterboxd_films.yaml
-Hugo shortcode template created: layouts/shortcodes/diego_letterboxd_films.html
-```
-
-```html
-<!-- layouts/shortcodes/diego_letterboxd_diary.html -->
-<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
-<table>
-  <tbody>
-    {{ range sort .Site.Data.diego_letterboxd_diary "name" }}
-    <tr>
-      <td>
-	<strong>{{ .name }}</strong>
-      </td>
-      <td>
-	{{ .year }}
-      </td>
-      <td>
-	{{ .date }}
-      </td>
-      <td>
-	{{ .rating }}
-      </td>
-      <td>
-	<a href="{{ .url }}">Letterboxd</a>
-      </td>
-    </tr>
-    {{ end }}
-  </tbody>
-</table>
-```
-
 5. To display the imported data file, call the shortcode in any Hugo page or content:
 
 ```
-{{< diego_letterboxd_diary >}}
+{{< diego_letterboxd_films >}}
 ```
