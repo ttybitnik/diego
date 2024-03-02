@@ -3,4 +3,5 @@ diego_*.yaml
 diego_*.toml
 diego_*.xml
 diego_*.json
+diego_*.html
 dist/
