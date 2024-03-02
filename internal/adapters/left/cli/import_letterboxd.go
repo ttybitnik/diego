@@ -25,10 +25,10 @@ import (
 )
 
 var letterboxdCmd = &cobra.Command{
-	Use:       "letterboxd {diary|films|reviews} -i file",
+	Use:       "letterboxd {diary|films|reviews|watchlist} -i file",
 	Aliases:   []string{"l"},
 	Args:      cobra.MatchAll(cobra.ExactArgs(1), cobra.OnlyValidArgs),
-	ValidArgs: []string{"diary", "films", "reviews"},
+	ValidArgs: []string{"diary", "films", "reviews", "watchlist"},
 	Example: "diego import letterboxd films -i films.csv\n" +
 		"diego i l diary -i diary.csv --all --scrape --shortcode",
 	Short: "Import data from Letterboxd",
@@ -49,6 +49,9 @@ var letterboxdCmd = &cobra.Command{
 			ca.cobraImport(ca.cobra)
 		case "reviews":
 			ca.cobra.model = domain.LetterboxdReviews
+			ca.cobraImport(ca.cobra)
+		case "watchlist":
+			ca.cobra.model = domain.LetterboxdWatchlist
 			ca.cobraImport(ca.cobra)
 		}
 	},

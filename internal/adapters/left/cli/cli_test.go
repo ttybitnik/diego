@@ -52,6 +52,7 @@ var cases = []struct {
 	{"LetterboxdDiary", []string{"diary", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdDiary, "diary"},
 	{"LetterboxdFilms", []string{"films", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdFilms, "films"},
 	{"LetterboxdReviews", []string{"reviews", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdReviews, "reviews"},
+	{"LetterboxdWatchlist", []string{"watchlist", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdWatchlist, "watchlist"},
 	{"SpotifyLibrary", []string{"library", "invalid", "empty"}, []bool{false, true, true}, domain.SpotifyLibrary, "library"},
 	{"SpotifyPlaylist", []string{"playlist", "invalid", "empty"}, []bool{false, true, true}, domain.SpotifyPlaylist, "playlist"},
 	{"YoutubePlaylist", []string{"playlist", "invalid", "empty"}, []bool{false, true, true}, domain.YoutubePlaylist, "playlist"},

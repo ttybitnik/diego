@@ -151,7 +151,7 @@ diego i i ratings -i ratings.csv --all --scrape --shortcode
 Import data from Letterboxd.
 
 ```
-diego import letterboxd {diary|films|reviews} -i file [flags]
+diego import letterboxd {diary|films|reviews|watchlist} -i file [flags]
 ```
 
 **Examples**
@@ -456,6 +456,16 @@ Date,Name,Year,Letterboxd URI,Rating,Rewatch,Review,Tags,Watched Date
 2024-01-07,Fallen Leaves,2023,https://boxd.it/5wluaZ,4,,"Lorem Ipsum!",,2024-01-06
 2024-01-21,"Goodbye, Dragon Inn",2003,https://boxd.it/5E4WzB,4,,"Lorem Ipsum!",,2024-01-20
 2024-01-24,Pictures of Ghosts,2023,https://boxd.it/5FB5dd,5,,"Lorem Ipsum!",,2024-01-23
+```
+
+Optional `--scrape` fields: *Director*, *ImgUrl*
+
+**letterboxd_watchlist.csv**
+```csv
+Date,Name,Year,Letterboxd URI
+2023-12-14,Vivre Sa Vie,1962,https://boxd.it/28s6
+2023-12-14,Mon Oncle,1958,https://boxd.it/2apy
+2023-12-14,Days,2020,https://boxd.it/oEE8
 ```
 
 Optional `--scrape` fields: *Director*, *ImgUrl*

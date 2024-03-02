@@ -51,9 +51,10 @@ const (
 	imdbRatingsLen   = 13
 	imdbWatchlistLen = 17
 
-	letterboxdDiaryLen   = 8
-	letterboxdFilmsLen   = 4
-	letterboxdReviewsLen = 9
+	letterboxdDiaryLen     = 8
+	letterboxdFilmsLen     = 4
+	letterboxdReviewsLen   = 9
+	letterboxdWatchlistLen = 4
 
 	spotifyLibraryLen  = 8 // TODO: implement JSON len verification
 	spotifyPlaylistLen = 1 // TODO: implement JSON len verification
@@ -116,6 +117,12 @@ func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 		mLen = letterboxdReviewsLen
 		if dc.All {
 			sm = &letterboxd.ReviewsComplete{}
+		}
+	case domain.LetterboxdWatchlist:
+		sm = &letterboxd.Watchlist{}
+		mLen = letterboxdWatchlistLen
+		if dc.All {
+			sm = &letterboxd.WatchlistComplete{}
 		}
 	case domain.SpotifyLibrary:
 		sm = &spotify.Library{}
