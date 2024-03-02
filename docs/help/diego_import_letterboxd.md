@@ -7,7 +7,7 @@ Import data from Letterboxd
 Import data from Letterboxd.
 
 ```
-diego import letterboxd {diary|films|reviews} -i file [flags]
+diego import letterboxd {diary|films|reviews|watchlist} -i file [flags]
 ```
 
 ### Examples
