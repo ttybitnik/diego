@@ -1,8 +1,9 @@
 changelog:
   categories:
-    - title: Dependencies
-      labels:
-        - dependencies
+    # Disabled in favour of release-please deps commit type
+    # - title: Dependencies
+    #   labels:
+    #     - dependencies
     - title: Pull Requests
       labels:
         - '*'
