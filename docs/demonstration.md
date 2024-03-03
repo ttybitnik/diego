@@ -14,7 +14,7 @@ $ diego import letterboxd -h
 Import data from Letterboxd
 
 Usage:
-  diego import letterboxd {diary|films|reviews} -i file [flags]
+  diego import letterboxd {diary|films|reviews|watchlist} -i file [flags]
 
 Aliases:
   letterboxd, l
@@ -37,7 +37,7 @@ Global Flags:
       --config string   config file (default is $HOME/.config/diego/config.yaml)
 ```
 
-3. As displayed in the usage section, `diego import letterboxd` currently supports three Letterboxd files: `diary`, `films`, and `reviews`. For this demonstration, the `films.csv` containing the record of liked movies is used:
+3. As displayed in the usage section, `diego import letterboxd` currently supports three Letterboxd files: `diary`, `films`, `reviews`, and `watchlist`. For this demonstration, the `films.csv` containing the record of liked movies is used:
 
 ```csv
 Date,Name,Year,Letterboxd URI
