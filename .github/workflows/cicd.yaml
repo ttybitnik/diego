@@ -13,12 +13,9 @@ on:
       - '**.md'
       - 'docs/**'
 
-# No need for this now, and it's causing the release-please checks to
-# cancel. Future self: if re-enabled, make sure to submit changes only
-# through pull requests.
-# concurrency:
-#   group: ${{ github.workflow }}-${{ github.ref }}
-#   cancel-in-progress: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   release-please:
