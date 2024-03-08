@@ -37,7 +37,7 @@ Global Flags:
       --config string   config file (default is $HOME/.config/diego/config.yaml)
 ```
 
-3. As displayed in the usage section, `diego import letterboxd` currently supports three Letterboxd files: `diary`, `films`, `reviews`, and `watchlist`. For this demonstration, the `films.csv` containing the record of liked movies is used:
+3. As displayed in the usage section, `diego import letterboxd` currently supports four Letterboxd files: `diary`, `films`, `reviews`, and `watchlist`. For this demonstration, the `films.csv` containing the record of liked movies is used:
 
 ```csv
 Date,Name,Year,Letterboxd URI
