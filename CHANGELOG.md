@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/ttybitnik/diego/compare/v0.2.0...v0.2.1) (2024-03-15)
+
+
+### Dependencies
+
+* **go:** bump google.golang.org/protobuf from 1.32.0 to 1.33.0 ([#5](https://github.com/ttybitnik/diego/issues/5)) ([2a86450](https://github.com/ttybitnik/diego/commit/2a8645084dee60b0ef41defeaec618de4688c4ef))
+
 ## [0.2.0](https://github.com/ttybitnik/diego/compare/v0.1.0...v0.2.0) (2024-03-05)
 
 
