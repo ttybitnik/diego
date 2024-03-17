@@ -20,26 +20,23 @@ package core
 
 import (
 	"bufio"
-
-	"github.com/ttybitnik/diego/internal/app/domain"
-	"github.com/ttybitnik/diego/internal/app/social"
-
+	"encoding/csv"
+	"encoding/json"
+	"fmt"
+	"io"
 	"math/rand"
+	"os"
+	"path/filepath"
 	"sync"
 	"time"
 
+	"github.com/ttybitnik/diego/internal/app/domain"
+	"github.com/ttybitnik/diego/internal/app/social"
 	"github.com/ttybitnik/diego/internal/app/social/goodreads"
 	"github.com/ttybitnik/diego/internal/app/social/imdb"
 	"github.com/ttybitnik/diego/internal/app/social/letterboxd"
 	"github.com/ttybitnik/diego/internal/app/social/spotify"
 	"github.com/ttybitnik/diego/internal/app/social/youtube"
-
-	"encoding/csv"
-	"encoding/json"
-	"fmt"
-	"io"
-	"os"
-	"path/filepath"
 )
 
 const (
