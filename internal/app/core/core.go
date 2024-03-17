@@ -68,6 +68,39 @@ func New() *App {
 }
 
 // Logic
+func (a *App) selectServiceComplete(dc *domain.Core, sm *social.Service) error {
+	switch dc.Model {
+	case domain.GoodreadsLibrary:
+		*sm = &goodreads.LibraryComplete{}
+	case domain.ImdbList:
+		*sm = &imdb.ListComplete{}
+	case domain.ImdbRatings:
+		*sm = &imdb.RatingsComplete{}
+	case domain.ImdbWatchlist:
+		*sm = &imdb.WatchlistComplete{}
+	case domain.LetterboxdDiary:
+		*sm = &letterboxd.DiaryComplete{}
+	case domain.LetterboxdFilms:
+		*sm = &letterboxd.FilmsComplete{}
+	case domain.LetterboxdReviews:
+		*sm = &letterboxd.ReviewsComplete{}
+	case domain.LetterboxdWatchlist:
+		*sm = &letterboxd.WatchlistComplete{}
+	case domain.SpotifyLibrary:
+		*sm = &spotify.LibraryComplete{}
+	case domain.SpotifyPlaylist:
+		*sm = &spotify.PlaylistComplete{}
+	case domain.YoutubePlaylist:
+		*sm = &youtube.PlaylistComplete{}
+	case domain.YoutubeSubscriptions:
+		*sm = &youtube.SubscriptionsComplete{}
+	default:
+		return fmt.Errorf("Model type '%s' not valid.", dc.Model)
+	}
+
+	return nil
+}
+
 func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 	var sm social.Service
 	var mLen int
@@ -76,77 +109,48 @@ func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 	case domain.GoodreadsLibrary:
 		sm = &goodreads.Library{}
 		mLen = goodreadsLibraryLen
-		if dc.All {
-			sm = &goodreads.LibraryComplete{}
-		}
 	case domain.ImdbList:
 		sm = &imdb.List{}
 		mLen = imdbListLen
-		if dc.All {
-			sm = &imdb.ListComplete{}
-		}
 	case domain.ImdbRatings:
 		sm = &imdb.Ratings{}
 		mLen = imdbRatingsLen
-		if dc.All {
-			sm = &imdb.RatingsComplete{}
-		}
 	case domain.ImdbWatchlist:
 		sm = &imdb.Watchlist{}
 		mLen = imdbWatchlistLen
-		if dc.All {
-			sm = &imdb.WatchlistComplete{}
-		}
 	case domain.LetterboxdDiary:
 		sm = &letterboxd.Diary{}
 		mLen = letterboxdDiaryLen
-		if dc.All {
-			sm = &letterboxd.DiaryComplete{}
-		}
 	case domain.LetterboxdFilms:
 		sm = &letterboxd.Films{}
 		mLen = letterboxdFilmsLen
-		if dc.All {
-			sm = &letterboxd.FilmsComplete{}
-		}
 	case domain.LetterboxdReviews:
 		sm = &letterboxd.Reviews{}
 		mLen = letterboxdReviewsLen
-		if dc.All {
-			sm = &letterboxd.ReviewsComplete{}
-		}
 	case domain.LetterboxdWatchlist:
 		sm = &letterboxd.Watchlist{}
 		mLen = letterboxdWatchlistLen
-		if dc.All {
-			sm = &letterboxd.WatchlistComplete{}
-		}
 	case domain.SpotifyLibrary:
 		sm = &spotify.Library{}
 		mLen = spotifyLibraryLen
-		if dc.All {
-			sm = &spotify.LibraryComplete{}
-		}
 	case domain.SpotifyPlaylist:
 		sm = &spotify.Playlist{}
 		mLen = spotifyPlaylistLen
-		if dc.All {
-			sm = &spotify.PlaylistComplete{}
-		}
 	case domain.YoutubePlaylist:
 		sm = &youtube.Playlist{}
 		mLen = youtubePlaylistLen
-		if dc.All {
-			sm = &youtube.PlaylistComplete{}
-		}
 	case domain.YoutubeSubscriptions:
 		sm = &youtube.Subscriptions{}
 		mLen = youtubeSubscriptionsLen
-		if dc.All {
-			sm = &youtube.SubscriptionsComplete{}
-		}
 	default:
 		return nil, 0, fmt.Errorf("Model type '%s' not valid.", dc.Model)
+	}
+
+	if dc.All {
+		err := a.selectServiceComplete(&dc, &sm)
+		if err != nil {
+			return nil, 0, err
+		}
 	}
 
 	return sm, mLen, nil
