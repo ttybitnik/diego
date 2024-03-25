@@ -25,7 +25,6 @@
 	".": {
 	    "extra-files": [
 		"internal/adapters/left/cli/root.go",
-		"README.md",
 		"README.md"
 	    ]
 	}
