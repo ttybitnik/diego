@@ -22,7 +22,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// importCmd represents the import command
 var importCmd = &cobra.Command{
 	Use:     "import",
 	Aliases: []string{"i"},
