@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/ttybitnik/diego/compare/v0.2.1...v0.2.2) (2024-03-25)
+
+
+### Dependencies
+
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.1.1 to 2.2.0 ([#7](https://github.com/ttybitnik/diego/issues/7)) ([4a7ab28](https://github.com/ttybitnik/diego/commit/4a7ab2827a4e3c69ac8feaa4e4b3182e90ece171))
+
 ## [0.2.1](https://github.com/ttybitnik/diego/compare/v0.2.0...v0.2.1) (2024-03-15)
 
 
