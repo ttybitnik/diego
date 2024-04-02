@@ -27,7 +27,7 @@ Diego integrates with Hugo as a CLI tool to assist in importing and utilizing ex
 
 For a basic workflow example using `diego` to import data, see the [demonstration](docs/demonstration.md).
 
-For real usage examples, you can check the collections section on my personal **Hugo** website. I utilize `diego` to showcase my [favorite albums](https://eternodevir.com/digital-garden/albums/), [movies](https://eternodevir.com/digital-garden/movies/), [TV shows](https://eternodevir.com/digital-garden/tv-shows/), [music videos](https://eternodevir.com/digital-garden/music-videos/), and [books](https://eternodevir.com/digital-garden/books/).
+For real usage examples, you can check the collections section on my personal **Hugo** website. I utilize `diego` to showcase my [favorite albums](https://eternodevir.com/dg/albums/), [movies](https://eternodevir.com/dg/movies/), [TV shows](https://eternodevir.com/dg/tv-shows/), [music videos](https://eternodevir.com/dg/music-videos/), and [books](https://eternodevir.com/dg/books/).
 
 # Installation
 
