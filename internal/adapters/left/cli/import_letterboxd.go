@@ -1,6 +1,6 @@
 /*
    DIEGO - A data importer extension for Hugo
-   Copyright (C) 2024 Vinicius Moraes <vinicius.moraes@eternodevir.com>
+   Copyright (C) 2024 Vinícius Moraes <vinicius.moraes@eternodevir.com>
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
