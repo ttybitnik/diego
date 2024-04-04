@@ -182,7 +182,7 @@ To contribute to `diego` development, refer to the [contributing instructions](C
 
 ## Mailing list
 
-[https://git-send-email.io/][Email workflow] is also available. Feel free to send patches, questions, or issues related to `diego` to the [https://lists.sr.ht/~ttybitnik/general][~ttybitnik/general mailing list].
+[Email workflow](https://git-send-email.io/) is also available. Feel free to send patches, questions, or issues related to `diego` to the [~ttybitnik/general mailing list](https://lists.sr.ht/~ttybitnik/general).
 
 # License
 
