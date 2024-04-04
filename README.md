@@ -180,6 +180,10 @@ In case of unexpected behavior, please open a [bug report](https://github.com/tt
 
 To contribute to `diego` development, refer to the [contributing instructions](CONTRIBUTING.md).
 
+## Mailing list
+
+[https://git-send-email.io/][Email workflow] is also available. Feel free to send patches, questions, or issues related to `diego` to the [https://lists.sr.ht/~ttybitnik/general][~ttybitnik/general mailing list].
+
 # License
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0), **unless an exception is made explicit in context**. The GPL is a copyleft license that guarantees the freedom to use, modify, and distribute software. It ensures that users have control over the software they use and promotes collaboration and sharing of knowledge. By requiring that derivative works of GPL-licensed software also be licensed under the GPL, the license ensures that the freedoms it provides are extended to future generations of users and developers.
