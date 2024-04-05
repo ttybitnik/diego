@@ -34,6 +34,7 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social"
 	"github.com/ttybitnik/diego/internal/app/social/goodreads"
 	"github.com/ttybitnik/diego/internal/app/social/imdb"
+	"github.com/ttybitnik/diego/internal/app/social/instapaper"
 	"github.com/ttybitnik/diego/internal/app/social/letterboxd"
 	"github.com/ttybitnik/diego/internal/app/social/spotify"
 	"github.com/ttybitnik/diego/internal/app/social/youtube"
@@ -47,6 +48,8 @@ const (
 	imdbListLen      = 17
 	imdbRatingsLen   = 13
 	imdbWatchlistLen = 17
+
+	instapaperListLen = 5
 
 	letterboxdDiaryLen     = 8
 	letterboxdFilmsLen     = 4
@@ -78,6 +81,8 @@ func (a *App) selectServiceComplete(dc *domain.Core, sm *social.Service) error {
 		*sm = &imdb.RatingsComplete{}
 	case domain.ImdbWatchlist:
 		*sm = &imdb.WatchlistComplete{}
+	case domain.InstapaperList:
+		*sm = &instapaper.ListComplete{}
 	case domain.LetterboxdDiary:
 		*sm = &letterboxd.DiaryComplete{}
 	case domain.LetterboxdFilms:
@@ -118,6 +123,9 @@ func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 	case domain.ImdbWatchlist:
 		sm = &imdb.Watchlist{}
 		mLen = imdbWatchlistLen
+	case domain.InstapaperList:
+		sm = &instapaper.List{}
+		mLen = instapaperListLen
 	case domain.LetterboxdDiary:
 		sm = &letterboxd.Diary{}
 		mLen = letterboxdDiaryLen

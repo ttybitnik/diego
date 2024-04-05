@@ -25,6 +25,8 @@ const (
 	ImdbRatings   = "diego_imdb_ratings"
 	ImdbWatchlist = "diego_imdb_watchlist"
 
+	InstapaperList = "diego_instapaper_list"
+
 	LetterboxdDiary     = "diego_letterboxd_diary"
 	LetterboxdFilms     = "diego_letterboxd_films"
 	LetterboxdReviews   = "diego_letterboxd_reviews"

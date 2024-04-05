@@ -146,6 +146,21 @@ diego import imdb list -i list.csv
 diego i i ratings -i ratings.csv --all --scrape --shortcode
 ```
 
+### `diego import instapaper`
+
+Import data from Instapaper.
+
+```
+diego import instapaper {list} -i file [flags]
+```
+
+**Examples**
+
+```
+diego import instapaper list -i list.csv
+diego i ip ratings -i ratings.csv --all --shortcode
+```
+
 ### `diego import letterboxd`
 
 Import data from Letterboxd.
@@ -425,6 +440,18 @@ Position,Const,Created,Modified,Description,Title,URL,Title Type,IMDb Rating,Run
 ```
 
 Optional `--scrape` fields: *ImgUrl*
+
+### Instapaper
+
+Official Instapaper supported files.
+
+**instapaper_list.csv**
+```csv
+URL,Title,Selection,Folder,Timestamp
+https://www.newyorker.com/magazine/2017/09/04/fernando-pessoas-disappearing-act,Fernando Pessoa’s Disappearing Act,,Starred,1679174385
+https://dougseven.com/2014/04/17/knightmare-a-devops-cautionary-tale/,Knightmare: A DevOps Cautionary Tale,,Starred,1694613937
+https://www.newyorker.com/magazine/2016/08/08/lauren-collins-learns-to-love-in-french,Love in Translation,,Starred,1679174483
+```
 
 ### Letterboxd
 

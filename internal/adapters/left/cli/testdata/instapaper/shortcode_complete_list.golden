@@ -1,0 +1,18 @@
+<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<table>
+  <tbody>
+    {{ range sort .Site.Data.diego_instapaper_list "name" }}
+    <tr>
+      <td>
+	<strong>{{ .name }}</strong>
+      </td>
+      <td>
+	{{ .timestamp }}
+      </td>
+      <td>
+	<a href="{{ .url }}">Link</a>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

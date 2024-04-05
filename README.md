@@ -12,7 +12,7 @@ Diego integrates with Hugo as a CLI tool to assist in importing and utilizing ex
 
 # Overview
 
-`diego` is a CLI tool designed to import official `CSV` and `JSON` data files from popular services like **Goodreads**, **IMDb**, **Letterboxd**, **Spotify**, and **YouTube** into **Hugo**.
+`diego` is a CLI tool designed to import official `CSV` and `JSON` data files from popular services like **Goodreads**, **IMDb**, **Instapaper**, **Letterboxd**, **Spotify**, and **YouTube** into **Hugo**.
 
 `diego` provides:
 - Automatic `CSV` and `JSON` conversion into [Hugo data files](https://gohugo.io/templates/data-templates/)
@@ -168,6 +168,7 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 
 - [Goodreads](docs/user_guide.md#goodreads)
 - [IMDb](docs/user_guide.md#imdb)
+- [Instapaper](docs/user_guide.md#instapaper)
 - [Letterboxd](docs/user_guide.md#letterboxd)
 - [Spotify](docs/user_guide.md#spotify)
 - [YouTube](docs/user_guide.md#youtube)

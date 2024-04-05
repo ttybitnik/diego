@@ -49,6 +49,7 @@ var cases = []struct {
 	{"ImdbList", []string{"list", "invalid", "empty"}, []bool{false, true, true}, domain.ImdbList, "list"},
 	{"ImdbRatings", []string{"ratings", "invalid", "empty"}, []bool{false, true, true}, domain.ImdbRatings, "ratings"},
 	{"ImdbWatchlist", []string{"watchlist", "invalid", "empty"}, []bool{false, true, true}, domain.ImdbWatchlist, "watchlist"},
+	{"InstapaperList", []string{"list", "invalid", "empty"}, []bool{false, true, true}, domain.InstapaperList, "list"},
 	{"LetterboxdDiary", []string{"diary", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdDiary, "diary"},
 	{"LetterboxdFilms", []string{"films", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdFilms, "films"},
 	{"LetterboxdReviews", []string{"reviews", "invalid", "empty"}, []bool{false, true, true}, domain.LetterboxdReviews, "reviews"},
@@ -70,6 +71,9 @@ func serviceSubdirAndFormat(t *testing.T, command string) (string, string) {
 		format = ".csv"
 	case strings.HasPrefix(command, "Imdb"):
 		subdir = "imdb/"
+		format = ".csv"
+	case strings.HasPrefix(command, "Instapaper"):
+		subdir = "instapaper/"
 		format = ".csv"
 	case strings.HasPrefix(command, "Letterboxd"):
 		subdir = "letterboxd/"
