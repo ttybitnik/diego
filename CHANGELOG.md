@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/ttybitnik/diego/compare/v0.2.2...v0.3.0) (2024-04-05)
+
+
+### Features
+
+* **import:** add support for instapaper ([aaa0e98](https://github.com/ttybitnik/diego/commit/aaa0e98a00c97f48150cd2426a72603204317ea5))
+
 ## [0.2.2](https://github.com/ttybitnik/diego/compare/v0.2.1...v0.2.2) (2024-03-25)
 
 
