@@ -151,6 +151,7 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 - [diego import](docs/user_guide.md#diego-import) :: import data from various services into Hugo
   - [diego import goodreads](docs/user_guide.md#diego-import-goodreads) :: import data from Goodreads
   - [diego import imdb](docs/user_guide.md#diego-import-imdb) :: import data from IMDb
+  - [diego import instapaper](docs/user_guide.md#diego-import-instapaper) :: import data from Instapaper
   - [diego import letterboxd](docs/user_guide.md#diego-import-letterboxd) :: import data from Letterboxd
   - [diego import spotify](docs/user_guide.md#diego-import-spotify) :: import data from Spotify
   - [diego import youtube](docs/user_guide.md#diego-import-youtube) :: import data from YouTube
@@ -185,7 +186,7 @@ To contribute to `diego` development, refer to the [contributing instructions](C
 
 [Email workflow](https://git-send-email.io/) is also available.
 
-Feel free to send patches, questions, or issues related to `diego` to the [~ttybitnik/general mailing list](https://lists.sr.ht/~ttybitnik/general).
+Feel free to send patches, questions, or discussions related to `diego` to the [~ttybitnik/general mailing list](https://lists.sr.ht/~ttybitnik/general).
 
 # License
 
