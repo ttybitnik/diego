@@ -30,7 +30,7 @@ var instapaperCmd = &cobra.Command{
 	Args:      cobra.MatchAll(cobra.ExactArgs(1), cobra.OnlyValidArgs),
 	ValidArgs: []string{"list"},
 	Example: "diego import instapaper list -i list.csv\n" +
-		"diego i ip ratings -i ratings.csv --all --shortcode",
+		"diego i ip list -i list.csv --all --shortcode",
 	Short: "Import data from Instapaper",
 	Long:  `Import data from Instapaper.`,
 	PreRun: func(cmd *cobra.Command, args []string) {

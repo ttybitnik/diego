@@ -158,7 +158,7 @@ diego import instapaper {list} -i file [flags]
 
 ```
 diego import instapaper list -i list.csv
-diego i ip ratings -i ratings.csv --all --shortcode
+diego i ip list -i list.csv --all --shortcode
 ```
 
 ### `diego import letterboxd`
