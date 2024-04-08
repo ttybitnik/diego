@@ -21,27 +21,22 @@ package domain
 const (
 	GoodreadsLibrary = "diego_goodreads_library"
 
-	ImdbList      = "diego_imdb_list"
-	ImdbRatings   = "diego_imdb_ratings"
-	ImdbWatchlist = "diego_imdb_watchlist"
-
-	InstapaperList = "diego_instapaper_list"
-
-	LetterboxdDiary     = "diego_letterboxd_diary"
-	LetterboxdFilms     = "diego_letterboxd_films"
-	LetterboxdReviews   = "diego_letterboxd_reviews"
-	LetterboxdWatchlist = "diego_letterboxd_watchlist"
-
-	SpotifyLibrary  = "diego_spotify_library"
-	SpotifyPlaylist = "diego_spotify_playlist"
-
+	ImdbList             = "diego_imdb_list"
+	ImdbRatings          = "diego_imdb_ratings"
+	ImdbWatchlist        = "diego_imdb_watchlist"
+	InstapaperList       = "diego_instapaper_list"
+	LetterboxdDiary      = "diego_letterboxd_diary"
+	LetterboxdFilms      = "diego_letterboxd_films"
+	LetterboxdReviews    = "diego_letterboxd_reviews"
+	LetterboxdWatchlist  = "diego_letterboxd_watchlist"
+	SpotifyLibrary       = "diego_spotify_library"
+	SpotifyPlaylist      = "diego_spotify_playlist"
 	YoutubePlaylist      = "diego_youtube_playlist"
 	YoutubeSubscriptions = "diego_youtube_subscriptions"
-
-	OutputYAML = "yaml"
-	OutputJSON = "json"
-	OutputTOML = "toml"
-	OutputXML  = "xml"
+	OutputYAML           = "yaml"
+	OutputJSON           = "json"
+	OutputTOML           = "toml"
+	OutputXML            = "xml"
 )
 
 // Core represents the configuration domain for the APIPort.

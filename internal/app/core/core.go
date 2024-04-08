@@ -43,22 +43,17 @@ import (
 const (
 	maxAsyncHTTP = 30
 
-	goodreadsLibraryLen = 24
-
-	imdbListLen      = 17
-	imdbRatingsLen   = 13
-	imdbWatchlistLen = 17
-
-	instapaperListLen = 5
-
-	letterboxdDiaryLen     = 8
-	letterboxdFilmsLen     = 4
-	letterboxdReviewsLen   = 9
-	letterboxdWatchlistLen = 4
-
-	spotifyLibraryLen  = 8 // TODO: implement JSON len verification
-	spotifyPlaylistLen = 1 // TODO: implement JSON len verification
-
+	goodreadsLibraryLen     = 24
+	imdbListLen             = 17
+	imdbRatingsLen          = 13
+	imdbWatchlistLen        = 17
+	instapaperListLen       = 5
+	letterboxdDiaryLen      = 8
+	letterboxdFilmsLen      = 4
+	letterboxdReviewsLen    = 9
+	letterboxdWatchlistLen  = 4
+	spotifyLibraryLen       = 8 // TODO: implement JSON len verification
+	spotifyPlaylistLen      = 1 // TODO: implement JSON len verification
 	youtubePlaylistLen      = 2
 	youtubeSubscriptionsLen = 3
 )
