@@ -19,8 +19,7 @@
 package domain
 
 const (
-	GoodreadsLibrary = "diego_goodreads_library"
-
+	GoodreadsLibrary     = "diego_goodreads_library"
 	ImdbList             = "diego_imdb_list"
 	ImdbRatings          = "diego_imdb_ratings"
 	ImdbWatchlist        = "diego_imdb_watchlist"
@@ -33,10 +32,11 @@ const (
 	SpotifyPlaylist      = "diego_spotify_playlist"
 	YoutubePlaylist      = "diego_youtube_playlist"
 	YoutubeSubscriptions = "diego_youtube_subscriptions"
-	OutputYAML           = "yaml"
-	OutputJSON           = "json"
-	OutputTOML           = "toml"
-	OutputXML            = "xml"
+
+	OutputYAML = "yaml"
+	OutputJSON = "json"
+	OutputTOML = "toml"
+	OutputXML  = "xml"
 )
 
 // Core represents the configuration domain for the APIPort.
