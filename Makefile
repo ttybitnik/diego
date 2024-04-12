@@ -2,7 +2,7 @@ lint:
 	golangci-lint run
 
 test: lint
-	go test -cover ./internal/adapters/left/cli
+	go test -cover -race ./internal/adapters/left/cli
 
 build: test
 	go build -o diego main.go
