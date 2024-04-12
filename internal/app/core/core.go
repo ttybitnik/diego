@@ -66,97 +66,92 @@ func New() *App {
 }
 
 // Logic
-func (a *App) selectServiceComplete(dc *domain.Core, sm *social.Service) error {
-	switch dc.Model {
-	case domain.GoodreadsLibrary:
-		*sm = &goodreads.LibraryComplete{}
-	case domain.ImdbList:
-		*sm = &imdb.ListComplete{}
-	case domain.ImdbRatings:
-		*sm = &imdb.RatingsComplete{}
-	case domain.ImdbWatchlist:
-		*sm = &imdb.WatchlistComplete{}
-	case domain.InstapaperList:
-		*sm = &instapaper.ListComplete{}
-	case domain.LetterboxdDiary:
-		*sm = &letterboxd.DiaryComplete{}
-	case domain.LetterboxdFilms:
-		*sm = &letterboxd.FilmsComplete{}
-	case domain.LetterboxdReviews:
-		*sm = &letterboxd.ReviewsComplete{}
-	case domain.LetterboxdWatchlist:
-		*sm = &letterboxd.WatchlistComplete{}
-	case domain.SpotifyLibrary:
-		*sm = &spotify.LibraryComplete{}
-	case domain.SpotifyPlaylist:
-		*sm = &spotify.PlaylistComplete{}
-	case domain.YoutubePlaylist:
-		*sm = &youtube.PlaylistComplete{}
-	case domain.YoutubeSubscriptions:
-		*sm = &youtube.SubscriptionsComplete{}
-	default:
-		return fmt.Errorf("Model type '%s' not valid.", dc.Model)
+func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
+	modelMap := map[string]struct {
+		service         social.Service
+		serviceComplete social.Service
+		length          int
+	}{
+		domain.GoodreadsLibrary: {
+			&goodreads.Library{},
+			&goodreads.LibraryComplete{},
+			goodreadsLibraryLen,
+		},
+		domain.ImdbList: {
+			&imdb.List{},
+			&imdb.ListComplete{},
+			imdbListLen,
+		},
+		domain.ImdbRatings: {
+			&imdb.Ratings{},
+			&imdb.RatingsComplete{},
+			imdbRatingsLen,
+		},
+		domain.ImdbWatchlist: {
+			&imdb.Watchlist{},
+			&imdb.WatchlistComplete{},
+			imdbWatchlistLen,
+		},
+		domain.InstapaperList: {
+			&instapaper.List{},
+			&instapaper.ListComplete{},
+			instapaperListLen,
+		},
+		domain.LetterboxdDiary: {
+			&letterboxd.Diary{},
+			&letterboxd.DiaryComplete{},
+			letterboxdDiaryLen,
+		},
+		domain.LetterboxdFilms: {
+			&letterboxd.Films{},
+			&letterboxd.FilmsComplete{},
+			letterboxdFilmsLen,
+		},
+		domain.LetterboxdReviews: {
+			&letterboxd.Reviews{},
+			&letterboxd.ReviewsComplete{},
+			letterboxdReviewsLen,
+		},
+		domain.LetterboxdWatchlist: {
+			&letterboxd.Watchlist{},
+			&letterboxd.WatchlistComplete{},
+			letterboxdWatchlistLen,
+		},
+		domain.SpotifyLibrary: {
+			&spotify.Library{},
+			&spotify.LibraryComplete{},
+			spotifyLibraryLen,
+		},
+		domain.SpotifyPlaylist: {
+			&spotify.Playlist{},
+			&spotify.PlaylistComplete{},
+			spotifyPlaylistLen,
+		},
+		domain.YoutubePlaylist: {
+			&youtube.Playlist{},
+			&youtube.PlaylistComplete{},
+			youtubePlaylistLen,
+		},
+		domain.YoutubeSubscriptions: {
+			&youtube.Subscriptions{},
+			&youtube.SubscriptionsComplete{},
+			youtubeSubscriptionsLen,
+		},
 	}
 
-	return nil
-}
-
-func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
-	var sm social.Service
-	var mLen int
-
-	switch dc.Model {
-	case domain.GoodreadsLibrary:
-		sm = &goodreads.Library{}
-		mLen = goodreadsLibraryLen
-	case domain.ImdbList:
-		sm = &imdb.List{}
-		mLen = imdbListLen
-	case domain.ImdbRatings:
-		sm = &imdb.Ratings{}
-		mLen = imdbRatingsLen
-	case domain.ImdbWatchlist:
-		sm = &imdb.Watchlist{}
-		mLen = imdbWatchlistLen
-	case domain.InstapaperList:
-		sm = &instapaper.List{}
-		mLen = instapaperListLen
-	case domain.LetterboxdDiary:
-		sm = &letterboxd.Diary{}
-		mLen = letterboxdDiaryLen
-	case domain.LetterboxdFilms:
-		sm = &letterboxd.Films{}
-		mLen = letterboxdFilmsLen
-	case domain.LetterboxdReviews:
-		sm = &letterboxd.Reviews{}
-		mLen = letterboxdReviewsLen
-	case domain.LetterboxdWatchlist:
-		sm = &letterboxd.Watchlist{}
-		mLen = letterboxdWatchlistLen
-	case domain.SpotifyLibrary:
-		sm = &spotify.Library{}
-		mLen = spotifyLibraryLen
-	case domain.SpotifyPlaylist:
-		sm = &spotify.Playlist{}
-		mLen = spotifyPlaylistLen
-	case domain.YoutubePlaylist:
-		sm = &youtube.Playlist{}
-		mLen = youtubePlaylistLen
-	case domain.YoutubeSubscriptions:
-		sm = &youtube.Subscriptions{}
-		mLen = youtubeSubscriptionsLen
-	default:
+	modelSelected, ok := modelMap[dc.Model]
+	if !ok {
 		return nil, 0, fmt.Errorf("Model type '%s' not valid.", dc.Model)
 	}
 
+	service := modelSelected.service
+	length := modelSelected.length
+
 	if dc.All {
-		err := a.selectServiceComplete(&dc, &sm)
-		if err != nil {
-			return nil, 0, err
-		}
+		service = modelSelected.serviceComplete
 	}
 
-	return sm, mLen, nil
+	return service, length, nil
 }
 
 func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service, error) {
