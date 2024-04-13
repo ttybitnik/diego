@@ -144,19 +144,16 @@ func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 		return nil, 0, fmt.Errorf("Model type '%s' not valid.", dc.Model)
 	}
 
-	service := modelSelected.service
-	length := modelSelected.length
-
 	if dc.All {
-		service = modelSelected.serviceComplete
+		modelSelected.service = modelSelected.serviceComplete
 	}
 
-	return service, length, nil
+	return modelSelected.service, modelSelected.length, nil
 }
 
 func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service, error) {
 	var wg sync.WaitGroup
-	var scrapeSemaphore = make(chan struct{}, maxAsyncHTTP)
+	scrapeSemaphore := make(chan struct{}, maxAsyncHTTP)
 	errCh := make(chan error, 1)
 	emptyModel := make([]social.Service, 0)
 
@@ -177,7 +174,7 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 
 	for i, record := range records {
 		wg.Add(1)
-		go func(resultDest *social.Service, record []string) {
+		go func(resultIdx *social.Service, record []string) {
 			defer wg.Done()
 
 			newEntity, modelLen, err := a.selectService(dc)
@@ -212,7 +209,7 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 				}
 			}
 
-			*resultDest = newEntity
+			*resultIdx = newEntity
 
 		}(&results[i], record)
 	}
@@ -234,7 +231,7 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]social.Service) error {
 	var wg sync.WaitGroup
 	var mu sync.Mutex
-	var scrapeSemaphore = make(chan struct{}, maxAsyncHTTP)
+	scrapeSemaphore := make(chan struct{}, maxAsyncHTTP)
 	errCh := make(chan error, 1)
 	emptySlice := []string{}
 
