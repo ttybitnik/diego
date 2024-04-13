@@ -13,6 +13,9 @@ run: build
 deploy: build
 	goreleaser build --snapshot --clean
 
+debug: test
+	go build -gcflags=all="-N -l" -o diego main.go
+
 
 update:
 	go get -u ./...
