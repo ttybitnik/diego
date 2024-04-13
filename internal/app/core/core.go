@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package core contains the essential application logic.
 package core
 
 import (
@@ -52,8 +53,8 @@ const (
 	letterboxdFilmsLen      = 4
 	letterboxdReviewsLen    = 9
 	letterboxdWatchlistLen  = 4
-	spotifyLibraryLen       = 8 // TODO: implement JSON len verification
-	spotifyPlaylistLen      = 1 // TODO: implement JSON len verification
+	spotifyLibraryLen       = 8 // TODO: implement JSON len verification.
+	spotifyPlaylistLen      = 1 // TODO: implement JSON len verification.
 	youtubePlaylistLen      = 2
 	youtubeSubscriptionsLen = 3
 )
@@ -65,7 +66,6 @@ func New() *App {
 	return &App{}
 }
 
-// Logic
 func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 	modelMap := map[string]struct {
 		service         social.Service

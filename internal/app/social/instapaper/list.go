@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package instapaper implements the social interface for instapaper service.
 package instapaper
 
 import (

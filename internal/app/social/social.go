@@ -16,9 +16,10 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package social provides an abstraction for services packages.
 package social
 
-// Service interface for social media services
+// Service interface for social media services.
 type Service interface {
 	BindFile(record *[]string) error
 	FetchFromHTTP() error

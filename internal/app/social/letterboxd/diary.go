@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package letterboxd implements the social interface for letterboxd service.
 package letterboxd
 
 import (

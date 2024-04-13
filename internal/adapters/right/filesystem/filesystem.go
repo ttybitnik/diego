@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package filesystem implements the filesystem adapter logic.
 package filesystem
 
 import (
@@ -33,7 +34,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Filesystem implements the FileSystemPort interface
+// Filesystem implements the FileSystemPort interface.
 type Adapter struct{}
 
 func NewAdapter() *Adapter {

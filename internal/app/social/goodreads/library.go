@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package goodreads implements the social interface for goodreads service.
 package goodreads
 
 import (

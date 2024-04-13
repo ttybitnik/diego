@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package cli contains the command line interface adapter logic.
 package cli
 
 import (
@@ -34,7 +35,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-// CLI implements the APIPort and WriterPort interfaces along with cobraModel
+// CLI implements the APIPort and WriterPort interfaces along with cobraModel.
 type Adapter struct {
 	api   ports.APIPort
 	fs    ports.WriterPort
@@ -45,7 +46,7 @@ func NewAdapter(api ports.APIPort, fs ports.WriterPort) *Adapter {
 	return &Adapter{api: api, fs: fs}
 }
 
-// cobraAdapter initializes the CLI Adapter
+// cobraAdapter initializes the CLI Adapter.
 func cobraAdapter() *Adapter {
 	c := core.New()
 	fs := filesystem.NewAdapter()
@@ -55,7 +56,7 @@ func cobraAdapter() *Adapter {
 	return clia
 }
 
-// cobraModel represents the command-line options for the Diego CLI
+// cobraModel represents the command-line options for the Diego CLI.
 type cobraModel struct {
 	format  string
 	hugodir string
@@ -68,14 +69,14 @@ type cobraModel struct {
 	shortcode bool
 }
 
-// global variables pointers for the Cobra/CLI adapter implementation
+// global variables pointers for the Cobra/CLI adapter implementation.
 var (
 	dc  *domain.Core
 	dfs *domain.FileSystem
 	ca  *Adapter
 )
 
-// modelToDomain converts cobraModel into domain.Core and domain.FileSystem
+// modelToDomain converts cobraModel into domain.Core and domain.FileSystem.
 func modelToDomain(cm cobraModel) {
 	dc = &domain.Core{
 		All:    cm.all,
@@ -92,7 +93,7 @@ func modelToDomain(cm cobraModel) {
 	}
 }
 
-// cobraImport performs the import operation using the API and writes results to filesystem
+// cobraImport performs the import operation using the API and writes results to filesystem.
 func (clia *Adapter) cobraImport(cm cobraModel) {
 	err := validateInputs()
 	if err != nil {

@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package imdb implements the social interface for imdb service.
 package imdb
 
 import (

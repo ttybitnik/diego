@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package ports provides driver (left) and driven (right) ports.
 package ports
 
 import (
@@ -23,7 +24,7 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social"
 )
 
-// APIPort is the technology neutral port for driver adapters
+// APIPort is the technology neutral port for driver adapters.
 type APIPort interface {
 	GetImportFile(f string, dc domain.Core) ([]social.Service, error)
 	GetGenerateShortcode(dc domain.Core) (*string, error)

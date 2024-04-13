@@ -23,7 +23,7 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social"
 )
 
-// WriterPort is the output port for driven adapters
+// WriterPort is the output port for driven adapters.
 type WriterPort interface {
 	WriteToFile(data []social.Service, dfs domain.FileSystem) error
 	WriteShortcode(shortcode *string, dfs domain.FileSystem) error

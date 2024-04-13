@@ -23,7 +23,7 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social"
 )
 
-// Core reflection
+// Abstraction reflecting core exported functions.
 type Core interface {
 	ImportFile(f string, dc domain.Core) ([]social.Service, error)
 	GenerateShortcode(dc domain.Core) (*string, error)

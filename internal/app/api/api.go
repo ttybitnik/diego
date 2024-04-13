@@ -16,6 +16,7 @@
    along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Package api provides a versstile application programming interface.
 package api
 
 import (
@@ -23,7 +24,7 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social"
 )
 
-// Application implements the API Port interface
+// Application implements the API Port interface.
 type Application struct {
 	core Core
 }
