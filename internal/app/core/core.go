@@ -157,19 +157,18 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 	var wg sync.WaitGroup
 	scrapeSemaphore := make(chan struct{}, maxAsyncHTTP)
 	errCh := make(chan error, 1)
-	emptyModel := make([]social.Service, 0)
 
 	header, err := reader.Read()
 	if len(header) == 0 {
-		return emptyModel, fmt.Errorf("Empty CSV file: %w", err)
+		return []social.Service{}, fmt.Errorf("Empty CSV file: %w", err)
 	}
 	if err != nil {
-		return emptyModel, fmt.Errorf("Error skipping the first line: %w", err)
+		return []social.Service{}, fmt.Errorf("Error skipping the first line: %w", err)
 	}
 
 	records, err := reader.ReadAll()
 	if err != nil {
-		return emptyModel, fmt.Errorf("Error reading the CSV file: %w", err)
+		return []social.Service{}, fmt.Errorf("Error reading the CSV file: %w", err)
 	}
 
 	results := make([]social.Service, len(records))
@@ -235,7 +234,7 @@ func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]soci
 	var mu sync.Mutex
 	scrapeSemaphore := make(chan struct{}, maxAsyncHTTP)
 	errCh := make(chan error, 1)
-	emptySlice := []string{}
+	record := []string{}
 
 	if !recorder.More() {
 		return fmt.Errorf("Empty JSON file.")
@@ -259,7 +258,7 @@ func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]soci
 		go func() {
 			defer wg.Done()
 
-			err = newEntity.BindFile(&emptySlice)
+			err = newEntity.BindFile(&record)
 			if err != nil {
 				errCh <- fmt.Errorf("Error binding JSON: %w", err)
 			}
