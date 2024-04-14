@@ -30,7 +30,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Reviews represents the official input data fields.
 type Reviews struct {
 	Name     string
 	Director string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -42,6 +42,7 @@ type Reviews struct {
 	Review   string
 }
 
+// BindFile binds the CSV values into the Reviews struct.
 func (l *Reviews) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -53,6 +54,7 @@ func (l *Reviews) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Reviews struct.
 func (l *Reviews) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -67,11 +69,12 @@ func (l *Reviews) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Reviews struct.
 func (l *Reviews) BindHTML(shortcode, comment *string, model string) error {
 	return htmlReviews(shortcode, comment, model)
 }
 
-// Complete
+// ReviewsComplete represents the official input data fields.
 type ReviewsComplete struct {
 	Name        string
 	Director    string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -86,6 +89,7 @@ type ReviewsComplete struct {
 	WatchedDate string
 }
 
+// BindFile binds the CSV values into the ReviewsComplete struct.
 func (l *ReviewsComplete) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -100,6 +104,7 @@ func (l *ReviewsComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the ReviewsComplete struct.
 func (l *ReviewsComplete) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -114,11 +119,12 @@ func (l *ReviewsComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the ReviewsComplete struct.
 func (l *ReviewsComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlReviews(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlReviews(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

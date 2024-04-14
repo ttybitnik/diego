@@ -34,9 +34,10 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Filesystem implements the FileSystemPort interface.
+// Filesystem Adapter implements the FileSystemPort interface.
 type Adapter struct{}
 
+// NewAdapter creates a new instance of the Adapter struct.
 func NewAdapter() *Adapter {
 	return &Adapter{}
 }
@@ -60,6 +61,7 @@ func (fsa *Adapter) isExist(filename string) bool {
 	return !os.IsNotExist(err)
 }
 
+// WriteToFile writes data into filesystem using the given domain.FileSystem configuration.
 func (fsa *Adapter) WriteToFile(data []social.Service, dfs domain.FileSystem) error {
 	err := fsa.validateWriteToFile(dfs.Format)
 	if err != nil {
@@ -125,6 +127,7 @@ func (fsa *Adapter) WriteToFile(data []social.Service, dfs domain.FileSystem) er
 	return err
 }
 
+// WriteShortcode writes the shortcode into filesystem in the Hugo directory.
 func (fsa *Adapter) WriteShortcode(shortcode *string, dfs domain.FileSystem) error {
 	if dfs.Shortcode {
 

@@ -30,7 +30,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Playlist represents the official input data fields.
 type Playlist struct {
 	Name      string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 	ID        string
@@ -38,6 +38,7 @@ type Playlist struct {
 	URL       string
 }
 
+// BindFile binds the CSV values into the Playlist struct.
 func (y *Playlist) BindFile(record *[]string) error {
 	y.ID = (*record)[0]
 	y.Timestamp = (*record)[1]
@@ -46,6 +47,7 @@ func (y *Playlist) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Playlist struct.
 func (y *Playlist) FetchFromHTTP() error {
 	var name string
 
@@ -59,11 +61,12 @@ func (y *Playlist) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Playlist struct.
 func (y *Playlist) BindHTML(shortcode, comment *string, model string) error {
 	return htmlPlaylist(shortcode, comment, model)
 }
 
-// Complete
+// PlaylistComplete represents the official input data fields.
 type PlaylistComplete struct {
 	Name      string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 	ID        string
@@ -71,6 +74,7 @@ type PlaylistComplete struct {
 	URL       string
 }
 
+// BindFile binds the CSV values into the PlaylistComplete struct.
 func (y *PlaylistComplete) BindFile(record *[]string) error {
 	y.ID = (*record)[0]
 	y.Timestamp = (*record)[1]
@@ -79,6 +83,7 @@ func (y *PlaylistComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the PlaylistComplete struct.
 func (y *PlaylistComplete) FetchFromHTTP() error {
 	var name string
 
@@ -92,11 +97,12 @@ func (y *PlaylistComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the PlaylistComplete struct.
 func (y *PlaylistComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlPlaylist(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlPlaylist(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

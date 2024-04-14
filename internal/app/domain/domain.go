@@ -19,6 +19,7 @@
 // Package domain provides application options.
 package domain
 
+// Driver options.
 const (
 	GoodreadsLibrary     = "diego_goodreads_library"
 	ImdbList             = "diego_imdb_list"

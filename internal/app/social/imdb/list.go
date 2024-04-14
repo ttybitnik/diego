@@ -30,7 +30,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// List represents the official input data fields.
 type List struct {
 	Name       string
 	Directors  string
@@ -40,6 +40,7 @@ type List struct {
 	ImgURL     string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
+// BindFile binds the CSV values into the List struct.
 func (i *List) BindFile(record *[]string) error {
 	i.Name = (*record)[5]
 	i.Directors = (*record)[14]
@@ -50,6 +51,7 @@ func (i *List) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the List struct.
 func (i *List) FetchFromHTTP() error {
 	var imgURL string
 
@@ -63,11 +65,12 @@ func (i *List) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the List struct.
 func (i *List) BindHTML(shortcode, comment *string, model string) error {
 	return htmlList(shortcode, comment, model)
 }
 
-// Complete
+// ListComplete represents the official input data fields.
 type ListComplete struct {
 	Name        string
 	Directors   string
@@ -89,6 +92,7 @@ type ListComplete struct {
 	DateRated   string
 }
 
+// BindFile binds the CSV values into the ListComplete struct.
 func (i *ListComplete) BindFile(record *[]string) error {
 	i.Name = (*record)[5]
 	i.Directors = (*record)[14]
@@ -111,6 +115,7 @@ func (i *ListComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the ListComplete struct.
 func (i *ListComplete) FetchFromHTTP() error {
 	var imgURL string
 
@@ -124,11 +129,12 @@ func (i *ListComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the ListComplete struct.
 func (i *ListComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlList(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlList(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

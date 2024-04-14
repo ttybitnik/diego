@@ -30,7 +30,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Library represents the official input data fields.
 type Library struct {
 	Name          string
 	Author        string
@@ -40,6 +40,7 @@ type Library struct {
 	ImgURL        string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
+// BindFile binds the CSV values into the Library struct.
 func (g *Library) BindFile(record *[]string) error {
 	g.Name = (*record)[1]
 	g.Author = (*record)[2]
@@ -50,6 +51,7 @@ func (g *Library) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Library struct.
 func (g *Library) FetchFromHTTP() error {
 	var imgURL string
 
@@ -63,11 +65,12 @@ func (g *Library) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Library struct.
 func (g *Library) BindHTML(shortcode, comment *string, model string) error {
 	return htmlLibrary(shortcode, comment, model)
 }
 
-// Complete
+// LibraryComplete represents the official input data fields.
 type LibraryComplete struct {
 	Name               string
 	Author             string
@@ -96,6 +99,7 @@ type LibraryComplete struct {
 	ImgURL             string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
+// BindFile binds the CSV values into the LibraryComplete struct.
 func (g *LibraryComplete) BindFile(record *[]string) error {
 	g.Name = (*record)[1]
 	g.Author = (*record)[2]
@@ -125,6 +129,7 @@ func (g *LibraryComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the LibraryComplete struct.
 func (g *LibraryComplete) FetchFromHTTP() error {
 	var imgURL string
 
@@ -138,11 +143,12 @@ func (g *LibraryComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the LibraryComplete struct.
 func (g *LibraryComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlLibrary(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlLibrary(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

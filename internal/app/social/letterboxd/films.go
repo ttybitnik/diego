@@ -30,7 +30,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Films represents the official input data fields.
 type Films struct {
 	Name     string
 	Director string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -40,6 +40,7 @@ type Films struct {
 	Date     string
 }
 
+// BindFile binds the CSV values into the Films struct.
 func (l *Films) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -49,6 +50,7 @@ func (l *Films) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Films struct.
 func (l *Films) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -63,11 +65,12 @@ func (l *Films) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Films struct.
 func (l *Films) BindHTML(shortcode, comment *string, model string) error {
 	return htmlFilms(shortcode, comment, model)
 }
 
-// Complete
+// FilmsComplete represents the official input data fields.
 type FilmsComplete struct {
 	Name     string
 	Director string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -77,6 +80,7 @@ type FilmsComplete struct {
 	Date     string
 }
 
+// BindFile binds the CSV values into the FilmsComplete struct.
 func (l *FilmsComplete) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -86,6 +90,7 @@ func (l *FilmsComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the FilmsComplete struct.
 func (l *FilmsComplete) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -100,11 +105,12 @@ func (l *FilmsComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the FilmsComplete struct.
 func (l *FilmsComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlFilms(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlFilms(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

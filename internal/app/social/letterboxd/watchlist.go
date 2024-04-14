@@ -30,7 +30,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Watchlist represents the official input data fields.
 type Watchlist struct {
 	Name     string
 	Director string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -40,6 +40,7 @@ type Watchlist struct {
 	Date     string
 }
 
+// BindFile binds the CSV values into the Watchlist struct.
 func (l *Watchlist) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -49,6 +50,7 @@ func (l *Watchlist) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Watchlist struct.
 func (l *Watchlist) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -63,11 +65,12 @@ func (l *Watchlist) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Watchlist struct.
 func (l *Watchlist) BindHTML(shortcode, comment *string, model string) error {
 	return htmlWatchlist(shortcode, comment, model)
 }
 
-// Complete
+// WatchlistComplete represents the official input data fields.
 type WatchlistComplete struct {
 	Name     string
 	Director string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -77,6 +80,7 @@ type WatchlistComplete struct {
 	Date     string
 }
 
+// BindFile binds the CSV values into the WatchlistComplete struct.
 func (l *WatchlistComplete) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -86,6 +90,7 @@ func (l *WatchlistComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the WatchlistComplete struct.
 func (l *WatchlistComplete) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -100,11 +105,12 @@ func (l *WatchlistComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the WatchlistComplete struct.
 func (l *WatchlistComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlWatchlist(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlWatchlist(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

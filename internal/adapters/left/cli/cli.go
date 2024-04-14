@@ -35,13 +35,14 @@ import (
 	"github.com/spf13/viper"
 )
 
-// CLI implements the APIPort and WriterPort interfaces along with cobraModel.
+// CLI Adapter implements the APIPort and WriterPort interfaces, and cobraModel.
 type Adapter struct {
 	api   ports.APIPort
 	fs    ports.WriterPort
 	cobra cobraModel
 }
 
+// NewAdapter creates a new instance of the Adapter struct.
 func NewAdapter(api ports.APIPort, fs ports.WriterPort) *Adapter {
 	return &Adapter{api: api, fs: fs}
 }

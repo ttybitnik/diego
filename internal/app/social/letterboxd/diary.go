@@ -31,7 +31,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Diary represents the official input data fields.
 type Diary struct {
 	Name     string
 	Director string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -42,6 +42,7 @@ type Diary struct {
 	Rating   string
 }
 
+// BindFile binds the CSV values into the Diary struct.
 func (l *Diary) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -52,6 +53,7 @@ func (l *Diary) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Diary struct.
 func (l *Diary) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -66,11 +68,12 @@ func (l *Diary) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Diary struct.
 func (l *Diary) BindHTML(shortcode, comment *string, model string) error {
 	return htmlDiary(shortcode, comment, model)
 }
 
-// Complete
+// DiaryComplete represents the official input data fields.
 type DiaryComplete struct {
 	Name        string
 	Director    string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
@@ -84,6 +87,7 @@ type DiaryComplete struct {
 	WatchedDate string
 }
 
+// BindFile binds the CSV values into the DiaryComplete struct.
 func (l *DiaryComplete) BindFile(record *[]string) error {
 	l.Name = (*record)[1]
 	l.Year = (*record)[2]
@@ -97,6 +101,7 @@ func (l *DiaryComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the DiaryComplete struct.
 func (l *DiaryComplete) FetchFromHTTP() error {
 	var director, imgURL string
 
@@ -111,11 +116,12 @@ func (l *DiaryComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the DiaryComplete struct.
 func (l *DiaryComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlDiary(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlDiary(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

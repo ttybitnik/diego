@@ -20,13 +20,14 @@ package youtube
 
 import "fmt"
 
-// Default
+// Subscriptions represents the official input data fields.
 type Subscriptions struct {
 	Name       string
 	ChannelID  string
 	ChannelURL string
 }
 
+// BindFile binds the CSV values into the Subscriptions struct.
 func (y *Subscriptions) BindFile(record *[]string) error {
 	y.Name = (*record)[2]
 	y.ChannelID = (*record)[0]
@@ -35,21 +36,24 @@ func (y *Subscriptions) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Subscriptions struct.
 func (y *Subscriptions) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Subscriptions struct.
 func (y *Subscriptions) BindHTML(shortcode, comment *string, model string) error {
 	return htmlSubscriptions(shortcode, comment, model)
 }
 
-// Complete
+// SubscriptionsComplete represents the official input data fields.
 type SubscriptionsComplete struct {
 	Name       string
 	ChannelID  string
 	ChannelURL string
 }
 
+// BindFile binds the CSV values into the SubscriptionsComplete struct.
 func (y *SubscriptionsComplete) BindFile(record *[]string) error {
 	y.Name = (*record)[2]
 	y.ChannelID = (*record)[0]
@@ -58,15 +62,17 @@ func (y *SubscriptionsComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the SubscriptionsComplete struct.
 func (y *SubscriptionsComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the SubscriptionsComplete struct.
 func (y *SubscriptionsComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlSubscriptions(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlSubscriptions(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

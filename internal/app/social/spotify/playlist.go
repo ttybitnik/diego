@@ -23,7 +23,7 @@ import (
 	"strings"
 )
 
-// Default
+// Playlist represents the official input data fields.
 type Playlist struct {
 	Playlists []struct {
 		Name             string `json:"name"`
@@ -45,6 +45,7 @@ type Playlist struct {
 	} `json:"playlists"`
 }
 
+// BindFile binds the JSON values into the Playlist struct.
 func (s *Playlist) BindFile(record *[]string) error {
 	for i := range s.Playlists {
 		for j := range s.Playlists[i].Items {
@@ -56,15 +57,17 @@ func (s *Playlist) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Playlist struct.
 func (s *Playlist) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Playlist struct.
 func (s *Playlist) BindHTML(shortcode, comment *string, model string) error {
 	return htmlPlaylist(shortcode, comment, model)
 }
 
-// Complete
+// PlaylistComplete represents the official input data fields.
 type PlaylistComplete struct {
 	Playlists []struct {
 		Name             string `json:"name"`
@@ -86,6 +89,7 @@ type PlaylistComplete struct {
 	} `json:"playlists"`
 }
 
+// BindFile binds the JSON values into the PlaylistComplete struct.
 func (s *PlaylistComplete) BindFile(record *[]string) error {
 	for i := range s.Playlists {
 		for j := range s.Playlists[i].Items {
@@ -97,15 +101,17 @@ func (s *PlaylistComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the PlaylistComplete struct.
 func (s *PlaylistComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the PlaylistComplete struct.
 func (s *PlaylistComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlPlaylist(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlPlaylist(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

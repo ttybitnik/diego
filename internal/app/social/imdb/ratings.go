@@ -29,7 +29,7 @@ import (
 	"github.com/gocolly/colly/v2/extensions"
 )
 
-// Default
+// Ratings represents the official input data fields.
 type Ratings struct {
 	Name       string
 	Directors  string
@@ -40,6 +40,7 @@ type Ratings struct {
 	ImgURL     string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
+// BindFile binds the CSV values into the Ratings struct.
 func (i *Ratings) BindFile(record *[]string) error {
 	i.Name = (*record)[3]
 	i.Directors = (*record)[12]
@@ -51,6 +52,7 @@ func (i *Ratings) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Ratings struct.
 func (i *Ratings) FetchFromHTTP() error {
 	var imgURL string
 
@@ -64,11 +66,12 @@ func (i *Ratings) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Ratings struct.
 func (i *Ratings) BindHTML(shortcode, comment *string, model string) error {
 	return htmlRatings(shortcode, comment, model)
 }
 
-// Complete
+// RatingsComplete represents the official input data fields.
 type RatingsComplete struct {
 	Name        string
 	Directors   string
@@ -86,6 +89,7 @@ type RatingsComplete struct {
 	ReleaseDate string
 }
 
+// BindFile binds the CSV values into the RatingsComplete struct.
 func (i *RatingsComplete) BindFile(record *[]string) error {
 	i.Name = (*record)[3]
 	i.Directors = (*record)[12]
@@ -104,6 +108,7 @@ func (i *RatingsComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the RatingsComplete struct.
 func (i *RatingsComplete) FetchFromHTTP() error {
 	var imgURL string
 
@@ -117,11 +122,12 @@ func (i *RatingsComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the RatingsComplete struct.
 func (i *RatingsComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlRatings(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlRatings(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

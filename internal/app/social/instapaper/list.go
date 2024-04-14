@@ -23,13 +23,14 @@ import (
 	"fmt"
 )
 
-// Default
+// List represents the official input data fields.
 type List struct {
 	Name      string
 	URL       string
 	Timestamp string
 }
 
+// BindFile binds the CSV values into the List struct.
 func (i *List) BindFile(record *[]string) error {
 	i.URL = (*record)[0]
 	i.Name = (*record)[1]
@@ -38,15 +39,17 @@ func (i *List) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the List struct.
 func (i *List) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the List struct.
 func (i *List) BindHTML(shortcode, comment *string, model string) error {
 	return htmlPlaylist(shortcode, comment, model)
 }
 
-// Complete
+// ListComplete represents the official input data fields.
 type ListComplete struct {
 	Name      string
 	URL       string
@@ -55,6 +58,7 @@ type ListComplete struct {
 	Timestamp string
 }
 
+// BindFile binds the CSV values into the ListComplete struct.
 func (i *ListComplete) BindFile(record *[]string) error {
 	i.URL = (*record)[0]
 	i.Name = (*record)[1]
@@ -65,15 +69,17 @@ func (i *ListComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the ListComplete struct.
 func (i *ListComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the ListComplete struct.
 func (i *ListComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlPlaylist(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlPlaylist(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>

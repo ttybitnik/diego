@@ -41,6 +41,7 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social/youtube"
 )
 
+// Core define consrtatins and maximum lengths for the data structs.
 const (
 	maxAsyncHTTP = 30
 
@@ -59,9 +60,10 @@ const (
 	youtubeSubscriptionsLen = 3
 )
 
-// Constructor
+// App represents the main application struct.
 type App struct{}
 
+// New creates a new instance of the App struct.
 func New() *App {
 	return &App{}
 }
@@ -340,6 +342,7 @@ func (a *App) validateImportFile(f string) (string, error) {
 	return "", fmt.Errorf("Error wrong file format %s", fe)
 }
 
+// ImportFile imports data from input through the specific domain.Core.
 func (a *App) ImportFile(f string, dc domain.Core) ([]social.Service, error) {
 	ext, err := a.validateImportFile(f)
 	if err != nil {
@@ -362,6 +365,7 @@ func (a *App) ImportFile(f string, dc domain.Core) ([]social.Service, error) {
 	return data, nil
 }
 
+// GenerateShortcode generates the Hugo shortcode for the given domain.Core.
 func (a *App) GenerateShortcode(dc domain.Core) (*string, error) {
 	var shortcode string
 

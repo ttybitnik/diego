@@ -29,14 +29,17 @@ type Application struct {
 	core Core
 }
 
+// NewApplication creates a new instance of Application with the provided core.
 func NewApplication(core Core) *Application {
 	return &Application{core: core}
 }
 
+// GetImportFile delegates the import file operation to the underlying core.
 func (a Application) GetImportFile(f string, dc domain.Core) ([]social.Service, error) {
 	return a.core.ImportFile(f, dc)
 }
 
+// GetGenerateShortcode delegates the shortcode generation to the underlying core.
 func (a Application) GetGenerateShortcode(dc domain.Core) (*string, error) {
 	return a.core.GenerateShortcode(dc)
 }

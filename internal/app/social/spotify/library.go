@@ -24,7 +24,7 @@ import (
 	"strings"
 )
 
-// Default
+// Library represents the official input data fields.
 type Library struct {
 	Tracks []struct {
 		Artist   string `json:"artist"`
@@ -41,12 +41,12 @@ type Library struct {
 	} `json:"albums"`
 }
 
+// BindFile binds the CSV values into the Library struct.
 func (s *Library) BindFile(record *[]string) error {
 	for i := range s.Tracks {
 		trackURL, _ := strings.CutPrefix(s.Tracks[i].URI, "spotify:track:")
 		s.Tracks[i].TrackURL = "https://open.spotify.com/track/" + trackURL
 	}
-
 	for i := range s.Albums {
 		albumURL, _ := strings.CutPrefix(s.Albums[i].URI, "spotify:album:")
 		s.Albums[i].AlbumURL = "https://open.spotify.com/album/" + albumURL
@@ -54,15 +54,17 @@ func (s *Library) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the Library struct.
 func (s *Library) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the Library struct.
 func (s *Library) BindHTML(shortcode, comment *string, model string) error {
 	return htmlLibrary(shortcode, comment, model)
 }
 
-// Complete
+// LibraryComplete represents the official input data fields.
 type LibraryComplete struct {
 	Tracks []struct {
 		Artist   string `json:"artist"`
@@ -79,12 +81,12 @@ type LibraryComplete struct {
 	} `json:"albums"`
 }
 
+// BindFile binds the CSV values into the LibraryComplete struct.
 func (s *LibraryComplete) BindFile(record *[]string) error {
 	for i := range s.Tracks {
 		trackURL, _ := strings.CutPrefix(s.Tracks[i].URI, "spotify:track:")
 		s.Tracks[i].TrackURL = "https://open.spotify.com/track/" + trackURL
 	}
-
 	for i := range s.Albums {
 		albumURL, _ := strings.CutPrefix(s.Albums[i].URI, "spotify:album:")
 		s.Albums[i].AlbumURL = "https://open.spotify.com/album/" + albumURL
@@ -92,15 +94,17 @@ func (s *LibraryComplete) BindFile(record *[]string) error {
 	return nil
 }
 
+// FetchFromHTTP gets additional values from the URLs for the LibraryComplete struct.
 func (s *LibraryComplete) FetchFromHTTP() error {
 	return nil
 }
 
+// BindHTML generates the Hugo shortcode for the LibraryComplete struct.
 func (s *LibraryComplete) BindHTML(shortcode, comment *string, model string) error {
 	return htmlLibrary(shortcode, comment, model)
 }
 
-// Common
+// Common to both structs.
 func htmlLibrary(shortcode, comment *string, model string) error {
 	htmlTemplate := `%s
 <table>
