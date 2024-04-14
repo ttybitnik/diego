@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.1](https://github.com/ttybitnik/diego/compare/v0.3.0...v0.3.1) (2024-04-14)
+
+
+### Bug Fixes
+
+* **instapaper:** amend command example ([a240f7c](https://github.com/ttybitnik/diego/commit/a240f7cd418e4936ae2bc42cac76a8910ea6c51d))
+
+
+### Dependencies
+
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.2.0 to 2.2.1 ([#11](https://github.com/ttybitnik/diego/issues/11)) ([a1e5cd6](https://github.com/ttybitnik/diego/commit/a1e5cd6dd4de6feff84f651d2c91d64da6eac64c))
+
 ## [0.3.0](https://github.com/ttybitnik/diego/compare/v0.2.2...v0.3.0) (2024-04-05)
 
 
