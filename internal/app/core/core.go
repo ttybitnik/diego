@@ -160,15 +160,15 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 
 	header, err := reader.Read()
 	if len(header) == 0 {
-		return []social.Service{}, fmt.Errorf("Empty CSV file: %w", err)
+		return nil, fmt.Errorf("Empty CSV file: %w", err)
 	}
 	if err != nil {
-		return []social.Service{}, fmt.Errorf("Error skipping the first line: %w", err)
+		return nil, fmt.Errorf("Error skipping the first line: %w", err)
 	}
 
 	records, err := reader.ReadAll()
 	if err != nil {
-		return []social.Service{}, fmt.Errorf("Error reading the CSV file: %w", err)
+		return nil, fmt.Errorf("Error reading the CSV file: %w", err)
 	}
 
 	results := make([]social.Service, len(records))
@@ -222,7 +222,7 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 
 	for err := range errCh {
 		if err != nil {
-			return results, err
+			return nil, err
 		}
 	}
 
@@ -308,7 +308,7 @@ func (a *App) processDTO(fo *os.File, ext string, dc domain.Core) ([]social.Serv
 
 		data, err = a.parseFromCSV(reader, dc)
 		if err != nil {
-			return data, err
+			return nil, err
 		}
 	case ".json":
 		buffer := bufio.NewReader(fo)
@@ -316,7 +316,7 @@ func (a *App) processDTO(fo *os.File, ext string, dc domain.Core) ([]social.Serv
 
 		err := a.parseFromJSON(decoder, dc, &data)
 		if err != nil {
-			return data, err
+			return nil, err
 		}
 	}
 
@@ -345,12 +345,12 @@ func (a *App) validateImportFile(f string) (string, error) {
 func (a *App) ImportFile(f string, dc domain.Core) ([]social.Service, error) {
 	ext, err := a.validateImportFile(f)
 	if err != nil {
-		return []social.Service{}, err
+		return nil, err
 	}
 
 	fo, err := os.Open(f)
 	if err != nil {
-		return []social.Service{}, err
+		return nil, err
 	}
 	defer fo.Close()
 
@@ -358,7 +358,7 @@ func (a *App) ImportFile(f string, dc domain.Core) ([]social.Service, error) {
 
 	data, err := a.processDTO(fo, ext, dc)
 	if err != nil {
-		return []social.Service{}, err
+		return nil, err
 	}
 
 	return data, nil
@@ -370,7 +370,7 @@ func (a *App) GenerateShortcode(dc domain.Core) (*string, error) {
 
 	newEntity, _, err := a.selectService(dc)
 	if err != nil {
-		return &shortcode, err
+		return nil, err
 	}
 
 	comment := "<!-- Basic template. " +
@@ -378,7 +378,7 @@ func (a *App) GenerateShortcode(dc domain.Core) (*string, error) {
 
 	err = newEntity.BindHTML(&shortcode, &comment, dc.Model)
 	if err != nil {
-		return &shortcode, err
+		return nil, err
 	}
 
 	return &shortcode, nil
