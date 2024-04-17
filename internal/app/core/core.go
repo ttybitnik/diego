@@ -43,7 +43,8 @@ import (
 
 // Core define consrtatins and maximum lengths for the data structs.
 const (
-	maxAsyncHTTP = 30
+	maxAsyncHTTP     = 30
+	modelMapInitSize = 13
 
 	goodreadsLibraryLen     = 24
 	imdbListLen             = 17
@@ -68,77 +69,91 @@ func New() *App {
 	return &App{}
 }
 
+type serviceSelector struct {
+	service         social.Service
+	serviceComplete social.Service
+	length          int
+}
+
 func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
-	modelMap := map[string]struct {
-		service         social.Service
-		serviceComplete social.Service
-		length          int
-	}{
-		domain.GoodreadsLibrary: {
-			&goodreads.Library{},
-			&goodreads.LibraryComplete{},
-			goodreadsLibraryLen,
-		},
-		domain.ImdbList: {
-			&imdb.List{},
-			&imdb.ListComplete{},
-			imdbListLen,
-		},
-		domain.ImdbRatings: {
-			&imdb.Ratings{},
-			&imdb.RatingsComplete{},
-			imdbRatingsLen,
-		},
-		domain.ImdbWatchlist: {
-			&imdb.Watchlist{},
-			&imdb.WatchlistComplete{},
-			imdbWatchlistLen,
-		},
-		domain.InstapaperList: {
-			&instapaper.List{},
-			&instapaper.ListComplete{},
-			instapaperListLen,
-		},
-		domain.LetterboxdDiary: {
-			&letterboxd.Diary{},
-			&letterboxd.DiaryComplete{},
-			letterboxdDiaryLen,
-		},
-		domain.LetterboxdFilms: {
-			&letterboxd.Films{},
-			&letterboxd.FilmsComplete{},
-			letterboxdFilmsLen,
-		},
-		domain.LetterboxdReviews: {
-			&letterboxd.Reviews{},
-			&letterboxd.ReviewsComplete{},
-			letterboxdReviewsLen,
-		},
-		domain.LetterboxdWatchlist: {
-			&letterboxd.Watchlist{},
-			&letterboxd.WatchlistComplete{},
-			letterboxdWatchlistLen,
-		},
-		domain.SpotifyLibrary: {
-			&spotify.Library{},
-			&spotify.LibraryComplete{},
-			spotifyLibraryLen,
-		},
-		domain.SpotifyPlaylist: {
-			&spotify.Playlist{},
-			&spotify.PlaylistComplete{},
-			spotifyPlaylistLen,
-		},
-		domain.YoutubePlaylist: {
-			&youtube.Playlist{},
-			&youtube.PlaylistComplete{},
-			youtubePlaylistLen,
-		},
-		domain.YoutubeSubscriptions: {
-			&youtube.Subscriptions{},
-			&youtube.SubscriptionsComplete{},
-			youtubeSubscriptionsLen,
-		},
+	modelMap := make(map[string]serviceSelector, modelMapInitSize)
+
+	modelMap[domain.GoodreadsLibrary] = serviceSelector{
+		&goodreads.Library{},
+		&goodreads.LibraryComplete{},
+		goodreadsLibraryLen,
+	}
+
+	modelMap[domain.ImdbList] = serviceSelector{
+		&imdb.List{},
+		&imdb.ListComplete{},
+		imdbListLen,
+	}
+
+	modelMap[domain.ImdbRatings] = serviceSelector{
+		&imdb.Ratings{},
+		&imdb.RatingsComplete{},
+		imdbRatingsLen,
+	}
+
+	modelMap[domain.ImdbWatchlist] = serviceSelector{
+		&imdb.Watchlist{},
+		&imdb.WatchlistComplete{},
+		imdbWatchlistLen,
+	}
+
+	modelMap[domain.InstapaperList] = serviceSelector{
+		&instapaper.List{},
+		&instapaper.ListComplete{},
+		instapaperListLen,
+	}
+
+	modelMap[domain.LetterboxdDiary] = serviceSelector{
+		&letterboxd.Diary{},
+		&letterboxd.DiaryComplete{},
+		letterboxdDiaryLen,
+	}
+
+	modelMap[domain.LetterboxdFilms] = serviceSelector{
+		&letterboxd.Films{},
+		&letterboxd.FilmsComplete{},
+		letterboxdFilmsLen,
+	}
+
+	modelMap[domain.LetterboxdReviews] = serviceSelector{
+		&letterboxd.Reviews{},
+		&letterboxd.ReviewsComplete{},
+		letterboxdReviewsLen,
+	}
+
+	modelMap[domain.LetterboxdWatchlist] = serviceSelector{
+		&letterboxd.Watchlist{},
+		&letterboxd.WatchlistComplete{},
+		letterboxdWatchlistLen,
+	}
+
+	modelMap[domain.SpotifyLibrary] = serviceSelector{
+		&spotify.Library{},
+		&spotify.LibraryComplete{},
+		spotifyLibraryLen,
+	}
+
+	modelMap[domain.SpotifyPlaylist] = serviceSelector{
+		&spotify.Playlist{},
+		&spotify.PlaylistComplete{},
+		spotifyPlaylistLen,
+	}
+
+	modelMap[domain.YoutubePlaylist] = serviceSelector{
+		&youtube.Playlist{},
+		&youtube.PlaylistComplete{},
+		youtubePlaylistLen,
+	}
+
+	modelMap[domain.YoutubeSubscriptions] = serviceSelector{
+		&youtube.Subscriptions{},
+		&youtube.SubscriptionsComplete{},
+		youtubeSubscriptionsLen,
 	}
 
 	modelSelected, ok := modelMap[dc.Model]
