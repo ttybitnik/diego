@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.2](https://github.com/ttybitnik/diego/compare/v0.3.1...v0.3.2) (2024-04-21)
+
+
+### Performance Improvements
+
+* **core:** return nil over empty slices ([c95059a](https://github.com/ttybitnik/diego/commit/c95059a49bb3475675bef4daa9d3afe59062dcd6))
+* **core:** specify model map initial size ([5fd3826](https://github.com/ttybitnik/diego/commit/5fd38266641e793f22b97b2db619b335f1cd48a9))
+
+
+### Dependencies
+
+* **go:** bump golang.org/x/net in the go_modules group ([#13](https://github.com/ttybitnik/diego/issues/13)) ([70a44f5](https://github.com/ttybitnik/diego/commit/70a44f59f042a86ecacadc68703175da8665c98d))
+
 ## [0.3.1](https://github.com/ttybitnik/diego/compare/v0.3.0...v0.3.1) (2024-04-14)
 
 
