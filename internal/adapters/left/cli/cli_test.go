@@ -107,7 +107,7 @@ func goldenValue(t *testing.T, command, golden string, gotByte []byte, update bo
 	goldenPath := "testdata/" + subdir + golden + ".golden"
 
 	if update {
-		err := os.WriteFile(goldenPath, gotByte, 0644)
+		err := os.WriteFile(goldenPath, gotByte, 0o644)
 		if err != nil {
 			t.Fatalf("Error writing to file %s: %s", goldenPath, err)
 		}

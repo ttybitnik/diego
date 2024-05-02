@@ -117,7 +117,7 @@ func (fsa *Adapter) WriteToFile(data []social.Service, dfs domain.FileSystem) er
 
 	filePath = filepath.Clean(filePath)
 
-	err = os.WriteFile(filePath, dto, 0644)
+	err = os.WriteFile(filePath, dto, 0o644)
 	if err != nil {
 		log.Fatalln("Error writing file into file system:", err)
 	}
@@ -148,7 +148,7 @@ func (fsa *Adapter) WriteShortcode(shortcode *string, dfs domain.FileSystem) err
 			}
 		}
 
-		err := os.WriteFile(filePath, []byte(*shortcode), 0644)
+		err := os.WriteFile(filePath, []byte(*shortcode), 0o644)
 		if err != nil {
 			log.Fatalln("Error writing shortcode into file system:", err)
 		}
