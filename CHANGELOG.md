@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.3](https://github.com/ttybitnik/diego/compare/v0.3.2...v0.3.3) (2024-05-07)
+
+
+### Dependencies
+
+* **gh:** bump golangci/golangci-lint-action from 4 to 5 ([#14](https://github.com/ttybitnik/diego/issues/14)) ([7f74984](https://github.com/ttybitnik/diego/commit/7f74984e98222d2a502db5185e91002240bbcaa4))
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.2.1 to 2.2.2 ([#16](https://github.com/ttybitnik/diego/issues/16)) ([34fc3eb](https://github.com/ttybitnik/diego/commit/34fc3ebde8319d7392411916b2999c35fd56aa00))
+* **go:** bump go to 1.22.2 ([9c1e35e](https://github.com/ttybitnik/diego/commit/9c1e35ef687ebd2a716ae36bb10437c44503fdce))
+
 ## [0.3.2](https://github.com/ttybitnik/diego/compare/v0.3.1...v0.3.2) (2024-04-21)
 
 
