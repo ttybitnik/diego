@@ -41,7 +41,6 @@ import (
 	"github.com/ttybitnik/diego/internal/app/social/youtube"
 )
 
-// Core define consrtatins and maximum lengths for the data structs.
 const (
 	maxAsyncHTTP     = 30
 	modelMapInitSize = 13
