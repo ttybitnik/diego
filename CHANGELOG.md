@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.4](https://github.com/ttybitnik/diego/compare/v0.3.3...v0.3.4) (2024-06-04)
+
+
+### Dependencies
+
+* **gh:** bump golangci/golangci-lint-action from 5 to 6 ([#17](https://github.com/ttybitnik/diego/issues/17)) ([1a84e6b](https://github.com/ttybitnik/diego/commit/1a84e6b23bdf893b0a3568ca379d145ae6041be7))
+* **go:** bump github.com/spf13/viper from 1.18.2 to 1.19.0 ([#19](https://github.com/ttybitnik/diego/issues/19)) ([51ce954](https://github.com/ttybitnik/diego/commit/51ce954a595f9ef7e08bf69d68be68ef3089d4e1))
+
 ## [0.3.3](https://github.com/ttybitnik/diego/compare/v0.3.2...v0.3.3) (2024-05-07)
 
 
