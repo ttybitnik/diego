@@ -57,7 +57,7 @@ You can also install `diego` by downloading the [latest release](https://github.
 <summary><b>x86_64</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Linux_x86_64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Linux_x86_64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -65,7 +65,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>arm64</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Linux_arm64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Linux_arm64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -73,7 +73,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>i386</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Linux_i386.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Linux_i386.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -84,7 +84,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>x86_64</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Freebsd_x86_64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Freebsd_x86_64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -92,7 +92,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>arm64</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Freebsd_arm64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Freebsd_arm64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -100,7 +100,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>i386</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Freebsd_i386.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Freebsd_i386.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -111,7 +111,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>x86_64</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Darwin_x86_64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Darwin_x86_64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -119,7 +119,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>arm64</b></summary>
 
 ```shell
-curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Darwin_arm64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
+curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Darwin_arm64.tar.gz | tar -xzvf - -C /tmp/ && cp /tmp/diego ~/.local/bin/ && cp /tmp/man/*.1 ~/.local/share/man/man1/ # x-release-please-version
 ```
 
 </details>
@@ -130,7 +130,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_
 <summary><b>x86_64</b></summary>
 
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.3_Windows_x86_64.zip" -OutFile "$env:USERPROFILE\Downloads\diego_x86_64.zip" # x-release-please-version
+Invoke-WebRequest -Uri "https://github.com/ttybitnik/diego/releases/latest/download/diego_0.3.4_Windows_x86_64.zip" -OutFile "$env:USERPROFILE\Downloads\diego_x86_64.zip" # x-release-please-version
 ```
 
 </details>
