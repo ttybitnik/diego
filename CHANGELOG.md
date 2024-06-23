@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.5](https://github.com/ttybitnik/diego/compare/v0.3.4...v0.3.5) (2024-06-23)
+
+
+### Dependencies
+
+* **gh:** bump goreleaser/goreleaser-action from 5 to 6 ([#20](https://github.com/ttybitnik/diego/issues/20)) ([79c9d89](https://github.com/ttybitnik/diego/commit/79c9d89f630de47443a2143b568c9296f30482f5))
+* **go:** bump github.com/spf13/cobra from 1.8.0 to 1.8.1 ([#21](https://github.com/ttybitnik/diego/issues/21)) ([e4579a0](https://github.com/ttybitnik/diego/commit/e4579a01148f73083287d6677500e4deb92a397d))
+
 ## [0.3.4](https://github.com/ttybitnik/diego/compare/v0.3.3...v0.3.4) (2024-06-04)
 
 
