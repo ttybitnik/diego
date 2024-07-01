@@ -388,7 +388,7 @@ func (a *App) GenerateShortcode(dc domain.Core) (*string, error) {
 	}
 
 	comment := "<!-- Basic template. " +
-		"Read https://gohugo.io/templates/data-templates/ -->"
+		"Read https://gohugo.io/methods/site/data/ -->"
 
 	err = newEntity.BindHTML(&shortcode, &comment, dc.Model)
 	if err != nil {

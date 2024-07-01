@@ -81,7 +81,7 @@ Hugo shortcode template created: layouts/shortcodes/diego_letterboxd_films.html
 
 ```html
 <!-- layouts/shortcodes/diego_letterboxd_films.html -->
-<!-- Basic template. Read https://gohugo.io/templates/data-templates/ -->
+<!-- Basic template. Read https://gohugo.io/methods/site/data/ -->
 <table>
   <tbody>
     {{ range sort .Site.Data.diego_letterboxd_films "name" }}
