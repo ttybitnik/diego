@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/ttybitnik/diego/compare/v0.3.5...v0.4.0) (2024-07-01)
+
+
+### Features
+
+* **project:** update documentation URL ([4ace826](https://github.com/ttybitnik/diego/commit/4ace8266fe4fef78ea119055e6ca19222ace0f86))
+
 ## [0.3.5](https://github.com/ttybitnik/diego/compare/v0.3.4...v0.3.5) (2024-06-23)
 
 
