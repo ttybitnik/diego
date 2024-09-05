@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/ttybitnik/diego/compare/v0.3.5...v0.4.0) (2024-09-05)
+
+
+### Features
+
+* **cli:** add source code URL line ([72ec954](https://github.com/ttybitnik/diego/commit/72ec9540ce93fa10123933a63775fb11a5f6432f))
+* **project:** update documentation URL ([4ace826](https://github.com/ttybitnik/diego/commit/4ace8266fe4fef78ea119055e6ca19222ace0f86))
+
+
+### Dependencies
+
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.2.2 to 2.2.3 ([#24](https://github.com/ttybitnik/diego/issues/24)) ([52d59ab](https://github.com/ttybitnik/diego/commit/52d59abcbe3e941987fbae85bd226245100b5661))
+
 ## [0.3.5](https://github.com/ttybitnik/diego/compare/v0.3.4...v0.3.5) (2024-06-23)
 
 
