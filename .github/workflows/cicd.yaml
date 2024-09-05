@@ -27,7 +27,7 @@ jobs:
       release_created: ${{ steps.release-please.outputs.release_created }}
     steps:
       - name: Run release-please-action
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         id: release-please
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
