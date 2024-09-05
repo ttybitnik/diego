@@ -39,7 +39,8 @@ var rootCmd = &cobra.Command{
 Copyright (C) 2024 Vinícius Moraes
 License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 This is free software, and you are welcome to change and redistribute it under
-certain conditions. This program comes with ABSOLUTELY NO WARRANTY.`,
+certain conditions. This program comes with ABSOLUTELY NO WARRANTY.
+Source code available at <https://github.com/ttybitnik/diego>.`,
 	Short: "DIEGO - A data importer extension for Hugo",
 	Long: `DIEGO - A data importer extension for Hugo
 
