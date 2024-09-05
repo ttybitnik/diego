@@ -193,3 +193,5 @@ Feel free to send patches, questions, or discussions related to `diego` to the [
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0), **unless an exception is made explicit in context**. The GPL is a copyleft license that guarantees the freedom to use, modify, and distribute software. It ensures that users have control over the software they use and promotes collaboration and sharing of knowledge. By requiring that derivative works of GPL-licensed software also be licensed under the GPL, the license ensures that the freedoms it provides are extended to future generations of users and developers.
 
 See the `COPYING` file for more information.
+
+The source code for this project is available at <https://github.com/ttybitnik/diego>.
