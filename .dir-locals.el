@@ -1,7 +1,2 @@
-((nil . (
-	 ;; (compilation-read-command . nil)
-         (compile-command . "make run")
-	 ))
- (makefile-mode . (
-		   (eval . (setenv "DIEGO_GENDOCS" "1"))
-		   )))
+((nil . ((compile-command . "make run")))
+ (makefile-mode . ((eval . (setenv "DIEGO_GENDOCS" "1")))))
