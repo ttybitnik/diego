@@ -1,7 +1,7 @@
 # Diego User Guide
 
 > [!TIP]
-> Utilize the outline button in the top right corner for easy navigation through the headings.
+> Use the outline button in the top right corner for easy navigation through the headings.
 
 ## Commands
 
@@ -389,7 +389,7 @@ diego:
         shortcode: false
 ```
 
-## Services and Files
+## Services and files
 
 List of current supported services and files with data samples.
 

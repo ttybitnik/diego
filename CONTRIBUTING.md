@@ -1,14 +1,8 @@
-# Contributing to Diego
+# Contributing guidelines
 
-Thank you for contributing to Diego. Your time and help are appreciated. Here are some guidelines to help you get started.
+Thank you for contributing to `diego`. Here are some guidelines to help you get started.
 
-To request support for a new service or file, submit a [feature request](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) with a small sample of the official exported file.
-
-In case of unexpected behavior, please open a [bug report](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=).
-
-To contribute to `diego` development, refer to the sections below.
-
-## Basic Steps
+## Basic steps
 
 1. Fork the project.
 1. Download your fork to your PC (`git clone https://github.com/your_username/diego && cd diego`)
@@ -19,15 +13,17 @@ To contribute to `diego` development, refer to the sections below.
 1. Push to the branch (`git push origin feat/new-feature`)
 1. Create new pull request
 
-## Testing and Running
+## Commit messages
+
+[Conventional Commits](https://www.conventionalcommits.org/) messages are welcome but not mandatory, since each pull request will be squashed during the merge process. They are used to automate [Semantic Versioning](https://semver.org/) for the releases.
+
+## Tests and checks
 
 Execute `make run` to test and check your changes. If you do not have `golangci-lint` installed on your system, comment out the `golangci-lint run` line in the `Makefile`.
 
-## Diego Internals
+## Internals
 
-Diego follows the **Port and Adapters Architecture (Hexagonal)**. Refer to commit [3eb8bf8](https://github.com/ttybitnik/diego/commit/3eb8bf8c4ff034c0383a258be3eda1b966aa1e86) for an overview of the files that need to be changed to implement support for a new service/file.
-
-[Conventional Commits](https://www.conventionalcommits.org/) messages are welcome but not mandatory, since each pull request will be squashed during the merge process. They are used to automate [Semantic Versioning](https://semver.org/) for the releases.
+Diego follows the **[Port and Adapters Architecture (Hexagonal)](https://jmgarridopaz.github.io/content/hexagonalarchitecture.html)**. Refer to commit [3eb8bf8](https://github.com/ttybitnik/diego/commit/3eb8bf8c4ff034c0383a258be3eda1b966aa1e86) for an overview of the files that need to be changed to implement support for a new service/file.
 
 ### Makefile
 
@@ -39,7 +35,7 @@ Diego follows the **Port and Adapters Architecture (Hexagonal)**. Refer to commi
 - `make update` :: update module dependencies and call `make run`
 - `make golden` :: generate/update golden files using current test results
 
-### Generate Docs
+### Generate docs
 
 To automate the process of updating the `docs/help` and `docs/man` files, set the `DIEGO_GENDOCS` environment variable to `1` before building and running the application.
 

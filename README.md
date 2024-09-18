@@ -1,16 +1,15 @@
+# Diego: a data importer extension for Hugo
+
 ![diego](assets/diego_header.png)
 
-Diego is a data importer extension for [Hugo](https://gohugo.io/).
-
-Diego integrates with Hugo as a CLI tool to assist in importing and utilizing exported social media data from various services on Hugo websites.
+Diego integrates with [Hugo](https://gohugo.io/) as a CLI tool to assist in importing and utilizing exported social media data from various services on Hugo websites.
 
 [![release](https://img.shields.io/github/v/release/ttybitnik/diego)](https://github.com/ttybitnik/diego/releases/latest)
 [![ci/cd](https://github.com/ttybitnik/diego/actions/workflows/cicd.yaml/badge.svg)](https://github.com/ttybitnik/diego/actions/workflows/cicd.yaml)
 [![go report card](https://goreportcard.com/badge/github.com/ttybitnik/diego)](https://goreportcard.com/report/github.com/ttybitnik/diego)
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-<!-- [!["buy me a coffee"](https://img.shields.io/badge/buy_me_a_coffee-ttybitnik-FFDD00?logo=buymeacoffee&labelColor=gray&logoColor=FFFFFF)](https://buymeacoffee.com/ttybitnik) -->
 
-# Overview
+## Overview
 
 `diego` is a CLI tool designed to import official `CSV` and `JSON` data files from popular services like **Goodreads**, **IMDb**, **Instapaper**, **Letterboxd**, **Spotify**, and **YouTube** into **Hugo**.
 
@@ -23,20 +22,20 @@ Diego integrates with Hugo as a CLI tool to assist in importing and utilizing ex
 - Flags suited for scripting and pipelines
 - Persistent configuration
 
-## Showcase
+### Showcase
 
 For a basic workflow example using `diego` to import data, see the [demonstration](docs/demonstration.md).
 
 For real usage examples, you can check the collections section on my personal **Hugo** website. I utilize `diego` to showcase my [favorite albums](https://eternodevir.com/dg/albums/), [films](https://eternodevir.com/dg/films/), [TV shows](https://eternodevir.com/dg/tv-shows/), [music videos](https://eternodevir.com/dg/music-videos/), and [books](https://eternodevir.com/dg/books/).
 
-# Installation
+## Installation
 
 Installing `diego` is easy. You can either compile it from source or download the official binaries from the [releases](https://github.com/ttybitnik/diego/releases).
 
 > [!TIP]
 > After following the instructions for your preferred installation method, run `diego -v` to test the installed version.
 
-## From source
+### From source
 
 If the target system has `go` installed, you can compile and install `diego` using the following command:
 
@@ -44,14 +43,14 @@ If the target system has `go` installed, you can compile and install `diego` usi
 go install github.com/ttybitnik/diego@latest
 ```
 
-## From releases
+### From releases
 
 You can also install `diego` by downloading the [latest release](https://github.com/ttybitnik/diego/releases/latest) for your system and moving its binary and man pages to the appropriate system paths. Use one of the commands below to simplify this process:
 
 > [!TIP]
 > In case of uncertainty about the machine architecture, run `uname -m` to check it.
 
-### Linux
+#### Linux
 
 <details>
 <summary><b>x86_64</b></summary>
@@ -78,7 +77,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.4.0_
 
 </details>
 
-### FreeBSD
+#### FreeBSD
 
 <details>
 <summary><b>x86_64</b></summary>
@@ -105,7 +104,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.4.0_
 
 </details>
 
-### MacOS
+#### MacOS
 
 <details>
 <summary><b>x86_64</b></summary>
@@ -124,7 +123,7 @@ curl -L https://github.com/ttybitnik/diego/releases/latest/download/diego_0.4.0_
 
 </details>
 
-### Windows
+#### Windows
 
 <details>
 <summary><b>x86_64</b></summary>
@@ -135,17 +134,17 @@ Invoke-WebRequest -Uri "https://github.com/ttybitnik/diego/releases/latest/downl
 
 </details>
 
-# Usage
+## Usage
 
-## Getting Started
+### Getting started
 
 Once installed, run `diego` and follow the instructions to start using it.
 
 Run either `diego help [command]` or `diego [command] -h` to discover more about a specific command.
 
-For complete details on using `diego`, read the [Diego User Guide](docs/user_guide.md).
+For complete details on using `diego`, see the [Diego User Guide](docs/user_guide.md).
 
-## Commands
+### Commands
 
 - [diego completion](docs/user_guide.md#diego-completion) :: generate the autocompletion script for the specified shell
 - [diego import](docs/user_guide.md#diego-import) :: import data from various services into Hugo
@@ -165,7 +164,7 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
   - [diego set shortcode](docs/user_guide.md#diego-set-shortcode) :: enable or disable the shortcode flag by default
 - [diego settings](docs/user_guide.md#diego-settings) :: show current settings
 
-## Supported Services and Files
+### Supported services and files
 
 - [Goodreads](docs/user_guide.md#goodreads)
 - [IMDb](docs/user_guide.md#imdb)
@@ -174,23 +173,23 @@ For complete details on using `diego`, read the [Diego User Guide](docs/user_gui
 - [Spotify](docs/user_guide.md#spotify)
 - [YouTube](docs/user_guide.md#youtube)
 
-# Contributing
+## Contributing
 
 To request support for a new service or file, submit a [feature request](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) with a small sample of the official exported file.
 
 In case of unexpected behavior, please open a [bug report](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=).
 
-To contribute to `diego` development, refer to the [contributing instructions](CONTRIBUTING.md).
+To contribute to `diego` development, see the [contributing guidelines](CONTRIBUTING.md).
 
-## Mailing list
+### Mailing list
 
 [Email workflow](https://git-send-email.io/) is also available.
 
 Feel free to send patches, questions, or discussions related to `diego` to the [~ttybitnik/general mailing list](https://lists.sr.ht/~ttybitnik/general).
 
-# License
+## License
 
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0), **unless an exception is made explicit in context**. The GPL is a copyleft license that guarantees the freedom to use, modify, and distribute software. It ensures that users have control over the software they use and promotes collaboration and sharing of knowledge. By requiring that derivative works of GPL-licensed software also be licensed under the GPL, the license ensures that the freedoms it provides are extended to future generations of users and developers.
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0), **unless an exception is made explicit in context**. The GPL is a copyleft license that guarantees freedom to use, modify, and distribute software. It ensures that users have control over the software they use and promotes collaboration and sharing of knowledge. By requiring that derivative works also be licensed under the GPL, it ensures that the freedoms it provides are extended to future generations of users and developers.
 
 See the `COPYING` file for more information.
 
