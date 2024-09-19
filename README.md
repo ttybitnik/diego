@@ -26,7 +26,7 @@ Diego integrates with [Hugo](https://gohugo.io/) as a CLI tool to assist in impo
 
 For a basic workflow example using `diego` to import data, see the [demonstration](docs/demonstration.md).
 
-For real usage examples, you can check the collections section on my personal **Hugo** website. I utilize `diego` to showcase my [favorite albums](https://eternodevir.com/dg/albums/), [films](https://eternodevir.com/dg/films/), [TV shows](https://eternodevir.com/dg/tv-shows/), [music videos](https://eternodevir.com/dg/music-videos/), and [books](https://eternodevir.com/dg/books/).
+For real usage examples, you can check the collections section on my personal **Hugo** website. I use `diego` to showcase my [favorite albums](https://eternodevir.com/dg/albums/), [films](https://eternodevir.com/dg/films/), [TV shows](https://eternodevir.com/dg/tv-shows/), [music videos](https://eternodevir.com/dg/music-videos/), and [books](https://eternodevir.com/dg/books/).
 
 ## Installation
 
@@ -37,7 +37,7 @@ Installing `diego` is easy. You can either compile it from source or download th
 
 ### From source
 
-If the target system has `go` installed, you can compile and install `diego` using the following command:
+If the target system has `go` installed, compile and install `diego` using the following command:
 
 ```shell
 go install github.com/ttybitnik/diego@latest
@@ -45,7 +45,7 @@ go install github.com/ttybitnik/diego@latest
 
 ### From releases
 
-You can also install `diego` by downloading the [latest release](https://github.com/ttybitnik/diego/releases/latest) for your system and moving its binary and man pages to the appropriate system paths. Use one of the commands below to simplify this process:
+Install `diego` by downloading the [latest release](https://github.com/ttybitnik/diego/releases/latest) for your system and moving its binary and man pages to the appropriate system paths. Use one of the commands below to simplify this process:
 
 > [!TIP]
 > In case of uncertainty about the machine architecture, run `uname -m` to check it.
