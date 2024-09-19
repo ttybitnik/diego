@@ -1,4 +1,4 @@
-# Diego User Guide
+# User guide
 
 > [!TIP]
 > Use the outline button in the top right corner for easy navigation through the headings.

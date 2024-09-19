@@ -142,7 +142,7 @@ Once installed, run `diego` and follow the instructions to start using it.
 
 Run either `diego help [command]` or `diego [command] -h` to discover more about a specific command.
 
-For complete details on using `diego`, see the [Diego User Guide](docs/user_guide.md).
+For complete details on using `diego`, see the [user guide](docs/user_guide.md).
 
 ### Commands
 

@@ -1,4 +1,4 @@
-# Contributing guidelines
+# Contributing
 
 Thank you for contributing to `diego`. Here are some guidelines to help you get started.
 
@@ -23,7 +23,7 @@ Execute `make run` to test and check your changes. If you do not have `golangci-
 
 ## Internals
 
-Diego follows the **[Port and Adapters Architecture (Hexagonal)](https://jmgarridopaz.github.io/content/hexagonalarchitecture.html)**. Refer to commit [3eb8bf8](https://github.com/ttybitnik/diego/commit/3eb8bf8c4ff034c0383a258be3eda1b966aa1e86) for an overview of the files that need to be changed to implement support for a new service/file.
+`diego` follows the **[Port and Adapters Architecture (Hexagonal)](https://jmgarridopaz.github.io/content/hexagonalarchitecture.html)**. Refer to commit [3eb8bf8](https://github.com/ttybitnik/diego/commit/3eb8bf8c4ff034c0383a258be3eda1b966aa1e86) for an overview of the files that need to be changed to implement support for a new service/file.
 
 ### Makefile
 
