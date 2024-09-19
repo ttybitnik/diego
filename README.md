@@ -45,7 +45,7 @@ go install github.com/ttybitnik/diego@latest
 
 ### From releases
 
-Install `diego` by downloading the [latest release](https://github.com/ttybitnik/diego/releases/latest) for your system and moving its binary and man pages to the appropriate system paths. Use one of the commands below to simplify this process:
+Download the [latest release](https://github.com/ttybitnik/diego/releases/latest) for your system and move its binary and man pages to the appropriate system paths. Use one of the commands below to simplify this process:
 
 > [!TIP]
 > In case of uncertainty about the machine architecture, run `uname -m` to check it.
