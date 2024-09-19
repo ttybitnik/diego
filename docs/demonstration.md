@@ -3,7 +3,7 @@
 For illustrative purposes, the following is a basic workflow for importing data from Letterboxd using `diego`.
 
 > [!IMPORTANT]
-> For a comprehensive understanding of `diego` functionalities, read the [Diego User Guide](user_guide.md) afterwards.
+> For a comprehensive understanding of `diego` functionalities, see the [user guide](user_guide.md) afterwards.
 
 1. Navigate to the Letterboxd website and download your data archive from `Settings > Data > Export Your Data`.
 
@@ -70,7 +70,7 @@ Hugo data file created: data/diego_letterboxd_films.yaml
   date: "2021-12-14"
 ```
 
-4.1 Optionally, to generate an Hugo shortcode template for the data file, append the `--shortcode` flag to the command. This creates the Hugo shortcode template under the `layouts/shortcodes` directory.
+4.1. Optionally, to generate an Hugo shortcode template for the data file, append the `--shortcode` flag to the command. This creates the Hugo shortcode template under the `layouts/shortcodes` directory.
 
 ```txt
 $ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --shortcode
@@ -104,10 +104,10 @@ Hugo shortcode template created: layouts/shortcodes/diego_letterboxd_films.html
 </table>
 ```
 
-4.2 Optionally, since the Letterboxd `films.csv` does not include director or poster information, append the `--scrape` flag to the command to fetch this additional data for each entry.
+4.2. Optionally, since the Letterboxd `films.csv` does not include director or poster information, append the `--scrape` flag to the command to fetch this additional data for each entry.
 
 > [!IMPORTANT]
-> The `--scrape` flag is designed to be as lightweight and minimal as possible. It only fetches missing textual information from the URLs in the input file. To understand how it works and the specific fields retrieved for each command, read the [Diego User Guide](user_guide.md) before using this flag.
+> The `--scrape` flag is designed to be as lightweight and minimal as possible. It only fetches missing textual information from the URLs in the input file. To understand how it works and the specific fields retrieved for each command, see the [user guide](user_guide.md) before using this flag.
 
 ```txt
 $ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --shortcode --scrape

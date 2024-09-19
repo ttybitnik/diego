@@ -191,7 +191,7 @@ Feel free to send patches, questions, or discussions related to `diego` to the [
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0), **unless an exception is made explicit in context**. The GPL is a copyleft license that guarantees freedom to use, modify, and distribute software. It ensures that users have control over the software they use and promotes collaboration and sharing of knowledge. By requiring that derivative works also be licensed under the GPL, it ensures that the freedoms it provides are extended to future generations of users and developers.
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0), **unless an exception is made explicit in context**. The GPL is a copyleft license that guarantees freedom to use, modify, and distribute software. It ensures that users have control over the software they use and promotes collaboration and sharing of knowledge. By requiring that derivative works also be licensed under the GPL, the freedoms it provides are extended to future generations of users and developers.
 
 See the `COPYING` file for more information.
 
