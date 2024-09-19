@@ -179,6 +179,8 @@ To request support for a new service or file, submit a [feature request](https:/
 
 In case of unexpected behavior, please open a [bug report](https://github.com/ttybitnik/diego/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=).
 
+For matters requiring privacy, such as security-related reports or patches, check the [security policy](SECURITY.md).
+
 To contribute to `diego` development, see the [contributing guidelines](CONTRIBUTING.md).
 
 ### Mailing list
