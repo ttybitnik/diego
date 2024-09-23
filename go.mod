@@ -1,6 +1,6 @@
 module github.com/ttybitnik/diego
 
-go 1.22.2
+go 1.22.6
 
 require (
 	github.com/gocolly/colly/v2 v2.1.0
