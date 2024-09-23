@@ -174,6 +174,7 @@ func fetchWatchlist(url string, imgURL *string) error {
 	c := colly.NewCollector()
 	extensions.RandomUserAgent(c)
 	c.SetRequestTimeout(15 * time.Second)
+	c.IgnoreRobotsTxt = false
 	maxRetries := 3
 	retryCount := 1
 

@@ -368,7 +368,7 @@ Overwrite existent output data file.
 Fetch additional data from CSV/JSON links using HTTP.
 
 > [!IMPORTANT]
-> This flag is designed to be as lightweight and minimal as possible. It incorporates hard-coded delays and restricted concurrency, focusing on fetching only missing textual information from the URLs in the input file. Despite these precautions, please be advised not to misuse or spam this flag.
+> This flag is designed to be as lightweight and minimal as possible, with respect for robots.txt. It incorporates hard-coded delays and restricted concurrency, focusing on fetching only missing textual information from the URLs in the input file. Despite these precautions, please be advised not to misuse or spam this flag.
 
 #### --shortcode
 

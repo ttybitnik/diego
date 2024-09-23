@@ -107,7 +107,7 @@ Hugo shortcode template created: layouts/shortcodes/diego_letterboxd_films.html
 4.2. Optionally, since the Letterboxd `films.csv` does not include director or poster information, append the `--scrape` flag to the command to fetch this additional data for each entry.
 
 > [!IMPORTANT]
-> The `--scrape` flag is designed to be as lightweight and minimal as possible. It only fetches missing textual information from the URLs in the input file. To understand how it works and the specific fields retrieved for each command, see the [user guide](user_guide.md) before using this flag.
+> The `--scrape` flag is designed to be as lightweight and minimal as possible, with respect for robots.txt. It only fetches missing textual information from the URLs in the input file. To understand how it works and the specific fields retrieved for each command, see the [user guide](user_guide.md) before using this flag.
 
 ```txt
 $ diego import letterboxd films -i examples/silo/letterboxd_likes_films.csv --shortcode --scrape
