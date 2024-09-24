@@ -69,7 +69,7 @@ jobs:
           go-version: 'stable'
           cache: false
       - name: Check files with golangci-lint
-        id: golangci-lint
+        id: golangci
         uses: golangci/golangci-lint-action@v6
         with:
           version: latest
@@ -82,7 +82,7 @@ jobs:
         run: |
           echo "| Key | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|:--|:--|" >> $GITHUB_STEP_SUMMARY
-          echo "| **golangci-lint** | ${{ steps.linter.outcome }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **golangci-lint** | ${{ steps.golangci.outcome }} |" >> $GITHUB_STEP_SUMMARY
           echo "| **go-test** | ${{ steps.go-test.outcome }} |" >> $GITHUB_STEP_SUMMARY
 
   goreleaser:
