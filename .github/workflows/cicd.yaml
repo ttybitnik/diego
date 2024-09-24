@@ -25,7 +25,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     outputs:
-      release_created: ${{ steps.release-please.outputs.release_created }}
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
       - name: Automate releases based on conventional commits
         uses: googleapis/release-please-action@v4
