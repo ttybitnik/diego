@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/ttybitnik/diego/compare/v0.4.0...v0.5.0) (2024-09-24)
+
+
+### Features
+
+* **scrape:** ensure robots.txt honor ([d7a9cd1](https://github.com/ttybitnik/diego/commit/d7a9cd16a1eaa2f2ebebff4174a800de210fa556))
+
+
+### Dependencies
+
+* **go:** bump go to 1.22.6 ([9b20166](https://github.com/ttybitnik/diego/commit/9b2016657587e79adabb4c38f8c916eb665ba1bf))
+
 ## [0.4.0](https://github.com/ttybitnik/diego/compare/v0.3.5...v0.4.0) (2024-09-05)
 
 
