@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/ttybitnik/diego/compare/v0.5.0...v0.5.1) (2024-12-07)
+
+
+### Dependencies
+
+* **gh:** bump goreleaser config to 2 ([543aae2](https://github.com/ttybitnik/diego/commit/543aae26c831f7da29927b44b69031083fd8429c))
+
 ## [0.5.0](https://github.com/ttybitnik/diego/compare/v0.4.0...v0.5.0) (2024-09-24)
 
 
