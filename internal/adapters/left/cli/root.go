@@ -30,7 +30,7 @@ import (
 
 var (
 	cfgFile   string
-	ciVersion string = "0.5.1" // x-release-please-version
+	ciVersion string = "0.5.2" // x-release-please-version
 )
 
 var rootCmd = &cobra.Command{
