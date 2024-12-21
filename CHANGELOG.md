@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/ttybitnik/diego/compare/v0.5.1...v0.5.2) (2024-12-21)
+
+
+### Dependencies
+
+* **go:** bump golang.org/x/net from 0.23.0 to 0.33.0 ([2ecf058](https://github.com/ttybitnik/diego/commit/2ecf058989a752fb0fa8d0220e1c69bd027df45a))
+
 ## [0.5.1](https://github.com/ttybitnik/diego/compare/v0.5.0...v0.5.1) (2024-12-07)
 
 
