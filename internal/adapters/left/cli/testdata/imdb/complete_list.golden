@@ -1,21 +1,23 @@
 - name: No Intenso Agora
+  originalname: No Intenso Agora
   directors: João Moreira Salles
   year: "2017"
   yourrating: "10"
   url: https://www.imdb.com/title/tt6532954/
   position: "1"
   const: tt6532954
-  created: "2018-01-16"
-  modified: "2018-01-16"
+  created: "2018-05-25"
+  modified: "2018-05-25"
   description: ""
-  titletype: movie
-  imdbrating: "7.3"
+  titletype: Movie
+  imdbrating: "7.4"
   runtimemins: "127"
   genres: Documentary, History
-  numvotes: "606"
-  releasedate: "2017-02-11"
+  numvotes: "623"
+  releasedate: "2018-01-31"
   daterated: "2018-05-25"
 - name: Loving Vincent
+  originalname: Loving Vincent
   directors: DK Welchman, Hugh Welchman
   year: "2017"
   yourrating: "10"
@@ -25,27 +27,28 @@
   created: "2018-01-20"
   modified: "2018-01-20"
   description: ""
-  titletype: movie
+  titletype: Movie
   imdbrating: "7.8"
   runtimemins: "94"
   genres: Animation, Drama, Mystery
-  numvotes: "62477"
-  releasedate: "2017-06-12"
+  numvotes: "65222"
+  releasedate: "2017-09-22"
   daterated: "2018-01-20"
 - name: T2 Trainspotting
+  originalname: T2 Trainspotting
   directors: Danny Boyle
   year: "2017"
   yourrating: "9"
   url: https://www.imdb.com/title/tt2763304/
   position: "3"
   const: tt2763304
-  created: "2018-01-16"
-  modified: "2018-01-16"
+  created: "2017-05-28"
+  modified: "2017-05-28"
   description: ""
-  titletype: movie
-  imdbrating: "7.2"
+  titletype: Movie
+  imdbrating: "7.1"
   runtimemins: "117"
   genres: Comedy, Crime, Drama
-  numvotes: "131395"
-  releasedate: "2017-01-22"
+  numvotes: "135606"
+  releasedate: "2017-03-31"
   daterated: "2017-05-28"
