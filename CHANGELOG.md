@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0](https://github.com/ttybitnik/diego/compare/v0.5.2...v1.0.0) (2024-12-25)
+
+
+### Features
+
+* **imdb:** add support for new CSV format ([516715d](https://github.com/ttybitnik/diego/commit/516715d3d75c66a91f8d9fb439f91206288804b0))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0 ([19eb2e8](https://github.com/ttybitnik/diego/commit/19eb2e836da1fcf6ec6b8e8e05d332a099b80396))
+
 ## [0.5.2](https://github.com/ttybitnik/diego/compare/v0.5.1...v0.5.2) (2024-12-21)
 
 
