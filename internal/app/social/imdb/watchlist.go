@@ -31,23 +31,25 @@ import (
 
 // Watchlist represents the official input data fields.
 type Watchlist struct {
-	Name      string
-	Directors string
-	Year      string
-	Created   string
-	Position  string
-	URL       string
-	ImgURL    string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
+	Name         string
+	OriginalName string
+	Directors    string
+	Year         string
+	Created      string
+	Position     string
+	URL          string
+	ImgURL       string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
 // BindFile binds the CSV values into the Watchlist struct.
 func (i *Watchlist) BindFile(record *[]string) error {
 	i.Name = (*record)[5]
-	i.Directors = (*record)[14]
-	i.Year = (*record)[10]
+	i.OriginalName = (*record)[6]
+	i.Directors = (*record)[15]
+	i.Year = (*record)[11]
 	i.Created = (*record)[2]
 	i.Position = (*record)[0]
-	i.URL = (*record)[6]
+	i.URL = (*record)[7]
 
 	return nil
 }
@@ -73,45 +75,47 @@ func (i *Watchlist) BindHTML(shortcode, comment *string, model string) error {
 
 // WatchlistComplete represents the official input data fields.
 type WatchlistComplete struct {
-	Name        string
-	Directors   string
-	Year        string
-	Created     string
-	Position    string
-	URL         string
-	ImgURL      string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
-	Const       string
-	Modified    string
-	Description string
-	TitleType   string
-	IMDbRating  string
-	RuntimeMins string
-	Genres      string
-	NumVotes    string
-	ReleaseDate string
-	YourRating  string
-	DateRated   string
+	Name         string
+	OriginalName string
+	Directors    string
+	Year         string
+	Created      string
+	Position     string
+	URL          string
+	ImgURL       string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
+	Const        string
+	Modified     string
+	Description  string
+	TitleType    string
+	IMDbRating   string
+	RuntimeMins  string
+	Genres       string
+	NumVotes     string
+	ReleaseDate  string
+	YourRating   string
+	DateRated    string
 }
 
 // BindFile binds the CSV values into the WatchlistComplete struct.
 func (i *WatchlistComplete) BindFile(record *[]string) error {
 	i.Name = (*record)[5]
-	i.Directors = (*record)[14]
-	i.Year = (*record)[10]
+	i.OriginalName = (*record)[6]
+	i.Directors = (*record)[15]
+	i.Year = (*record)[11]
 	i.Created = (*record)[2]
 	i.Position = (*record)[0]
-	i.URL = (*record)[6]
+	i.URL = (*record)[7]
 	i.Const = (*record)[1]
 	i.Modified = (*record)[3]
 	i.Description = (*record)[4]
-	i.TitleType = (*record)[7]
-	i.IMDbRating = (*record)[8]
-	i.RuntimeMins = (*record)[9]
-	i.Genres = (*record)[11]
-	i.NumVotes = (*record)[12]
-	i.ReleaseDate = (*record)[13]
-	i.YourRating = (*record)[15]
-	i.DateRated = (*record)[16]
+	i.TitleType = (*record)[8]
+	i.IMDbRating = (*record)[9]
+	i.RuntimeMins = (*record)[10]
+	i.Genres = (*record)[12]
+	i.NumVotes = (*record)[13]
+	i.ReleaseDate = (*record)[14]
+	i.YourRating = (*record)[16]
+	i.DateRated = (*record)[17]
 
 	return nil
 }

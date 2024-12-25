@@ -413,30 +413,30 @@ Official IMDb supported files.
 
 **imdb_list.csv**
 ```csv
-Position,Const,Created,Modified,Description,Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
-1,tt6532954,2018-01-16,2018-01-16,,No Intenso Agora,https://www.imdb.com/title/tt6532954/,movie,7.3,127,2017,"Documentary, History",606,2017-02-11,João Moreira Salles,10,2018-05-25
-2,tt3262342,2018-01-20,2018-01-20,,Loving Vincent,https://www.imdb.com/title/tt3262342/,movie,7.8,94,2017,"Animation, Drama, Mystery",62477,2017-06-12,"DK Welchman, Hugh Welchman",10,2018-01-20
-3,tt2763304,2018-01-16,2018-01-16,,T2 Trainspotting,https://www.imdb.com/title/tt2763304/,movie,7.2,117,2017,"Comedy, Crime, Drama",131395,2017-01-22,Danny Boyle,9,2017-05-28
+Position,Const,Created,Modified,Description,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
+1,tt6532954,2018-05-25,2018-05-25,,"No Intenso Agora","No Intenso Agora",https://www.imdb.com/title/tt6532954/,Movie,7.4,127,2017,"Documentary, History",623,2018-01-31,"João Moreira Salles",10,2018-05-25
+2,tt3262342,2018-01-20,2018-01-20,,"Loving Vincent","Loving Vincent",https://www.imdb.com/title/tt3262342/,Movie,7.8,94,2017,"Animation, Drama, Mystery",65222,2017-09-22,"DK Welchman, Hugh Welchman",10,2018-01-20
+3,tt2763304,2017-05-28,2017-05-28,,"T2 Trainspotting","T2 Trainspotting",https://www.imdb.com/title/tt2763304/,Movie,7.1,117,2017,"Comedy, Crime, Drama",135606,2017-03-31,"Danny Boyle",9,2017-05-28
 ```
 
 Optional `--scrape` fields: *ImgUrl*
 
 **imdb_ratings.csv**
 ```csv
-Const,Your Rating,Date Rated,Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors
-tt0287467,10,2016-07-24,Hable con ella,https://www.imdb.com/title/tt0287467/,movie,7.9,112,2002,"Drama, Mystery, Romance",116629,2002-03-15,Pedro Almodóvar
-tt0058003,10,2018-08-21,Il deserto rosso,https://www.imdb.com/title/tt0058003/,movie,7.5,117,1964,Drama,17257,1964-09-07,Michelangelo Antonioni
-tt0118694,10,2021-05-16,Fa yeung nin wah,https://www.imdb.com/title/tt0118694/,movie,8.1,98,2000,"Drama, Romance",163252,2000-05-20,Kar-Wai Wong
+Const,Your Rating,Date Rated,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors
+tt0058003,10,2018-08-21,"Red Desert","Il deserto rosso",https://www.imdb.com/title/tt0058003,Movie,7.4,117,1964,"Drama",18182,"1965-02-08","Michelangelo Antonioni"
+tt0287467,10,2016-07-24,"Talk to Her","Hable con ella",https://www.imdb.com/title/tt0287467,Movie,7.9,112,2002,"Romance, Mystery, Drama",119041,"2003-02-14","Pedro Almodóvar"
+tt0118694,10,2021-05-16,"In the Mood for Love","Fa yeung nin wah",https://www.imdb.com/title/tt0118694,Movie,8.1,98,2000,"Romance, Drama",172527,"2001-03-09","Kar-Wai Wong"
 ```
 
 Optional `--scrape` fields: *ImgUrl*
 
 **imdb_watchlist.csv**
 ```csv
-Position,Const,Created,Modified,Description,Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
-222,tt5537002,2023-12-25,2023-12-25,,Killers of the Flower Moon,https://www.imdb.com/title/tt5537002/,movie,7.8,206,2023,"Crime, Drama, History, Mystery, Romance, Western",139774,2023-05-20,Martin Scorsese,,
-223,tt21027780,2023-12-25,2023-12-25,,Kuolleet lehdet,https://www.imdb.com/title/tt21027780/,movie,7.6,81,2023,"Comedy, Drama",6786,2023-05-23,Aki Kaurismäki,,
-224,tt26255088,2023-12-25,2023-12-25,,"Elis & Tom, só tinha de ser com você",https://www.imdb.com/title/tt26255088/,movie,7.9,100,2023,Documentary,240,2023-08-24,"Roberto de Oliveira, Jom Tob Azulay",,
+Position,Const,Created,Modified,Description,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
+8,tt0054389,2016-01-15,2016-01-15,,"Shoot the Piano Player","Tirez sur le pianiste",https://www.imdb.com/title/tt0054389/,Movie,7.4,92,1960,"Crime, Drama, Thriller",21077,1962-07-23,"François Truffaut",,
+218,tt21254598,2023-12-25,2023-12-25,,"Cobweb","Geomijip",https://www.imdb.com/title/tt21254598/,Movie,6.6,135,2023,"Comedy, Drama, History",1908,2024-02-09,"Kim Jee-woon",,
+220,tt26255088,2023-12-29,2023-12-29,,"Elis and Tom","Elis & Tom: Só Tinha de Ser com Você",https://www.imdb.com/title/tt26255088/,Movie,7.8,100,2022,"Documentary, Music",438,2024-08-01,"Roberto de Oliveira, Jom Tob Azulay",,
 ```
 
 Optional `--scrape` fields: *ImgUrl*

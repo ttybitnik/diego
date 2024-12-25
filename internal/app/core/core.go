@@ -46,9 +46,9 @@ const (
 	modelMapInitSize = 13
 
 	goodreadsLibraryLen     = 24
-	imdbListLen             = 17
-	imdbRatingsLen          = 13
-	imdbWatchlistLen        = 17
+	imdbListLen             = 18
+	imdbRatingsLen          = 14
+	imdbWatchlistLen        = 18
 	instapaperListLen       = 5
 	letterboxdDiaryLen      = 8
 	letterboxdFilmsLen      = 4

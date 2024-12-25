@@ -31,23 +31,25 @@ import (
 
 // Ratings represents the official input data fields.
 type Ratings struct {
-	Name       string
-	Directors  string
-	Year       string
-	YourRating string
-	IMDbRating string
-	URL        string
-	ImgURL     string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
+	Name         string
+	OriginalName string
+	Directors    string
+	Year         string
+	YourRating   string
+	IMDbRating   string
+	URL          string
+	ImgURL       string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
 // BindFile binds the CSV values into the Ratings struct.
 func (i *Ratings) BindFile(record *[]string) error {
 	i.Name = (*record)[3]
-	i.Directors = (*record)[12]
-	i.Year = (*record)[8]
-	i.YourRating = (*record)[1]
-	i.IMDbRating = (*record)[6]
-	i.URL = (*record)[4]
+	i.OriginalName = (*record)[4]
+	i.Directors = (*record)[13]
+	i.Year = (*record)[9]
+	i.YourRating = (*record)[2]
+	i.IMDbRating = (*record)[7]
+	i.URL = (*record)[5]
 
 	return nil
 }
@@ -73,37 +75,39 @@ func (i *Ratings) BindHTML(shortcode, comment *string, model string) error {
 
 // RatingsComplete represents the official input data fields.
 type RatingsComplete struct {
-	Name        string
-	Directors   string
-	Year        string
-	YourRating  string
-	IMDbRating  string
-	URL         string
-	ImgURL      string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
-	Const       string
-	TitleType   string
-	DateRated   string
-	RuntimeMins string
-	Genres      string
-	NumVotes    string
-	ReleaseDate string
+	Name         string
+	OriginalName string
+	Directors    string
+	Year         string
+	YourRating   string
+	IMDbRating   string
+	URL          string
+	ImgURL       string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
+	Const        string
+	TitleType    string
+	DateRated    string
+	RuntimeMins  string
+	Genres       string
+	NumVotes     string
+	ReleaseDate  string
 }
 
 // BindFile binds the CSV values into the RatingsComplete struct.
 func (i *RatingsComplete) BindFile(record *[]string) error {
 	i.Name = (*record)[3]
-	i.Directors = (*record)[12]
-	i.Year = (*record)[8]
+	i.OriginalName = (*record)[4]
+	i.Directors = (*record)[13]
+	i.Year = (*record)[9]
 	i.YourRating = (*record)[1]
-	i.IMDbRating = (*record)[6]
-	i.URL = (*record)[4]
+	i.IMDbRating = (*record)[7]
+	i.URL = (*record)[5]
 	i.Const = (*record)[0]
 	i.DateRated = (*record)[2]
-	i.TitleType = (*record)[5]
-	i.RuntimeMins = (*record)[7]
-	i.Genres = (*record)[9]
-	i.NumVotes = (*record)[10]
-	i.ReleaseDate = (*record)[11]
+	i.TitleType = (*record)[6]
+	i.RuntimeMins = (*record)[8]
+	i.Genres = (*record)[10]
+	i.NumVotes = (*record)[11]
+	i.ReleaseDate = (*record)[12]
 
 	return nil
 }

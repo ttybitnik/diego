@@ -1,4 +1,4 @@
-Position,Const,Created,Modified,Description,Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
-1,tt6532954,2018-01-16,2018-01-16,,No Intenso Agora,https://www.imdb.com/title/tt6532954/,movie,7.3,127,2017,"Documentary, History",606,2017-02-11,João Moreira Salles,10,2018-05-25
-2,tt3262342,2018-01-20,2018-01-20,,Loving Vincent,https://www.imdb.com/title/tt3262342/,movie,7.8,94,2017,"Animation, Drama, Mystery",62477,2017-06-12,"DK Welchman, Hugh Welchman",10,2018-01-20
-3,tt2763304,2018-01-16,2018-01-16,,T2 Trainspotting,https://www.imdb.com/title/tt2763304/,movie,7.2,117,2017,"Comedy, Crime, Drama",131395,2017-01-22,Danny Boyle,9,2017-05-28
+Position,Const,Created,Modified,Description,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors,Your Rating,Date Rated
+1,tt6532954,2018-05-25,2018-05-25,,"No Intenso Agora","No Intenso Agora",https://www.imdb.com/title/tt6532954/,Movie,7.4,127,2017,"Documentary, History",623,2018-01-31,"João Moreira Salles",10,2018-05-25
+2,tt3262342,2018-01-20,2018-01-20,,"Loving Vincent","Loving Vincent",https://www.imdb.com/title/tt3262342/,Movie,7.8,94,2017,"Animation, Drama, Mystery",65222,2017-09-22,"DK Welchman, Hugh Welchman",10,2018-01-20
+3,tt2763304,2017-05-28,2017-05-28,,"T2 Trainspotting","T2 Trainspotting",https://www.imdb.com/title/tt2763304/,Movie,7.1,117,2017,"Comedy, Crime, Drama",135606,2017-03-31,"Danny Boyle",9,2017-05-28

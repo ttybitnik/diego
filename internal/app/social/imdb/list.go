@@ -32,21 +32,23 @@ import (
 
 // List represents the official input data fields.
 type List struct {
-	Name       string
-	Directors  string
-	Year       string
-	YourRating string
-	URL        string
-	ImgURL     string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
+	Name         string
+	OriginalName string
+	Directors    string
+	Year         string
+	YourRating   string
+	URL          string
+	ImgURL       string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
 }
 
 // BindFile binds the CSV values into the List struct.
 func (i *List) BindFile(record *[]string) error {
 	i.Name = (*record)[5]
-	i.Directors = (*record)[14]
-	i.Year = (*record)[10]
-	i.YourRating = (*record)[15]
-	i.URL = (*record)[6]
+	i.OriginalName = (*record)[6]
+	i.Directors = (*record)[15]
+	i.Year = (*record)[11]
+	i.YourRating = (*record)[16]
+	i.URL = (*record)[7]
 
 	return nil
 }
@@ -72,45 +74,47 @@ func (i *List) BindHTML(shortcode, comment *string, model string) error {
 
 // ListComplete represents the official input data fields.
 type ListComplete struct {
-	Name        string
-	Directors   string
-	Year        string
-	YourRating  string
-	URL         string
-	ImgURL      string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
-	Position    string
-	Const       string
-	Created     string
-	Modified    string
-	Description string
-	TitleType   string
-	IMDbRating  string
-	RuntimeMins string
-	Genres      string
-	NumVotes    string
-	ReleaseDate string
-	DateRated   string
+	Name         string
+	OriginalName string
+	Directors    string
+	Year         string
+	YourRating   string
+	URL          string
+	ImgURL       string `yaml:",omitempty" json:",omitempty" toml:",omitempty" xml:",omitempty"`
+	Position     string
+	Const        string
+	Created      string
+	Modified     string
+	Description  string
+	TitleType    string
+	IMDbRating   string
+	RuntimeMins  string
+	Genres       string
+	NumVotes     string
+	ReleaseDate  string
+	DateRated    string
 }
 
 // BindFile binds the CSV values into the ListComplete struct.
 func (i *ListComplete) BindFile(record *[]string) error {
 	i.Name = (*record)[5]
-	i.Directors = (*record)[14]
-	i.Year = (*record)[10]
-	i.YourRating = (*record)[15]
-	i.URL = (*record)[6]
+	i.OriginalName = (*record)[6]
+	i.Directors = (*record)[15]
+	i.Year = (*record)[11]
+	i.YourRating = (*record)[16]
+	i.URL = (*record)[7]
 	i.Position = (*record)[0]
 	i.Const = (*record)[1]
 	i.Created = (*record)[2]
 	i.Modified = (*record)[3]
 	i.Description = (*record)[4]
-	i.TitleType = (*record)[7]
-	i.IMDbRating = (*record)[8]
-	i.RuntimeMins = (*record)[9]
-	i.Genres = (*record)[11]
-	i.NumVotes = (*record)[12]
-	i.ReleaseDate = (*record)[13]
-	i.DateRated = (*record)[16]
+	i.TitleType = (*record)[8]
+	i.IMDbRating = (*record)[9]
+	i.RuntimeMins = (*record)[10]
+	i.Genres = (*record)[12]
+	i.NumVotes = (*record)[13]
+	i.ReleaseDate = (*record)[14]
+	i.DateRated = (*record)[17]
 
 	return nil
 }
