@@ -25,11 +25,17 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      prs_created: ${{ steps.release.outputs.prs_created }}
       release_created: ${{ steps.release.outputs.release_created }}
+      major: ${{ steps.release.outputs.major }}
+      minor: ${{ steps.release.outputs.minor }}
+      patch: ${{ steps.release.outputs.patch }}
+      sha: ${{ steps.release.outputs.sha }}
     steps:
       - name: Automate releases based on conventional commits
-        uses: googleapis/release-please-action@v4
         id: release
+        uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: configs/release-please-config.json
@@ -118,7 +124,12 @@ jobs:
           echo "|:--|:--|" >> $GITHUB_STEP_SUMMARY
           echo "| **goreleaser** | ${{ steps.releaser.outcome }} |" >> $GITHUB_STEP_SUMMARY
 
-  codeql-analyze:
+  secops:
+    needs: [release-please, lint-and-test]
     permissions:
+      contents: read
       security-events: write
-    uses: ./.github/workflows/codeql.yaml
+      # private repos only
+      # actions: read
+    if: ${{ needs.release-please.outputs.release_created }}
+    uses: ./.github/workflows/secops.yaml
