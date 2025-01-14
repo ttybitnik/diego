@@ -42,8 +42,9 @@ jobs:
       run: |
         echo "| Key | Value |" >> $GITHUB_STEP_SUMMARY
         echo "|:--|:--|" >> $GITHUB_STEP_SUMMARY
-        echo "| **codeql** | {{ steps.analyze.outcome }} |" >> $GITHUB_STEP_SUMMARY
-        echo "| **codeql-version** | {{ steps.analyze.outputs.codeql-version }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| **codeql** | ${{ steps.analyze.outcome }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| **codeql_version** | ${{ steps.analyze.outputs.codeql-version }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| **codeql_verbosity** | $CODEQL_VERBOSITY  |" >> $GITHUB_STEP_SUMMARY
 
   trivy:
     permissions:
@@ -73,5 +74,6 @@ jobs:
         run: |
           echo "| Key | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|:--|:--|" >> $GITHUB_STEP_SUMMARY
-          echo "| **trivy** | {{ steps.trivy-scan.outcome }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| **trivy_exit_code** | $TRIVY_EXIT_CODE }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **trivy** | ${{ steps.trivy-scan.outcome }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **trivy_ignore_unfixed** | $TRIVY_IGNORE_UNFIXED  |" >> $GITHUB_STEP_SUMMARY
+          echo "| **trivy_severity** | $TRIVY_SEVERITY  |" >> $GITHUB_STEP_SUMMARY
