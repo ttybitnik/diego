@@ -27,11 +27,14 @@ Execute `make run` to test and check your changes. If you do not have `golangci-
 
 ### Makefile
 
+- `make dev/start/stop/clean/serestore` :: see [ttybitnik/mkdev](https://github.com/ttybitnik/mkdev)
 - `make lint` :: lint the source code
 - `make test` :: lint and test the source code
 - `make build` :: lint, test, and build the binary
 - `make run` :: lint, test, build, and run the binary
 - `make deploy` :: lint, test, build, and deploy the application locally
+- `make debug` :: build the binary for debugging
+- `make disclean` :: remove artifacts
 - `make update` :: update module dependencies and call `make run`
 - `make golden` :: generate/update golden files using current test results
 

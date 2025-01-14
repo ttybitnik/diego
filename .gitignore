@@ -5,3 +5,4 @@ diego_*.xml
 diego_*.json
 diego_*.html
 dist/
+/.mkdev/
