@@ -43,7 +43,6 @@ jobs:
         echo "| Key | Value |" >> $GITHUB_STEP_SUMMARY
         echo "|:--|:--|" >> $GITHUB_STEP_SUMMARY
         echo "| **codeql** | ${{ steps.analyze.outcome }} |" >> $GITHUB_STEP_SUMMARY
-        echo "| **codeql_version** | ${{ steps.analyze.outputs.codeql-version }} |" >> $GITHUB_STEP_SUMMARY
         echo "| **codeql_verbosity** | $CODEQL_VERBOSITY  |" >> $GITHUB_STEP_SUMMARY
 
   trivy:
