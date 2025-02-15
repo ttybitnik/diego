@@ -13,6 +13,8 @@ on:
     paths-ignore:
       - '**.md'
       - 'docs/**'
+  schedule:
+    - cron: '0 0 1,16 * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
