@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/ttybitnik/diego/compare/v1.0.0...v1.0.1) (2025-02-27)
+
+
+### Dependencies
+
+* **go:** bump github.com/spf13/cobra from 1.8.1 to 1.9.1 ([#29](https://github.com/ttybitnik/diego/issues/29)) ([638e6c1](https://github.com/ttybitnik/diego/commit/638e6c123e96cc82c1399c52b892932102b1d197))
+
 ## [1.0.0](https://github.com/ttybitnik/diego/compare/v0.5.2...v1.0.0) (2024-12-25)
 
 
