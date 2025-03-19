@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.2](https://github.com/ttybitnik/diego/compare/v1.0.1...v1.0.2) (2025-03-19)
+
+
+### Dependencies
+
+* **gh:** bump aquasecurity/trivy-action from 0.29.0 to 0.30.0 ([#33](https://github.com/ttybitnik/diego/issues/33)) ([7b80f49](https://github.com/ttybitnik/diego/commit/7b80f4910cac1afb0293b6e1ac90cc1e20f4e06a))
+* **go:** bump github.com/spf13/viper from 1.19.0 to 1.20.0 ([#32](https://github.com/ttybitnik/diego/issues/32)) ([2a03e47](https://github.com/ttybitnik/diego/commit/2a03e4763d7642fa2205d7b64e7acde2800b7a14))
+* **go:** bump golang.org/x/net from 0.33.0 to 0.36.0 in the go_modules group ([#31](https://github.com/ttybitnik/diego/issues/31)) ([9874199](https://github.com/ttybitnik/diego/commit/9874199bfb9bb4c26ff2c557cbec328bb05063e7))
+
 ## [1.0.1](https://github.com/ttybitnik/diego/compare/v1.0.0...v1.0.1) (2025-02-27)
 
 
