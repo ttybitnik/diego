@@ -1,6 +1,6 @@
 /*
    DIEGO - A data importer extension for Hugo
-   Copyright (C) 2024 Vinícius Moraes <vinicius.moraes@eternodevir.com>
+   Copyright (C) 2024, 2025 Vinícius Moraes <vinicius.moraes@eternodevir.com>
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -51,7 +51,7 @@ func (fsa *Adapter) validateWriteToFile(format string) error {
 	}
 
 	if !supportedFormats[format] {
-		return fmt.Errorf("Error: file format %s not supported", format)
+		return fmt.Errorf("error: file format %s not supported", format)
 	}
 
 	return nil

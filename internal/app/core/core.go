@@ -1,6 +1,6 @@
 /*
    DIEGO - A data importer extension for Hugo
-   Copyright (C) 2024 Vinícius Moraes <vinicius.moraes@eternodevir.com>
+   Copyright (C) 2024, 2025 Vinícius Moraes <vinicius.moraes@eternodevir.com>
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -157,7 +157,7 @@ func (a *App) selectService(dc domain.Core) (social.Service, int, error) {
 
 	modelSelected, ok := modelMap[dc.Model]
 	if !ok {
-		return nil, 0, fmt.Errorf("Model type '%s' not valid.", dc.Model)
+		return nil, 0, fmt.Errorf("model type '%s' not valid", dc.Model)
 	}
 
 	if dc.All {
@@ -174,15 +174,15 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 
 	header, err := reader.Read()
 	if len(header) == 0 {
-		return nil, fmt.Errorf("Empty CSV file: %w", err)
+		return nil, fmt.Errorf("empty CSV file: %w", err)
 	}
 	if err != nil {
-		return nil, fmt.Errorf("Error skipping the first line: %w", err)
+		return nil, fmt.Errorf("error skipping the first line: %w", err)
 	}
 
 	records, err := reader.ReadAll()
 	if err != nil {
-		return nil, fmt.Errorf("Error reading the CSV file: %w", err)
+		return nil, fmt.Errorf("error reading the CSV file: %w", err)
 	}
 
 	results := make([]social.Service, len(records))
@@ -194,19 +194,19 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 
 			newEntity, modelLen, err := a.selectService(dc)
 			if err != nil {
-				errCh <- fmt.Errorf("Error selecting service: %w", err)
+				errCh <- fmt.Errorf("error selecting service: %w", err)
 				return
 			}
 
 			entityLen := len(record)
 			if entityLen != modelLen {
-				errCh <- fmt.Errorf("Invalid CSV format. Want: %d fields, Got: %d fields", modelLen, entityLen)
+				errCh <- fmt.Errorf("invalid CSV format. Want: %d fields, Got: %d fields", modelLen, entityLen)
 				return
 			}
 
 			err = newEntity.BindFile(&record)
 			if err != nil {
-				errCh <- fmt.Errorf("Error binding CSV: %w", err)
+				errCh <- fmt.Errorf("error binding CSV: %w", err)
 				return
 			}
 
@@ -219,7 +219,7 @@ func (a *App) parseFromCSV(reader *csv.Reader, dc domain.Core) ([]social.Service
 
 				err := newEntity.FetchFromHTTP()
 				if err != nil {
-					errCh <- fmt.Errorf("Error fetching HTTP: %w", err)
+					errCh <- fmt.Errorf("error fetching HTTP: %w", err)
 					return
 				}
 			}
@@ -251,13 +251,13 @@ func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]soci
 	record := []string{}
 
 	if !recorder.More() {
-		return fmt.Errorf("Empty JSON file.")
+		return fmt.Errorf("empty JSON file")
 	}
 
 	for {
 		newEntity, _, err := a.selectService(dc)
 		if err != nil {
-			return fmt.Errorf("Error selecting service: %w", err)
+			return fmt.Errorf("error selecting service: %w", err)
 		}
 
 		err = recorder.Decode(&newEntity)
@@ -265,7 +265,7 @@ func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]soci
 			break
 		}
 		if err != nil {
-			return fmt.Errorf("Error parsing JSON: %w", err)
+			return fmt.Errorf("error parsing JSON: %w", err)
 		}
 
 		wg.Add(1)
@@ -274,7 +274,7 @@ func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]soci
 
 			err = newEntity.BindFile(&record)
 			if err != nil {
-				errCh <- fmt.Errorf("Error binding JSON: %w", err)
+				errCh <- fmt.Errorf("error binding JSON: %w", err)
 			}
 
 			if dc.Scrape {
@@ -286,7 +286,7 @@ func (a *App) parseFromJSON(recorder *json.Decoder, dc domain.Core, data *[]soci
 
 				err = newEntity.FetchFromHTTP()
 				if err != nil {
-					errCh <- fmt.Errorf("Error fetching HTTP: %w", err)
+					errCh <- fmt.Errorf("error fetching HTTP: %w", err)
 
 				}
 			}
@@ -352,7 +352,7 @@ func (a *App) validateImportFile(f string) (string, error) {
 		return fe, nil
 	}
 
-	return "", fmt.Errorf("Error wrong file format %s", fe)
+	return "", fmt.Errorf("error wrong file format %s", fe)
 }
 
 // ImportFile imports data from input through the specific domain.Core.

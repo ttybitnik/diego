@@ -1,6 +1,6 @@
 /*
    DIEGO - A data importer extension for Hugo
-   Copyright (C) 2024 Vinícius Moraes <vinicius.moraes@eternodevir.com>
+   Copyright (C) 2024, 2025 Vinícius Moraes <vinicius.moraes@eternodevir.com>
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -166,7 +166,7 @@ func validateInputs() error {
 
 	_, err := os.Stat(hugoDir)
 	if err != nil {
-		return fmt.Errorf("Invalid Hugo directory path: %w", err)
+		return fmt.Errorf("invalid Hugo directory path: %w", err)
 	}
 
 	format := domain.OutputYAML
@@ -184,7 +184,7 @@ func validateInputs() error {
 	}
 
 	if !formatValid {
-		return fmt.Errorf("Invalid output format: %s\nAllowed formats: %v", format, formatAllowed)
+		return fmt.Errorf("invalid output format: %s\nAllowed formats: %v", format, formatAllowed)
 	}
 
 	return nil
@@ -223,8 +223,8 @@ func checkRequiredDirectories() error {
 
 	if len(missingDirs) > 0 {
 		return fmt.Errorf(
-			"Error: Invalid Hugo directory structure in: %s\n"+
-				"Missing the following directories: %v",
+			"error: invalid Hugo directory structure in: %s\n"+
+				"missing the following directories: %v",
 			currentDir, missingDirs,
 		)
 	}
@@ -236,7 +236,7 @@ func bindViperFlags(cmd *cobra.Command, args []string) {
 	if !viper.IsSet("diego.import.input") {
 		err := cmd.MarkFlagRequired("input")
 		if err != nil {
-			err = fmt.Errorf("Error marking flag as required: %w", err)
+			err = fmt.Errorf("error marking flag as required: %w", err)
 			log.Fatalln(err)
 		}
 	}
@@ -246,7 +246,7 @@ func bindViperFlags(cmd *cobra.Command, args []string) {
 	for _, flag := range viperBindFlags {
 		err := viper.BindPFlag("diego.import."+flag, cmd.Flags().Lookup(flag))
 		if err != nil {
-			err = fmt.Errorf("Error binding viper flag: %w", err)
+			err = fmt.Errorf("error binding viper flag: %w", err)
 			log.Fatalln(err)
 		}
 	}
