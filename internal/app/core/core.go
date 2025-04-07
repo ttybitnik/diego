@@ -367,10 +367,8 @@ func (a *App) ImportFile(f string, dc domain.Core) ([]social.Service, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	defer func() {
-		err = fo.Close()
-		if err != nil {
+		if err := fo.Close(); err != nil {
 			log.Fatalln("Error closing input file:", err)
 		}
 	}()
