@@ -25,6 +25,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"math/rand"
 	"os"
 	"path/filepath"
@@ -366,7 +367,13 @@ func (a *App) ImportFile(f string, dc domain.Core) ([]social.Service, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer fo.Close()
+
+	defer func() {
+		err = fo.Close()
+		if err != nil {
+			log.Fatalln("Error closing input file:", err)
+		}
+	}()
 
 	fmt.Println("Importing", dc.Model, "from:", f)
 
