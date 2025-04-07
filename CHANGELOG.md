@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.3](https://github.com/ttybitnik/diego/compare/v1.0.2...v1.0.3) (2025-04-07)
+
+
+### Dependencies
+
+* **gh:** bump golangci/golangci-lint-action from 6 to 7 ([#36](https://github.com/ttybitnik/diego/issues/36)) ([2909b3c](https://github.com/ttybitnik/diego/commit/2909b3c7f779baac5c514c99f71ff213765a44ee))
+* **gh:** bump goreleaser/goreleaser-action from 6.2.1 to 6.3.0 ([#35](https://github.com/ttybitnik/diego/issues/35)) ([750ed61](https://github.com/ttybitnik/diego/commit/750ed614e9f29ef1dbe775bfa1ed5e3a1388cdc1))
+* **go:** bump github.com/gocolly/colly/v2 from 2.1.0 to 2.2.0 ([#37](https://github.com/ttybitnik/diego/issues/37)) ([b97dd3e](https://github.com/ttybitnik/diego/commit/b97dd3e294ce29017fbf1fcc8921f18eb5a25900))
+* **go:** bump github.com/spf13/viper from 1.20.0 to 1.20.1 ([#38](https://github.com/ttybitnik/diego/issues/38)) ([473bf38](https://github.com/ttybitnik/diego/commit/473bf380879b557784c14baed8d3b71c3b2f2d05))
+
 ## [1.0.2](https://github.com/ttybitnik/diego/compare/v1.0.1...v1.0.2) (2025-03-19)
 
 
