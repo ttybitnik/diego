@@ -1,13 +1,17 @@
-# MKDEV 0.2.0 (x-release-please-version)
+# MKDEV 0.5.0 (x-release-please-version)
 # See <https://github.com/ttybitnik/mkdev> for more information.
 
 PROJECT_NAME = diego
 CONTAINER_ENGINE = podman
 
+RUN_BIND_SOCKET = false
+EXEC_SHELL_CMD = /bin/bash
+
 __USER = $(or $(USER),$(shell whoami))
+__SOCKET = /run/user/$(shell id -u)/podman/podman.sock
 
 # Host targets/commands
-.PHONY: dev start stop clean serestore
+.PHONY: dev start open stop clean serestore
 
 dev:
 	$(info Building development container image...)
@@ -25,9 +29,16 @@ start:
 	$(if $(filter podman,$(CONTAINER_ENGINE)),--userns=keep-id) \
 	--name mkdev-$(PROJECT_NAME) \
 	--volume .:/home/$(__USER)/workspace:Z \
+	$(if $(filter true,$(RUN_BIND_SOCKET)),--volume $(__SOCKET):$(__SOCKET)) \
+	$(if $(filter true,$(RUN_BIND_SOCKET)),--env CONTAINER_HOST=unix://$(__SOCKET)) \
 	localhost/mkdev/$(PROJECT_NAME):latest
 
 	@# $(CONTAINER_ENGINE) compose .mkdev/compose.yaml up -d
+
+open:
+	$(info Opening development container...)
+
+	$(CONTAINER_ENGINE) exec -it mkdev-$(PROJECT_NAME) $(EXEC_SHELL_CMD)
 
 stop:
 	$(info Stopping development container...)
