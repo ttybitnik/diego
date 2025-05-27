@@ -78,7 +78,7 @@ jobs:
           cache: false
       - name: Check files with golangci-lint
         id: golangci
-        uses: golangci/golangci-lint-action@v7
+        uses: golangci/golangci-lint-action@v8
         with:
           version: latest
       - name: Test changes with go test
