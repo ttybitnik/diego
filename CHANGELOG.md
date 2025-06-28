@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/ttybitnik/diego/compare/v1.0.4...v1.0.5) (2025-06-28)
+
+
+### Dependencies
+
+* **gh:** bump golangci/golangci-lint-action from 7 to 8 ([#43](https://github.com/ttybitnik/diego/issues/43)) ([93706f3](https://github.com/ttybitnik/diego/commit/93706f3b6e08c58af495bfd0a8d00925e66a0805))
+
 ## [1.0.4](https://github.com/ttybitnik/diego/compare/v1.0.3...v1.0.4) (2025-04-29)
 
 
