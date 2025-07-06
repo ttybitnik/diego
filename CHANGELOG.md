@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.6](https://github.com/ttybitnik/diego/compare/v1.0.5...v1.0.6) (2025-07-06)
+
+
+### Dependencies
+
+* **gh:** bump aquasecurity/trivy-action from 0.30.0 to 0.31.0 ([#47](https://github.com/ttybitnik/diego/issues/47)) ([fbd421b](https://github.com/ttybitnik/diego/commit/fbd421bed7597debf410f126bdc6dc1e85f38a7c))
+* **go:** bump github.com/go-viper/mapstructure/v2 ([#48](https://github.com/ttybitnik/diego/issues/48)) ([fb876df](https://github.com/ttybitnik/diego/commit/fb876dfcab4dfefee540d41167e630b0e21481af))
+
 ## [1.0.5](https://github.com/ttybitnik/diego/compare/v1.0.4...v1.0.5) (2025-06-28)
 
 
