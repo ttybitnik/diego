@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/ttybitnik/diego/compare/v1.0.6...v1.0.7) (2025-07-30)
+
+
+### Dependencies
+
+* **gh:** bump aquasecurity/trivy-action from 0.31.0 to 0.32.0 ([#50](https://github.com/ttybitnik/diego/issues/50)) ([e4168f0](https://github.com/ttybitnik/diego/commit/e4168f0c170abbb88bfbb11a0512a30fa5c14810))
+
 ## [1.0.6](https://github.com/ttybitnik/diego/compare/v1.0.5...v1.0.6) (2025-07-06)
 
 
