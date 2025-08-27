@@ -1,14 +1,15 @@
-# MKDEV 0.5.0 (x-release-please-version)
+# MKDEV 0.9.0 (x-release-please-version)
 # See <https://github.com/ttybitnik/mkdev> for more information.
 
-PROJECT_NAME = diego
+PROJECT_NAME     = diego
 CONTAINER_ENGINE = podman
 
-RUN_BIND_SOCKET = false
-EXEC_SHELL_CMD = /bin/bash
+RUN_BIND_SOCKET  = false
+EXEC_SHELL_CMD  := /bin/bash
+RM              := /bin/rm -f
 
-__USER = $(or $(USER),$(shell whoami))
-__SOCKET = /run/user/$(shell id -u)/podman/podman.sock
+__USER   := $(or $(USER),$(shell whoami))
+__SOCKET := /run/user/$(shell id -u)/podman/podman.sock
 
 # Host targets/commands
 .PHONY: dev start open stop clean serestore
@@ -98,7 +99,7 @@ debug: test
 distclean:
 	$(info Cleaning artifacts...)
 
-	rm -rf ./$(PROJECT_NAME) ./dist/
+	$(RM) -r -- ./$(PROJECT_NAME) ./dist/
 
 
 update:
