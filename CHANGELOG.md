@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.7](https://github.com/ttybitnik/diego/compare/v1.0.6...v1.0.7) (2025-08-28)
+
+
+### Dependencies
+
+* **gh:** bump actions/checkout from 4 to 5 ([#52](https://github.com/ttybitnik/diego/issues/52)) ([1ea9d51](https://github.com/ttybitnik/diego/commit/1ea9d515d662d3a431aa7ff461c5958a3d568f76))
+* **gh:** bump aquasecurity/trivy-action from 0.31.0 to 0.32.0 ([#50](https://github.com/ttybitnik/diego/issues/50)) ([e4168f0](https://github.com/ttybitnik/diego/commit/e4168f0c170abbb88bfbb11a0512a30fa5c14810))
+* **gh:** bump googleapis/release-please-action from 4.2.0 to 4.3.0 ([#55](https://github.com/ttybitnik/diego/issues/55)) ([c2ea138](https://github.com/ttybitnik/diego/commit/c2ea1382770702b045d0d00dc171dc1137f772f5))
+* **gh:** bump goreleaser/goreleaser-action from 6.3.0 to 6.4.0 ([#53](https://github.com/ttybitnik/diego/issues/53)) ([857a15c](https://github.com/ttybitnik/diego/commit/857a15c02eba3214659900ca282327c65cbccb6f))
+* **go:** bump github.com/go-viper/mapstructure/v2 ([#54](https://github.com/ttybitnik/diego/issues/54)) ([749304c](https://github.com/ttybitnik/diego/commit/749304c0f8fe86a99dbf0a9e1d67c4afa989d4f8))
+
 ## [1.0.6](https://github.com/ttybitnik/diego/compare/v1.0.5...v1.0.6) (2025-07-06)
 
 
