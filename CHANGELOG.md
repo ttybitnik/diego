@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.8](https://github.com/ttybitnik/diego/compare/v1.0.7...v1.0.8) (2025-10-11)
+
+
+### Dependencies
+
+* **gh:** bump actions/setup-go from 5 to 6 ([#57](https://github.com/ttybitnik/diego/issues/57)) ([cd2c7e4](https://github.com/ttybitnik/diego/commit/cd2c7e4eda79838278e949239d744d63f26ccf07))
+* **gh:** bump aquasecurity/trivy-action from 0.32.0 to 0.33.1 ([#56](https://github.com/ttybitnik/diego/issues/56)) ([17f79de](https://github.com/ttybitnik/diego/commit/17f79de454679b4329ef0a6208b8f2799cab640f))
+* **go:** bump github.com/spf13/cobra from 1.9.1 to 1.10.1 ([#58](https://github.com/ttybitnik/diego/issues/58)) ([6bd40ee](https://github.com/ttybitnik/diego/commit/6bd40ee6eb816755f11eef2fe935f6d508d0de07))
+* **go:** bump github.com/spf13/viper from 1.20.1 to 1.21.0 ([#59](https://github.com/ttybitnik/diego/issues/59)) ([ba3fc2a](https://github.com/ttybitnik/diego/commit/ba3fc2a066a91fd95eca2bb8c56052003423d996))
+
 ## [1.0.7](https://github.com/ttybitnik/diego/compare/v1.0.6...v1.0.7) (2025-08-28)
 
 
