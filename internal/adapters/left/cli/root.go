@@ -1,6 +1,6 @@
 /*
    DIEGO - A data importer extension for Hugo
-   Copyright (C) 2024 Vinícius Moraes <vinicius.moraes@eternodevir.com>
+   Copyright (C) 2024, 2025 Vinícius Moraes <vinicius.moraes@eternodevir.com>
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ var (
 var rootCmd = &cobra.Command{
 	Use: "diego",
 	Version: ciVersion + `
-Copyright (C) 2024 Vinícius Moraes
+Copyright (C) 2024, 2025 Vinícius Moraes
 License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 This is free software, and you are welcome to change and redistribute it under
 certain conditions. This program comes with ABSOLUTELY NO WARRANTY.
