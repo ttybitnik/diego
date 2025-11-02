@@ -33,4 +33,5 @@ jobs:
   secops:
     permissions:
       contents: read
+      security-events: write
     uses: ttybitnik/pipelines/.github/workflows/secops.yaml@master
