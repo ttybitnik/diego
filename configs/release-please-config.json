@@ -4,7 +4,7 @@
   "changelog-type": "default",
   "changelog-path": "CHANGELOG.md",
   "include-component-in-tag": false,
-  "draft": false,
+  "draft": true,
   "prerelease": false,
   "bump-minor-pre-major": true,
   "changelog-sections": [

@@ -35,7 +35,7 @@ builds:
         goarch: "386"
 
 archives:
-  - format: tar.gz
+  - formats: [ 'tar.gz' ]
     # this name template makes the OS and Arch compatible with the results of `uname`.
     name_template: >-
       {{ .ProjectName }}_
@@ -48,7 +48,7 @@ archives:
     # use zip for windows archives
     format_overrides:
       - goos: windows
-        format: zip
+        formats: [ 'zip' ]
     files:
       - CHANGELOG.md
       - COPYING
@@ -57,7 +57,8 @@ archives:
         dst: man
         strip_parent: true
 
-# release:
+release:
+  use_existing_draft: true
 #   draft: true
 
 changelog:

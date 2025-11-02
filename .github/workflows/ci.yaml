@@ -1,0 +1,36 @@
+---
+name: Continuous Integration
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      codeql-enable:
+        description: "Whether to enable CodeQL job"
+        required: false
+        default: false
+        type: boolean
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+  schedule:
+    - cron: '0 0 1,16 * *'
+
+jobs:
+  go-checks:
+    permissions:
+      contents: read
+      pull-requests: read
+      # checks: write
+      security-events: write
+    uses: ttybitnik/pipelines/.github/workflows/go-checks.yaml@master
+    with:
+      codeql-enable: ${{ inputs.codeql-enable }}
+
+  secops:
+    permissions:
+      contents: read
+    uses: ttybitnik/pipelines/.github/workflows/secops.yaml@master
