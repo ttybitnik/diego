@@ -28,7 +28,7 @@ jobs:
       security-events: write
     uses: ttybitnik/pipelines/.github/workflows/go-checks.yaml@master
     with:
-      codeql-enable: ${{ inputs.codeql-enable }}
+      codeql-enable: ${{ inputs.codeql-enable || false }}
 
   secops:
     permissions:
