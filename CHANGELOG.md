@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ttybitnik/diego/compare/v1.0.8...v1.1.0) (2025-11-02)
+
+
+### Features
+
+* **gh:** set immutable releases ([c609aba](https://github.com/ttybitnik/diego/commit/c609aba79ae20d68339f6fbc3b4b87b752df3933))
+
 ## [1.0.8](https://github.com/ttybitnik/diego/compare/v1.0.7...v1.0.8) (2025-10-11)
 
 
