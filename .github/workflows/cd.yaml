@@ -22,7 +22,7 @@ jobs:
       security-events: write
     uses: ./.github/workflows/ci.yaml
     with:
-      codeql-enable: false
+      codeql-enable: true
 
   semver:
     permissions:
