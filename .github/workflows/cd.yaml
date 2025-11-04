@@ -1,5 +1,5 @@
 ---
-name: Continuous Delivery
+name: CI/CD
 
 on:
   workflow_dispatch:

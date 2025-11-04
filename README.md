@@ -5,7 +5,7 @@
 Diego integrates with [Hugo](https://gohugo.io/) as a CLI tool to assist in importing and utilizing exported social media data from various services on Hugo websites.
 
 [![release](https://img.shields.io/github/v/release/ttybitnik/diego)](https://github.com/ttybitnik/diego/releases/latest)
-[![ci/cd](https://github.com/ttybitnik/diego/actions/workflows/cicd.yaml/badge.svg)](https://github.com/ttybitnik/diego/actions/workflows/cicd.yaml)
+[![ci/cd](https://github.com/ttybitnik/diego/actions/workflows/cd.yaml/badge.svg)](https://github.com/ttybitnik/diego/actions/workflows/cd.yaml)
 [![go report card](https://goreportcard.com/badge/github.com/ttybitnik/diego)](https://goreportcard.com/report/github.com/ttybitnik/diego)
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
