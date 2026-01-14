@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/ttybitnik/diego/compare/v1.1.0...v1.1.1) (2026-01-14)
+
+
+### Dependencies
+
+* **go:** bump github.com/gocolly/colly/v2 from 2.2.0 to 2.3.0 ([#64](https://github.com/ttybitnik/diego/issues/64)) ([2f95a0c](https://github.com/ttybitnik/diego/commit/2f95a0c4380bb42825c2136b0fcd935a448c2146))
+* **go:** bump github.com/spf13/cobra from 1.10.1 to 1.10.2 ([#65](https://github.com/ttybitnik/diego/issues/65)) ([93088f3](https://github.com/ttybitnik/diego/commit/93088f3452a5fd16ec2b7a8d1a4881ebafee6592))
+
 ## [1.1.0](https://github.com/ttybitnik/diego/compare/v1.0.8...v1.1.0) (2025-11-02)
 
 
