@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/ttybitnik/diego/compare/v1.1.1...v1.1.2) (2026-04-05)
+
+
+### Dependencies
+
+* **go:** bump github.com/antchfx/xpath from 1.3.5 to 1.3.6 in the go_modules group across 1 directory ([#67](https://github.com/ttybitnik/diego/issues/67)) ([061b0ca](https://github.com/ttybitnik/diego/commit/061b0cad8d7ea5792baefd31970aaedc49176e67))
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.2.4 to 2.3.0 ([#68](https://github.com/ttybitnik/diego/issues/68)) ([2f3eed8](https://github.com/ttybitnik/diego/commit/2f3eed8867fae514ea1e4af3ad6b543dd6faca5d))
+
 ## [1.1.1](https://github.com/ttybitnik/diego/compare/v1.1.0...v1.1.1) (2026-01-14)
 
 
