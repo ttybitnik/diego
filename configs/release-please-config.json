@@ -6,6 +6,7 @@
   "include-component-in-tag": false,
   "draft": true,
   "prerelease": false,
+  "force-tag-creation": true,
   "bump-minor-pre-major": true,
   "changelog-sections": [
     {

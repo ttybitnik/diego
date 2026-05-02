@@ -32,7 +32,6 @@ jobs:
     uses: ttybitnik/pipelines/.github/workflows/semver.yaml@master
     with:
       commit-message: ${{ github.event.head_commit.message }}
-      release-please-draft-tag-enable: true
 
   go-deploy:
     permissions:
