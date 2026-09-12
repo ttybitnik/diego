@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.3](https://github.com/ttybitnik/diego/compare/v1.1.2...v1.1.3) (2026-09-12)
+
+
+### Dependencies
+
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.3.0 to 2.3.1 ([#70](https://github.com/ttybitnik/diego/issues/70)) ([9975e98](https://github.com/ttybitnik/diego/commit/9975e9853023b5260cd9aa993d1c3af528b0015d))
+* **go:** bump github.com/pelletier/go-toml/v2 from 2.3.1 to 2.4.3 ([#74](https://github.com/ttybitnik/diego/issues/74)) ([7532e3b](https://github.com/ttybitnik/diego/commit/7532e3b9278d76e1ad03b16a179d0f76e93a9e32))
+* **go:** bump golang.org/x/net ([#75](https://github.com/ttybitnik/diego/issues/75)) ([8f70f13](https://github.com/ttybitnik/diego/commit/8f70f138e479bdb22756cf5939471aadd3658580))
+
 ## [1.1.2](https://github.com/ttybitnik/diego/compare/v1.1.1...v1.1.2) (2026-04-05)
 
 
