@@ -30,8 +30,6 @@ jobs:
       pull-requests: write
     needs: [call-ci]
     uses: ttybitnik/pipelines/.github/workflows/semver.yaml@master
-    with:
-      commit-message: ${{ github.event.head_commit.message }}
 
   go-deploy:
     permissions:
